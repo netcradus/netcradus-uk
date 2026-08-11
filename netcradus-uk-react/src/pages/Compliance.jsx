@@ -58,7 +58,7 @@ export default function Compliance() {
 
         {/* ICO Certificate Details Card */}
         <div className="ico-cert-card" style={{ marginTop: '3rem' }}>
-          <div className="ico-badge-graphic"><img src="/assets/ico-badge.svg" alt="ICO UK Badge" /></div>
+          <div className="ico-badge-graphic"><img src={`${import.meta.env.BASE_URL}assets/ico-badge.svg`} alt="ICO UK Badge" /></div>
           <div>
             <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', fontWeight: 800, color: '#fff', marginBottom: '0.8rem' }}>NETCRADUS LIMITED</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Registered Data Controller with the Information Commissioner's Office (ICO) under the UK Data Protection Act 2018.</p>

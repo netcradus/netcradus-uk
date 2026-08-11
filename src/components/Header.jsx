@@ -32,7 +32,7 @@ export default function Header() {
     <header className={`site-header ${isScrolled ? 'scrolled' : ''}`} id="siteHeader">
       <div className="nav-container">
         <Link to="/" className="brand-logo" aria-label="Netcradus UK Homepage">
-          <img src="/assets/netcradus logo.png" alt="Netcradus UK Logo" className="brand-logo-img" />
+          <img src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`} alt="Netcradus UK Logo" className="brand-logo-img" />
           <span className="logo-uk-pill">UK</span>
         </Link>
 

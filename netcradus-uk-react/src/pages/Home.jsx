@@ -121,7 +121,7 @@ export default function Home() {
       <section className="hero-wrapper" id="home">
         <div className="hero-video-stage" id="heroStage">
           <video autoPlay loop muted playsInline className="hero-bg-video">
-            <source src="/videos/hero bg .mp4" type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}videos/hero bg .mp4`} type="video/mp4" />
           </video>
           <div className="hero-video-overlay"></div>
         </div>
@@ -303,7 +303,7 @@ export default function Home() {
           <div className="industry-cards-grid">
             <div className="industry-card-item">
               <img
-                src="/images/industry_public_sector.png"
+                src={`${import.meta.env.BASE_URL}images/industry_public_sector.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80'; }}
                 alt="Public Sector Security"
                 className="industry-card-img"
@@ -317,7 +317,7 @@ export default function Home() {
 
             <div className="industry-card-item">
               <img
-                src="/images/industry_financial_services.png"
+                src={`${import.meta.env.BASE_URL}images/industry_financial_services.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'; }}
                 alt="Financial Services Security"
                 className="industry-card-img"
@@ -331,7 +331,7 @@ export default function Home() {
 
             <div className="industry-card-item">
               <img
-                src="/images/industry_healthcare.png"
+                src={`${import.meta.env.BASE_URL}images/industry_healthcare.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80'; }}
                 alt="Healthcare & Life Sciences"
                 className="industry-card-img"
@@ -345,7 +345,7 @@ export default function Home() {
 
             <div className="industry-card-item">
               <img
-                src="/images/industry_technology.png"
+                src={`${import.meta.env.BASE_URL}images/industry_technology.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80'; }}
                 alt="Technology & SaaS"
                 className="industry-card-img"
@@ -359,7 +359,7 @@ export default function Home() {
 
             <div className="industry-card-item">
               <img
-                src="/images/industry_manufacturing.png"
+                src={`${import.meta.env.BASE_URL}images/industry_manufacturing.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80'; }}
                 alt="Smart Manufacturing"
                 className="industry-card-img"
@@ -373,7 +373,7 @@ export default function Home() {
 
             <div className="industry-card-item">
               <img
-                src="/images/industry_professional_services.png"
+                src={`${import.meta.env.BASE_URL}images/industry_professional_services.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80'; }}
                 alt="Professional Services"
                 className="industry-card-img"
@@ -404,7 +404,7 @@ export default function Home() {
             <div className="insight-card">
               <div className="insight-img-wrapper">
                 <img
-                  src="/images/insight_uk_threat_landscape.png"
+                  src={`${import.meta.env.BASE_URL}images/insight_uk_threat_landscape.png`}
                   onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'; }}
                   alt="Autonomous Cyber Defence"
                   className="insight-img"
@@ -421,7 +421,7 @@ export default function Home() {
             <div className="insight-card">
               <div className="insight-img-wrapper">
                 <img
-                  src="/images/insight_automated_containment.png"
+                  src={`${import.meta.env.BASE_URL}images/insight_automated_containment.png`}
                   onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80'; }}
                   alt="UK Cybersecurity Compliance"
                   className="insight-img"
@@ -438,7 +438,7 @@ export default function Home() {
             <div className="insight-card">
               <div className="insight-img-wrapper">
                 <img
-                  src="/images/insight_uk_gdpr_nis2.png"
+                  src={`${import.meta.env.BASE_URL}images/insight_uk_gdpr_nis2.png`}
                   onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80'; }}
                   alt="Protecting Critical Public Services"
                   className="insight-img"
@@ -455,7 +455,7 @@ export default function Home() {
             <div className="insight-card">
               <div className="insight-img-wrapper">
                 <img
-                  src="/images/insight_zero_trust_identity.png"
+                  src={`${import.meta.env.BASE_URL}images/insight_zero_trust_identity.png`}
                   onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'; }}
                   alt="2024 UK Threat Landscape Report"
                   className="insight-img"

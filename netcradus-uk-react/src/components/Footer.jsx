@@ -23,7 +23,7 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-col">
             <Link to="/" className="brand-logo" style={{ marginBottom: '0.8rem' }}>
-              <img src="/assets/netcradus logo.png" alt="Netcradus UK Logo" className="brand-logo-img" />
+              <img src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`} alt="Netcradus UK Logo" className="brand-logo-img" />
               <span className="logo-uk-pill">UK</span>
             </Link>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>

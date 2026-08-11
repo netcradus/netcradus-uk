@@ -1158,7 +1158,7 @@ body {
   min-height: 70vh;
   background:
     linear-gradient(180deg, rgba(5, 2, 8, 0.25) 0%, rgba(11, 5, 24, 0.65) 100%),
-    url('/assets/platformbg.png') no-repeat center center / cover;
+    url('../public/assets/platformbg.png') no-repeat center center / cover;
   display: flex;
   align-items: center;
   justify-content: center;
