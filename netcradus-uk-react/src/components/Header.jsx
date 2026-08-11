@@ -68,10 +68,6 @@ export default function Header() {
         </ul>
 
         <div className="nav-actions">
-          <a href="tel:08001234567" className="nav-phone-pill">
-            <i className="fas fa-phone-alt"></i> 0800 123 4567
-          </a>
-
           <Link to="/contact" className="btn-talk-expert">
             Talk to an Expert &rarr;
           </Link>
