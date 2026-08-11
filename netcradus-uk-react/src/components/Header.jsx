@@ -33,7 +33,6 @@ export default function Header() {
       <div className="nav-container">
         <Link to="/" className="brand-logo" aria-label="Netcradus UK Homepage">
           <img src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`} alt="Netcradus UK Logo" className="brand-logo-img" />
-          <span className="logo-uk-pill">UK</span>
         </Link>
 
         <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>
