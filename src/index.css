@@ -2478,14 +2478,73 @@ img, video, canvas, svg {
 
 /* 2. Tablet Viewports (769px - 1024px) */
 @media (max-width: 1024px) {
+  .site-header {
+    padding: 0.4rem 0;
+  }
   .nav-container {
-    padding: 0.5rem 3%;
+    padding: 0.4rem 1.2rem;
+  }
+  .brand-logo-img {
+    height: 44px;
+    max-width: 240px;
   }
   .nav-links {
-    gap: 1.2rem;
+    display: none !important;
   }
-  .nav-link {
-    font-size: 0.9rem;
+  .nav-actions {
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-talk-expert {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.78rem;
+  }
+  .mobile-toggle {
+    color: #fff;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    display: flex !important;
+  }
+  .nav-links.mobile-open {
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 999;
+    background: rgba(10, 5, 22, 0.98);
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    padding: 2rem 1.5rem 4rem;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    overflow-y: auto;
+    display: flex !important;
+  }
+  .nav-links.mobile-open .nav-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+  }
+  .nav-links.mobile-open .mega-menu-dropdown {
+    display: none !important;
+  }
+  .hero-tunnelWrap,
+  .hero-glow {
+    display: none !important;
   }
   .hero-container {
     padding: 4rem 2rem 3rem;
@@ -2522,74 +2581,8 @@ img, video, canvas, svg {
 
 /* 3. Mobile Viewports & Small Tablets (≤768px) */
 @media (max-width: 768px) {
-  .site-header {
-    padding: 0.4rem 0;
-  }
-  .nav-container {
-    padding: 0.4rem 1.2rem;
-  }
-  .brand-logo-img {
-    height: 44px; /* Decreased from 52px */
-    max-width: 240px;
-  }
-  .nav-links {
-    display: none;
-  }
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .btn-talk-expert {
-    padding: 0.45rem 0.8rem;
-    font-size: 0.78rem;
-  }
-  .mobile-toggle {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .nav-links.mobile-open {
-    display: flex !important;
-    flex-direction: column;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 70px);
-    background: rgba(10, 5, 22, 0.98);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    padding: 2rem 1.5rem 4rem;
-    border-bottom: 1px solid var(--glass-border);
-    gap: 1.2rem;
-    overflow-y: auto;
-    z-index: 999;
-  }
-  .nav-links.mobile-open .nav-link {
-    font-size: 1.15rem;
-    font-weight: 700;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav-links.mobile-open .mega-menu-dropdown {
-    display: none !important;
-  }
-
   .hero-container {
-    padding: 3rem 1rem 2rem;
+    padding: 3rem 1.5rem 2rem;
   }
   .hero-actions {
     flex-direction: column;
@@ -2597,11 +2590,10 @@ img, video, canvas, svg {
   }
   .btn-hero-primary,
   .btn-hero-secondary {
-    width: 100%;
     text-align: center;
     justify-content: center;
+    width: 100%;
   }
-  
   .domain-badge-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.6rem;
@@ -2623,16 +2615,33 @@ img, video, canvas, svg {
   .domain-3d-sub {
     font-size: 0.62rem;
   }
-
+  .flow-steps-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+  .flow-arrow-icon {
+    transform: rotate(90deg); /* Turn chevron downwards when grid stacks */
+    margin: 0.5rem 0;
+  }
   .platform-grid-7,
   .industry-cards-grid,
   .insights-grid,
-  .metrics-grid-5,
   .footer-grid,
   .converged-platform-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
-
+  .metrics-grid-5 {
+    grid-template-columns: 1fr !important;
+  }
+  .metric-card {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.25rem 0 !important;
+  }
+  .metric-card:last-child {
+    border-bottom: none !important;
+  }
   .converged-platform-card-wrapper {
     border-radius: 16px;
   }
@@ -2646,17 +2655,19 @@ img, video, canvas, svg {
     width: 100%;
     justify-content: center;
   }
-
   .footer-col .brand-logo-img {
-    height: 55px;
+    height: 50px;
     max-width: 250px;
+  }
+  .cta-layout-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 /* 4. Ultra-Small Mobile Screens (≤480px) */
 @media (max-width: 480px) {
   .brand-logo-img {
-    height: 38px; /* Decreased from 44px */
+    height: 38px;
     max-width: 200px;
   }
   .hero-status-pill {
@@ -2671,6 +2682,26 @@ img, video, canvas, svg {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.8rem;
+  }
+  .hero-stats-row {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    text-align: center;
+  }
+  .stat-card {
+    align-items: center;
+  }
+  .industry-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .calculator-card {
+    padding: 1.5rem !important;
+  }
+  .calc-form-grid {
+    gap: 1.5rem !important;
   }
 }
 
