@@ -33,7 +33,7 @@ function Footer() {
           <div className="footer-col">
             <h4 className="footer-title">Products</h4>
             <ul className="footer-links">
-              <li><Link to="/acis">ACIS™ Platform</Link></li>
+              <li><Link to="/products/acis">ACIS™ Platform</Link></li>
               <li><Link to="/cyrix-xdr">CYRIX XDR</Link></li>
               <li><Link to="/managed-soc">24/7 Managed SOC</Link></li>
             </ul>

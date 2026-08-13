@@ -27,8 +27,8 @@ export default function Header() {
   }, [location]);
 
   const isActive = (path) => location.pathname === path;
-  const isProductsActive = ['/acis', '/cyrix-xdr', '/managed-soc'].includes(location.pathname);
-  const isServicesActive = ['/services', '/vapt', '/zero-trust', '/cloud-security', '/incident-response'].includes(location.pathname);
+  const isProductsActive = ['/products', '/products/acis', '/cyrix-xdr', '/managed-soc'].includes(location.pathname);
+  const isSolutionsActive = ['/services', '/vapt', '/zero-trust', '/cloud-security', '/incident-response', '/managed-soc'].includes(location.pathname);
 
   return (
     <header className={`site-header ${isScrolled ? 'scrolled' : ''}`} id="siteHeader">
@@ -39,34 +39,243 @@ export default function Header() {
 
         <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>
           <li className="nav-item dropdown mega-dropdown">
-            <Link to="/acis" className={`nav-link ${isActive('/acis') ? 'active' : ''}`}>
+            <Link to="/platform" className={`nav-link ${isActive('/platform') ? 'active' : ''}`}>
               Platform <i className="fas fa-chevron-down nav-arrow"></i>
             </Link>
             <div className="mega-menu-dropdown">
               <ConvergedPlatformBar />
             </div>
           </li>
-          <li className="nav-item dropdown">
-            <Link to="/acis" className={`nav-link ${isProductsActive ? 'active' : ''}`}>
+          <li className="nav-item dropdown mega-dropdown">
+            <Link to="/products" className={`nav-link ${isProductsActive ? 'active' : ''}`}>
               Products <i className="fas fa-chevron-down nav-arrow"></i>
             </Link>
-            <ul className="dropdown-menu">
-              <li><Link to="/acis">ACIS™ Autonomous Engine</Link></li>
-              <li><Link to="/cyrix-xdr">CYRIX XDR Unified Detection</Link></li>
-              <li><Link to="/managed-soc">24/7 Managed SOC &amp; SIEM</Link></li>
-            </ul>
+            <div className="mega-menu-dropdown products-mega-menu">
+              <div className="products-mega-menu-inner">
+                {/* Left Column: Cybersecurity Platform */}
+                <div className="products-mega-col cybersecurity-col">
+                  <h3 className="products-mega-heading">CYBERSECURITY PLATFORM</h3>
+                  <div className="products-mega-underline"></div>
+                  
+                  <div className="products-mega-list">
+                    <Link to="/products/acis" className="products-mega-item">
+                      <div className="products-mega-icon-container">
+                        <i className="fas fa-shield-alt"></i>
+                      </div>
+                      <div className="products-mega-text">
+                        <h4 className="products-mega-item-title">ACIS Platform</h4>
+                        <p className="products-mega-item-desc">Autonomous Cyber Immune System for threat detection and response.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/cyrix-xdr" className="products-mega-item">
+                      <div className="products-mega-icon-container">
+                        <i className="fas fa-crosshairs"></i>
+                      </div>
+                      <div className="products-mega-text">
+                        <h4 className="products-mega-item-title">Cyrix XDR</h4>
+                        <p className="products-mega-item-desc">AI-powered unified endpoint, cloud and network protection.</p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Middle Column: Business Solutions */}
+                <div className="products-mega-col business-col">
+                  <h3 className="products-mega-heading">BUSINESS SOLUTIONS</h3>
+                  <div className="products-mega-underline"></div>
+
+                  <div className="products-mega-list">
+                    <Link to="/products" className="products-mega-item">
+                      <div className="products-mega-icon-container">
+                        <i className="fas fa-users-cog"></i>
+                      </div>
+                      <div className="products-mega-text">
+                        <h4 className="products-mega-item-title">NetCRM</h4>
+                        <p className="products-mega-item-desc">Enterprise relationship and operations platform.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/products" className="products-mega-item">
+                      <div className="products-mega-icon-container">
+                        <i className="fas fa-exclamation-triangle"></i>
+                      </div>
+                      <div className="products-mega-text">
+                        <h4 className="products-mega-item-title">NetCrad</h4>
+                        <p className="products-mega-item-desc">
+                          AI-powered website security auditing and vulnerability assessment platform that scans websites for weaknesses, compliance, and performance risks.
+                        </p>
+                      </div>
+                    </Link>
+
+                    <div className="products-mega-item products-mega-item-soon">
+                      <div className="products-mega-icon-container">
+                        <i className="fas fa-magic"></i>
+                      </div>
+                      <div className="products-mega-text">
+                        <h4 className="products-mega-item-title">
+                          Future Products <span className="badge-soon">SOON</span>
+                        </h4>
+                        <p className="products-mega-item-desc">Sparking new security intelligence engines coming soon.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column: Large Orange Promo Card */}
+                <div className="products-mega-col promo-col">
+                  <div className="products-promo-card">
+                    {/* Background Technical Pattern */}
+                    <div className="promo-tech-bg">
+                      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="150" cy="150" r="120" stroke="rgba(255,255,255,0.06)" strokeWidth="1" strokeDasharray="5 5" />
+                        <polygon points="150,50 250,110 250,220 150,280 50,220 50,110" stroke="rgba(255,255,255,0.04)" strokeWidth="1.5" />
+                        <circle cx="150" cy="150" r="40" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
+                      </svg>
+                    </div>
+
+                    <span className="promo-badge">ENTERPRISE SECURITY PLATFORM</span>
+                    <h3 className="promo-title">Netcradus Products</h3>
+                    <p className="promo-desc">
+                      Discover AI-powered cybersecurity and business platforms designed to protect, automate, and accelerate your organization through a unified ecosystem.
+                    </p>
+
+                    <div className="promo-tags">
+                      <span className="promo-tag-pill">AI Powered</span>
+                      <span className="promo-tag-pill">Enterprise Ready</span>
+                      <span className="promo-tag-pill">Cloud Native</span>
+                      <span className="promo-tag-pill">Scalable</span>
+                      <span className="promo-tag-pill">Secure by Design</span>
+                    </div>
+
+                    <Link to="/products" className="promo-cta-btn">
+                      Explore Products &rarr;
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
-          <li className="nav-item dropdown">
-            <Link to="/services" className={`nav-link ${isServicesActive ? 'active' : ''}`}>
-              Services <i className="fas fa-chevron-down nav-arrow"></i>
+          <li className="nav-item dropdown mega-dropdown">
+            <Link to="/services" className={`nav-link ${isSolutionsActive ? 'active' : ''}`}>
+              Solutions <i className="fas fa-chevron-down nav-arrow"></i>
             </Link>
-            <ul className="dropdown-menu">
-              <li><Link to="/services">Cybersecurity Services</Link></li>
-              <li><Link to="/vapt">VAPT &amp; Penetration Testing</Link></li>
-              <li><Link to="/zero-trust">Zero Trust &amp; Identity</Link></li>
-              <li><Link to="/cloud-security">Cloud &amp; Network Security</Link></li>
-              <li><Link to="/incident-response">Incident Response</Link></li>
-            </ul>
+            <div className="mega-menu-dropdown solutions-mega-menu">
+              {/* Pointer Triangle */}
+              <div className="mega-menu-pointer"></div>
+
+              <div className="solutions-mega-menu-inner">
+                {/* Left Column: Core Security Services */}
+                <div className="solutions-mega-col core-services-col">
+                  <h3 className="solutions-mega-heading">CORE SECURITY SERVICES</h3>
+                  <div className="solutions-mega-underline"></div>
+                  
+                  <div className="solutions-mega-list">
+                    <Link to="/services" className="solutions-mega-item">
+                      <div className="solutions-mega-icon-container">
+                        <i className="fas fa-shield-alt"></i>
+                      </div>
+                      <div className="solutions-mega-text">
+                        <h4 className="solutions-mega-item-title">Cybersecurity</h4>
+                        <p className="solutions-mega-item-desc">End-to-end protection against evolving cyber threats.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/managed-soc" className="solutions-mega-item">
+                      <div className="solutions-mega-icon-container">
+                        <i className="fas fa-eye"></i>
+                      </div>
+                      <div className="solutions-mega-text">
+                        <h4 className="solutions-mega-item-title">Managed SOC</h4>
+                        <p className="solutions-mega-item-desc">24&times;7 monitoring and rapid threat detection &amp; response.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/cloud-security" className="solutions-mega-item">
+                      <div className="solutions-mega-icon-container">
+                        <i className="fas fa-network-wired"></i>
+                      </div>
+                      <div className="solutions-mega-text">
+                        <h4 className="solutions-mega-item-title">Network Security</h4>
+                        <p className="solutions-mega-item-desc">Defend your perimeter and internal network segments.</p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Middle Column: Specialized Solutions */}
+                <div className="solutions-mega-col specialized-col">
+                  <h3 className="solutions-mega-heading">SPECIALIZED SOLUTIONS</h3>
+                  <div className="solutions-mega-underline"></div>
+
+                  <div className="solutions-mega-list">
+                    <Link to="/cloud-security" className="solutions-mega-item">
+                      <div className="solutions-mega-icon-container">
+                        <i className="fas fa-cloud"></i>
+                      </div>
+                      <div className="solutions-mega-text">
+                        <h4 className="solutions-mega-item-title">Cloud Security</h4>
+                        <p className="solutions-mega-item-desc">Secure cloud workloads, SaaS, and hybrid environments.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/services" className="solutions-mega-item">
+                      <div className="solutions-mega-icon-container">
+                        <i className="fas fa-brain"></i>
+                      </div>
+                      <div className="solutions-mega-text">
+                        <h4 className="solutions-mega-item-title">AI Security</h4>
+                        <p className="solutions-mega-item-desc">Protect AI models, LLMs, and enterprise agents.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/services" className="solutions-mega-item">
+                      <div className="solutions-mega-icon-container">
+                        <i className="fas fa-building"></i>
+                      </div>
+                      <div className="solutions-mega-text">
+                        <h4 className="solutions-mega-item-title">Enterprise Security</h4>
+                        <p className="solutions-mega-item-desc">Tailored, enterprise-grade security programs.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/vapt" className="solutions-mega-item">
+                      <div className="solutions-mega-icon-container">
+                        <i className="fas fa-bug"></i>
+                      </div>
+                      <div className="solutions-mega-text">
+                        <h4 className="solutions-mega-item-title">VAPT Services</h4>
+                        <p className="solutions-mega-item-desc">Vulnerability assessment &amp; penetration testing.</p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Right Column: Featured Promo Panel */}
+                <div className="solutions-mega-col promo-col">
+                  <div className="solutions-promo-card">
+                    {/* Background Technical Pattern */}
+                    <div className="promo-tech-bg">
+                      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="150,50 250,250 50,250" stroke="rgba(255,255,255,0.05)" strokeWidth="1.5" />
+                        <polygon points="150,250 250,50 50,50" stroke="rgba(255,255,255,0.05)" strokeWidth="1.5" />
+                        <circle cx="150" cy="150" r="30" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
+                      </svg>
+                    </div>
+
+                    <span className="promo-badge">FEATURED PANEL</span>
+                    <h3 className="promo-title">Enterprise Solutions</h3>
+                    <p className="promo-desc">
+                      Discover AI-powered cybersecurity, healthcare, cloud, and digital transformation solutions designed to secure and accelerate modern businesses.
+                    </p>
+
+                    <Link to="/services" className="promo-cta-btn">
+                      Explore Solutions &rarr;
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li className="nav-item">
             <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>Contact</Link>

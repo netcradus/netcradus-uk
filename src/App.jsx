@@ -4,6 +4,9 @@ import Layout from './components/Layout';
 
 import Home from './pages/Home';
 import Acis from './pages/Acis';
+import Platform from './pages/Platform';
+import { Navigate } from 'react-router-dom';
+import Products from './pages/Products';
 import Services from './pages/Services';
 import ManagedSoc from './pages/ManagedSoc';
 import CloudSecurity from './pages/CloudSecurity';
@@ -23,7 +26,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="acis" element={<Acis />} />
+          <Route path="products/acis" element={<Acis />} />
+          <Route path="acis" element={<Navigate to="/products/acis" replace />} />
+          <Route path="platform" element={<Platform />} />
+          <Route path="products" element={<Products />} />
           <Route path="services" element={<Services />} />
           <Route path="managed-soc" element={<ManagedSoc />} />
           <Route path="cloud-security" element={<CloudSecurity />} />

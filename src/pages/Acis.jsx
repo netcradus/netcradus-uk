@@ -8,19 +8,58 @@ export default function Acis() {
         <div className="platform-hero-overlay"></div>
         <div className="section-container" style={{ position: 'relative', zIndex: 10 }}>
           <div className="section-header" style={{ marginBottom: 0 }}>
-            <span className="section-tag"><i className="fas fa-brain"></i> FLAGSHIP AI ENGINE</span>
-            <h1 className="section-title">ACIS — Autonomous Cyber Immune System</h1>
+            <span className="section-tag"><i className="fas fa-brain"></i> ACIS — Autonomous Cyber Immune System</span>
+            <h1 className="section-title">
+              One Platform. Complete Cyber Resilience.
+            </h1>
             <p className="section-desc">
-              <strong>Security that adapts. Defends. Learns.</strong><br />
-              ACIS brings together continuous detection, threat intelligence, automated response and security orchestration into an autonomous cyber defence ecosystem.
+              Netcradus brings visibility, threat intelligence, detection, response and security operations together in one intelligent platform.
             </p>
           </div>
         </div>
       </section>
 
       {/* PAGE 03 — ACIS CORE CAPABILITIES & LIFECYCLE SECTION */}
-      <section className="section" style={{ background: 'rgba(11, 5, 24, 0.7)', padding: '5rem 0' }}>
-        <div className="section-container">
+      <section className="section acis-lifecycle-section">
+        {/* Ambient Glow Orbs */}
+        <div className="glow-orb glow-orb-purple"></div>
+        <div className="glow-orb glow-orb-pink"></div>
+        <div className="glow-orb glow-orb-orange"></div>
+
+        {/* Cyber Network SVG Lines */}
+        <svg className="cyber-network-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="cyan-purple-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="var(--cyan)" />
+              <stop offset="100%" stopColor="var(--purple)" />
+            </linearGradient>
+            <linearGradient id="purple-pink-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="var(--purple)" />
+              <stop offset="100%" stopColor="var(--pink)" />
+            </linearGradient>
+            <linearGradient id="pink-orange-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="var(--pink)" />
+              <stop offset="100%" stopColor="var(--orange)" />
+            </linearGradient>
+          </defs>
+          <path d="M-10,20 L30,40 L70,30 L110,50" className="network-path" stroke="url(#cyan-purple-grad)" />
+          <path d="M-10,80 L40,60 L60,75 L110,55" className="network-path" stroke="url(#purple-pink-grad)" />
+          <path d="M20,-10 L50,50 L40,110" className="network-path" stroke="url(#pink-orange-grad)" />
+          
+          <circle cx="30" cy="40" r="1" className="network-node network-node-cyan" />
+          <circle cx="70" cy="30" r="1" className="network-node network-node-purple" />
+          <circle cx="40" cy="60" r="1.5" className="network-node network-node-pink" />
+          <circle cx="60" cy="75" r="1" className="network-node network-node-orange" />
+          <circle cx="50" cy="50" r="1.2" className="network-node network-node-purple" />
+        </svg>
+
+        {/* Small pulsating cybersecurity particles */}
+        <div className="cyber-dot cyber-dot-1"></div>
+        <div className="cyber-dot cyber-dot-2"></div>
+        <div className="cyber-dot cyber-dot-3"></div>
+        <div className="cyber-dot cyber-dot-4"></div>
+
+        <div className="section-container" style={{ position: 'relative', zIndex: 10 }}>
           {/* Outer Layers Diagram */}
           <div className="flow-diagram-wrapper" style={{ marginTop: 0, marginBottom: '4rem' }}>
             <div style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--pink)', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '1.5rem', textAlign: 'center' }}>

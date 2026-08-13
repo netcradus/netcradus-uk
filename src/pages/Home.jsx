@@ -209,7 +209,7 @@ export default function Home() {
               <Link to="/contact" className="btn-hero-primary">
                 Book a Security Assessment &rarr;
               </Link>
-              <Link to="/acis" className="btn-hero-secondary">
+              <Link to="/products/acis" className="btn-hero-secondary">
                 Explore ACIS &rarr;
               </Link>
             </div>
@@ -261,7 +261,7 @@ export default function Home() {
               <p className="platform-card-desc">
                 Identify threats and anomalies in real time using advanced AI models.
               </p>
-              <Link to="/acis" className="platform-card-arrow">→</Link>
+              <Link to="/products/acis" className="platform-card-arrow">→</Link>
             </div>
 
             <div className="platform-card">
@@ -272,7 +272,7 @@ export default function Home() {
               <p className="platform-card-desc">
                 Centralise monitoring, investigation and response in one modern SOC behavioural analysis.
               </p>
-              <Link to="/acis" className="platform-card-arrow">→</Link>
+              <Link to="/products/acis" className="platform-card-arrow">→</Link>
             </div>
 
             <div className="platform-card">
@@ -283,7 +283,7 @@ export default function Home() {
               <p className="platform-card-desc">
                 Enrich investigations with global threat intelligence and context.
               </p>
-              <Link to="/acis" className="platform-card-arrow">→</Link>
+              <Link to="/products/acis" className="platform-card-arrow">→</Link>
             </div>
 
             <div className="platform-card">
@@ -294,7 +294,7 @@ export default function Home() {
               <p className="platform-card-desc">
                 Respond faster with intelligent automation and configurable workflows.
               </p>
-              <Link to="/acis" className="platform-card-arrow">→</Link>
+              <Link to="/products/acis" className="platform-card-arrow">→</Link>
             </div>
 
             <div className="platform-card">
@@ -305,7 +305,7 @@ export default function Home() {
               <p className="platform-card-desc">
                 Investigate incidents deeply with AI-powered analysis and attack correlation.
               </p>
-              <Link to="/acis" className="platform-card-arrow">→</Link>
+              <Link to="/products/acis" className="platform-card-arrow">→</Link>
             </div>
 
             <div className="platform-card">
@@ -316,7 +316,7 @@ export default function Home() {
               <p className="platform-card-desc">
                 Turn security data into actionable insights and measurable outcomes.
               </p>
-              <Link to="/acis" className="platform-card-arrow">→</Link>
+              <Link to="/products/acis" className="platform-card-arrow">→</Link>
             </div>
 
             <div className="platform-card">
@@ -327,7 +327,7 @@ export default function Home() {
               <p className="platform-card-desc">
                 Strengthen resilience and recover quickly from cyber incidents.
               </p>
-              <Link to="/acis" className="platform-card-arrow">→</Link>
+              <Link to="/products/acis" className="platform-card-arrow">→</Link>
             </div>
           </div>
         </div>

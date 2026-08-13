@@ -24,7 +24,7 @@ const platformModules = [
     tag: '→ Automated Response + Playbooks',
     desc: 'Autonomous incident containment and agentic playbook orchestration.',
     icon: 'fa-bolt-lightning',
-    link: '/acis'
+    link: '/products/acis'
   },
   {
     id: 'cti',
@@ -32,7 +32,7 @@ const platformModules = [
     tag: '→ Threat Intelligence',
     desc: 'Global cyber threat research, adversary tradecraft and IOC feeds.',
     icon: 'fa-eye',
-    link: '/acis'
+    link: '/products/acis'
   },
   {
     id: 'pam',
@@ -56,7 +56,7 @@ const platformModules = [
     tag: '→ AI/ML Security + AI Threat Detection',
     desc: 'AI engine protection, model vulnerability defense & LLM threat triage.',
     icon: 'fa-microchip',
-    link: '/acis'
+    link: '/products/acis'
   }
 ];
 
@@ -79,7 +79,7 @@ export default function ConvergedPlatformBar() {
           </div>
         </div>
 
-        <Link to="/acis" className="converged-platform-cta-btn">
+        <Link to="/products/acis" className="converged-platform-cta-btn">
           Explore Full Architecture &rarr;
         </Link>
       </div>
@@ -108,7 +108,7 @@ export default function ConvergedPlatformBar() {
           <span className="dot"></span>
           Single Agent &bull; Single Console &bull; Autonomous Cyber Defense
         </div>
-        <Link to="/acis" className="converged-footer-link">
+        <Link to="/products/acis" className="converged-footer-link">
           View Interactive Platform Wheel &rarr;
         </Link>
       </div>
