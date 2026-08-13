@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ConvergedPlatformBar from './ConvergedPlatformBar';
+import CountryDropdown from './CountryDropdown';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -77,21 +78,7 @@ export default function Header() {
             Talk to an Expert &rarr;
           </Link>
 
-          <div className="country-selector-pill">
-            <svg className="uk-flag-tiny" viewBox="0 0 60 30" width="16" height="11">
-              <clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
-              <clipPath id="t"><path d="M30,15 h30 v15 z M30,15 h-30 v-15 z M30,15 h-30 v15 z M30,15 h30 v-15 z"/></clipPath>
-              <g clipPath="url(#s)">
-                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
-                <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#t)" stroke="#C8102E" strokeWidth="4"/>
-                <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
-                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
-              </g>
-            </svg>
-            <span>UK</span>
-            <i className="fas fa-chevron-down" style={{ fontSize: '0.65rem', color: '#a0aec0' }}></i>
-          </div>
+          <CountryDropdown />
         </div>
 
         <button 
