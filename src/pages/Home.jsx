@@ -1,6 +1,69 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Icon3D from '../components/Icon3D';
+function Domain3DCard({ icon, label, sub, theme, status }) {
+  const cardRef = useRef(null);
+  const [transformStyle, setTransformStyle] = useState({});
+
+  const handleMouseMove = (e) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -16;
+    const rotateY = ((x - centerX) / centerX) * 16;
+
+    setTransformStyle({
+      transform: `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(12px) scale(1.05)`,
+      '--mouse-x': `${(x / rect.width) * 100}%`,
+      '--mouse-y': `${(y / rect.height) * 100}%`,
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setTransformStyle({
+      transform: 'rotateX(0deg) rotateY(0deg) translateZ(0px) scale(1)',
+      '--mouse-x': '50%',
+      '--mouse-y': '50%',
+    });
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      className={`domain-3d-card ${theme}`}
+      style={transformStyle}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="domain-3d-shine" />
+      <div className="domain-3d-status">
+        <span className="status-dot"></span>
+        <span className="status-text">{status}</span>
+      </div>
+      <div className="domain-3d-orb">
+        <i className={`fas ${icon} domain-3d-icon`}></i>
+      </div>
+      <div className="domain-3d-content">
+        <div className="domain-3d-label">{label}</div>
+        <div className="domain-3d-sub">{sub}</div>
+      </div>
+      <div className="domain-3d-bar"></div>
+    </div>
+  );
+}
+
+const domainItems = [
+  { icon: 'fa-user-shield', label: 'Identity', sub: 'Zero Trust IAM', theme: 'theme-pink', status: 'SECURED' },
+  { icon: 'fa-cloud', label: 'Cloud', sub: 'Multi-Cloud Armor', theme: 'theme-cyan', status: 'MONITORED' },
+  { icon: 'fa-network-wired', label: 'Network', sub: 'Micro-Segmented', theme: 'theme-blue', status: 'ISOLATED' },
+  { icon: 'fa-laptop-medical', label: 'Endpoint', sub: 'Autonomous EDR', theme: 'theme-orange', status: 'IMMUNE' },
+  { icon: 'fa-database', label: 'Data', sub: 'Immutable Vault', theme: 'theme-purple', status: 'ENCRYPTED' },
+  { icon: 'fa-cubes', label: 'Applications', sub: 'Runtime AppSec', theme: 'theme-emerald', status: 'PROTECTED' }
+];
 
 function AnimatedMetrics() {
   const sectionRef = useRef(null);
@@ -152,35 +215,20 @@ export default function Home() {
             </div>
 
             {/* Protected Cyber Domains Badges */}
-            <div style={{ width: '100%', borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '1.5rem', marginTop: '1rem' }}>
-              <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '0.8rem' }}>
-                PROTECTED CYBER DOMAINS (ACIS IMMUNE CORE)
+            <div style={{ width: '100%', borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '1.8rem', marginTop: '1.5rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 800, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--pink)', boxShadow: '0 0 10px var(--pink)' }}></span>
+                  PROTECTED CYBER DOMAINS (ACIS IMMUNE CORE)
+                </div>
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'rgba(255, 255, 255, 0.5)', background: 'rgba(255, 255, 255, 0.05)', padding: '3px 10px', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <i className="fas fa-shield-halved" style={{ color: 'var(--pink)', marginRight: '6px' }}></i> 3D REAL-TIME ISOLATION ENGINE
+                </div>
               </div>
               <div className="domain-badge-grid">
-                <div className="domain-badge-card">
-                  <i className="fas fa-user-shield domain-badge-icon"></i>
-                  <div className="domain-badge-label">Identity</div>
-                </div>
-                <div className="domain-badge-card">
-                  <i className="fas fa-cloud domain-badge-icon"></i>
-                  <div className="domain-badge-label">Cloud</div>
-                </div>
-                <div className="domain-badge-card">
-                  <i className="fas fa-network-wired domain-badge-icon"></i>
-                  <div className="domain-badge-label">Network</div>
-                </div>
-                <div className="domain-badge-card">
-                  <i className="fas fa-laptop-medical domain-badge-icon"></i>
-                  <div className="domain-badge-label">Endpoint</div>
-                </div>
-                <div className="domain-badge-card">
-                  <i className="fas fa-database domain-badge-icon"></i>
-                  <div className="domain-badge-label">Data</div>
-                </div>
-                <div className="domain-badge-card">
-                  <i className="fas fa-cubes domain-badge-icon"></i>
-                  <div className="domain-badge-label">Applications</div>
-                </div>
+                {domainItems.map((item, idx) => (
+                  <Domain3DCard key={idx} {...item} />
+                ))}
               </div>
             </div>
           </div>

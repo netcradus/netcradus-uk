@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ConvergedPlatformBar from './ConvergedPlatformBar';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,8 +37,13 @@ export default function Header() {
         </Link>
 
         <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>
-          <li className="nav-item">
-            <Link to="/acis" className={`nav-link ${isActive('/acis') ? 'active' : ''}`}>Platform</Link>
+          <li className="nav-item dropdown mega-dropdown">
+            <Link to="/acis" className={`nav-link ${isActive('/acis') ? 'active' : ''}`}>
+              Platform <i className="fas fa-chevron-down nav-arrow"></i>
+            </Link>
+            <div className="mega-menu-dropdown">
+              <ConvergedPlatformBar />
+            </div>
           </li>
           <li className="nav-item dropdown">
             <Link to="/acis" className={`nav-link ${isProductsActive ? 'active' : ''}`}>
