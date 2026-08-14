@@ -19,6 +19,13 @@ import CaseStudies from './pages/CaseStudies';
 import WhyNetcradus from './pages/WhyNetcradus';
 import CyrixXdr from './pages/CyrixXdr';
 import Contact from './pages/Contact';
+import EndpointDetection from './pages/EndpointDetection';
+import Siem from './pages/Siem';
+import Soar from './pages/Soar';
+import Cti from './pages/Cti';
+import Pam from './pages/Pam';
+import Grc from './pages/Grc';
+import AiSecurity from './pages/AiSecurity';
 
 export default function App() {
   return (
@@ -29,6 +36,13 @@ export default function App() {
           <Route path="products/acis" element={<Acis />} />
           <Route path="acis" element={<Navigate to="/products/acis" replace />} />
           <Route path="platform" element={<Platform />} />
+          <Route path="platform/endpoint-detection" element={<EndpointDetection />} />
+          <Route path="platform/siem" element={<Siem />} />
+          <Route path="platform/soar" element={<Soar />} />
+          <Route path="platform/cti" element={<Cti />} />
+          <Route path="platform/pam" element={<Pam />} />
+          <Route path="platform/grc" element={<Grc />} />
+          <Route path="platform/ai-security" element={<AiSecurity />} />
           <Route path="products" element={<Products />} />
           <Route path="services" element={<Services />} />
           <Route path="managed-soc" element={<ManagedSoc />} />

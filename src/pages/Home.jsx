@@ -215,14 +215,14 @@ export default function Home() {
             </div>
 
             {/* Protected Cyber Domains Badges */}
-            <div style={{ width: '100%', borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '1.8rem', marginTop: '1.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '0.5rem' }}>
-                <div style={{ fontSize: '0.82rem', fontWeight: 800, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--pink)', boxShadow: '0 0 10px var(--pink)' }}></span>
+            <div className="hero-domain-section">
+              <div className="hero-domain-header">
+                <div className="hero-domain-title">
+                  <span className="hero-domain-dot"></span>
                   PROTECTED CYBER DOMAINS (ACIS IMMUNE CORE)
                 </div>
-                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'rgba(255, 255, 255, 0.5)', background: 'rgba(255, 255, 255, 0.05)', padding: '3px 10px', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-                  <i className="fas fa-shield-halved" style={{ color: 'var(--pink)', marginRight: '6px' }}></i> 3D REAL-TIME ISOLATION ENGINE
+                <div className="hero-domain-subtitle">
+                  <i className="fas fa-shield-halved"></i> 3D REAL-TIME ISOLATION ENGINE
                 </div>
               </div>
               <div className="domain-badge-grid">

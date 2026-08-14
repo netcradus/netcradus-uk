@@ -8,7 +8,7 @@ const platformModules = [
     tag: '→ Endpoint + Threat Hunting + Detection',
     desc: 'AI-powered unified endpoint, network and real-time threat hunting detection.',
     icon: 'fa-shield-halved',
-    link: '/cyrix-xdr'
+    link: '/platform/endpoint-detection'
   },
   {
     id: 'siem',
@@ -16,7 +16,7 @@ const platformModules = [
     tag: '→ Log Management + Detection + Correlation',
     desc: 'Real-time log aggregation, intelligent event correlation and threat detection.',
     icon: 'fa-bullseye',
-    link: '/managed-soc'
+    link: '/platform/siem'
   },
   {
     id: 'soar',
@@ -24,7 +24,7 @@ const platformModules = [
     tag: '→ Automated Response + Playbooks',
     desc: 'Autonomous incident containment and agentic playbook orchestration.',
     icon: 'fa-bolt-lightning',
-    link: '/products/acis'
+    link: '/platform/soar'
   },
   {
     id: 'cti',
@@ -32,7 +32,7 @@ const platformModules = [
     tag: '→ Threat Intelligence',
     desc: 'Global cyber threat research, adversary tradecraft and IOC feeds.',
     icon: 'fa-eye',
-    link: '/products/acis'
+    link: '/platform/cti'
   },
   {
     id: 'pam',
@@ -40,7 +40,7 @@ const platformModules = [
     tag: '→ Privileged Access Management',
     desc: 'Verify identity, enforce zero trust, and secure privileged credentials.',
     icon: 'fa-users-gear',
-    link: '/zero-trust'
+    link: '/platform/pam'
   },
   {
     id: 'grc',
@@ -48,7 +48,7 @@ const platformModules = [
     tag: '→ Risk + Compliance',
     desc: 'Continuous attack surface management, vulnerability scanning & compliance audits.',
     icon: 'fa-triangle-exclamation',
-    link: '/compliance'
+    link: '/platform/grc'
   },
   {
     id: 'ai-sec',
@@ -56,11 +56,11 @@ const platformModules = [
     tag: '→ AI/ML Security + AI Threat Detection',
     desc: 'AI engine protection, model vulnerability defense & LLM threat triage.',
     icon: 'fa-microchip',
-    link: '/products/acis'
+    link: '/platform/ai-security'
   }
 ];
 
-export default function ConvergedPlatformBar() {
+export default function ConvergedPlatformBar({ onItemClick }) {
   return (
     <div className="converged-platform-card-wrapper">
       {/* Top Header Bar */}
@@ -70,16 +70,16 @@ export default function ConvergedPlatformBar() {
             <i className="fas fa-shapes"></i>
           </div>
           <div>
-            <div className="converged-platform-heading">
+            <Link to="/platform" className="converged-platform-heading-link" onClick={onItemClick}>
               Platform <i className="fas fa-arrow-right"></i>
-            </div>
+            </Link>
             <div className="converged-platform-subheading">
               Seven converged platforms working together as one intelligent cyber defense system.
             </div>
           </div>
         </div>
 
-        <Link to="/products/acis" className="converged-platform-cta-btn">
+        <Link to="/products/acis" className="converged-platform-cta-btn" onClick={onItemClick}>
           Explore Full Architecture &rarr;
         </Link>
       </div>
@@ -87,7 +87,7 @@ export default function ConvergedPlatformBar() {
       {/* 7 Modules Grid */}
       <div className="converged-platform-grid">
         {platformModules.map((module) => (
-          <Link key={module.id} to={module.link} className="converged-item-card">
+          <Link key={module.id} to={module.link} className="converged-item-card" onClick={onItemClick}>
             <div className="converged-item-icon-orb">
               <i className={`fas ${module.icon}`}></i>
             </div>
@@ -108,7 +108,7 @@ export default function ConvergedPlatformBar() {
           <span className="dot"></span>
           Single Agent &bull; Single Console &bull; Autonomous Cyber Defense
         </div>
-        <Link to="/products/acis" className="converged-footer-link">
+        <Link to="/products/acis" className="converged-footer-link" onClick={onItemClick}>
           View Interactive Platform Wheel &rarr;
         </Link>
       </div>
