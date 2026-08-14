@@ -324,8 +324,7 @@ body {
   list-style: none;
 }
 
-.nav-item.mega-dropdown:hover .mega-menu-dropdown,
-.nav-item.mega-dropdown:focus-within .mega-menu-dropdown {
+.nav-item.mega-dropdown.mobile-submenu-open .mega-menu-dropdown {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;

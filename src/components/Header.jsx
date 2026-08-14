@@ -6,9 +6,9 @@ import CountryDropdown from './CountryDropdown';
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [platformOpen, setPlatformOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [isPlatformOpen, setIsPlatformOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   
   const location = useLocation();
   const headerRef = useRef(null);
@@ -31,54 +31,62 @@ export default function Header() {
     setMobileOpen(false);
   }, [location]);
 
-  // Close mobile drawer on click outside
+  // Close all menus when clicking outside the header
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (headerRef.current && !headerRef.current.contains(event.target)) {
+        setIsPlatformOpen(false);
+        setIsProductsOpen(false);
+        setIsSolutionsOpen(false);
         setMobileOpen(false);
       }
     };
-    if (mobileOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('touchstart', handleClickOutside);
-    }
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
     };
-  }, [mobileOpen]);
+  }, []);
 
   // Reset dropdown open states when mobile menu closes
   useEffect(() => {
     if (!mobileOpen) {
-      setPlatformOpen(false);
-      setProductsOpen(false);
-      setSolutionsOpen(false);
+      setIsPlatformOpen(false);
+      setIsProductsOpen(false);
+      setIsSolutionsOpen(false);
     }
   }, [mobileOpen]);
 
   const handleDropdownToggle = (e, menuName) => {
-    if (window.innerWidth < 1024) {
-      e.preventDefault();
-      if (menuName === 'platform') {
-        setPlatformOpen(prev => !prev);
-        setProductsOpen(false);
-        setSolutionsOpen(false);
-      } else if (menuName === 'products') {
-        setProductsOpen(prev => !prev);
-        setPlatformOpen(false);
-        setSolutionsOpen(false);
-      } else if (menuName === 'solutions') {
-        setSolutionsOpen(prev => !prev);
-        setPlatformOpen(false);
-        setProductsOpen(false);
-      }
+    e.preventDefault();
+    e.stopPropagation();
+    if (menuName === 'platform') {
+      setIsPlatformOpen(prev => !prev);
+      setIsProductsOpen(false);
+      setIsSolutionsOpen(false);
+    } else if (menuName === 'products') {
+      setIsProductsOpen(prev => !prev);
+      setIsPlatformOpen(false);
+      setIsSolutionsOpen(false);
+    } else if (menuName === 'solutions') {
+      setIsSolutionsOpen(prev => !prev);
+      setIsPlatformOpen(false);
+      setIsProductsOpen(false);
     }
   };
 
+  const closeAllMenus = () => {
+    setIsPlatformOpen(false);
+    setIsProductsOpen(false);
+    setIsSolutionsOpen(false);
+    setMobileOpen(false);
+  };
+
+  const isPlatformActive = location.pathname.startsWith('/platform');
+  const isProductsActive = location.pathname.startsWith('/products') || ['/cyrix-xdr'].includes(location.pathname);
+  const isSolutionsActive = ['/services', '/vapt', '/zero-trust', '/cloud-security', '/incident-response', '/managed-soc'].includes(location.pathname);
   const isActive = (path) => location.pathname === path;
-  const isProductsActive = ['/products', '/products/acis', '/cyrix-xdr', '/managed-soc', '/platform/endpoint-detection', '/platform/siem', '/platform/soar', '/platform/cti', '/platform/pam', '/platform/grc', '/platform/ai-security'].includes(location.pathname);
-  const isSolutionsActive = ['/services', '/vapt', '/zero-trust', '/cloud-security', '/incident-response', '/managed-soc', '/platform/endpoint-detection', '/platform/siem', '/platform/soar', '/platform/cti', '/platform/pam', '/platform/grc', '/platform/ai-security'].includes(location.pathname);
 
   return (
     <header className={`site-header ${isScrolled ? 'scrolled' : ''} ${mobileOpen ? 'mobile-menu-active' : ''}`} id="siteHeader" ref={headerRef}>
@@ -88,19 +96,19 @@ export default function Header() {
         </Link>
 
         <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>
-          <li className={`nav-item dropdown mega-dropdown ${platformOpen ? 'mobile-submenu-open' : ''}`}>
+          <li className={`nav-item dropdown mega-dropdown ${isPlatformOpen ? 'mobile-submenu-open' : ''}`}>
             <Link 
               to="/platform" 
-              className={`nav-link ${isActive('/platform') ? 'active' : ''}`}
+              className={`nav-link ${isPlatformActive ? 'active' : ''}`}
               onClick={(e) => handleDropdownToggle(e, 'platform')}
             >
               Platform <i className="fas fa-chevron-down nav-arrow"></i>
             </Link>
-            <div className="mega-menu-dropdown">
-              <ConvergedPlatformBar onItemClick={() => setMobileOpen(false)} />
+            <div className="mega-menu-dropdown" onClick={(e) => e.stopPropagation()}>
+              <ConvergedPlatformBar onItemClick={closeAllMenus} />
             </div>
           </li>
-          <li className={`nav-item dropdown mega-dropdown ${productsOpen ? 'mobile-submenu-open' : ''}`}>
+          <li className={`nav-item dropdown mega-dropdown ${isProductsOpen ? 'mobile-submenu-open' : ''}`}>
             <Link 
               to="/products" 
               className={`nav-link ${isProductsActive ? 'active' : ''}`}
@@ -108,7 +116,7 @@ export default function Header() {
             >
               Products <i className="fas fa-chevron-down nav-arrow"></i>
             </Link>
-            <div className="mega-menu-dropdown products-mega-menu">
+            <div className="mega-menu-dropdown products-mega-menu" onClick={(e) => e.stopPropagation()}>
               <div className="products-mega-menu-inner">
                 {/* Left Column: Cybersecurity Platform */}
                 <div className="products-mega-col cybersecurity-col">
@@ -116,7 +124,7 @@ export default function Header() {
                   <div className="products-mega-underline"></div>
                   
                   <div className="products-mega-list">
-                    <Link to="/products/acis" className="products-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/products/acis" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
                         <i className="fas fa-shield-alt"></i>
                       </div>
@@ -126,57 +134,83 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/cyrix-xdr" className="products-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/products/xdr" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
                         <i className="fas fa-crosshairs"></i>
                       </div>
                       <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">Cyrix XDR</h4>
+                        <h4 className="products-mega-item-title">NetCradus XDR</h4>
                         <p className="products-mega-item-desc">AI-powered unified endpoint, cloud and network protection.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/products/siem" className="products-mega-item" onClick={closeAllMenus}>
+                      <div className="products-mega-icon-container">
+                        <i className="fas fa-bullseye"></i>
+                      </div>
+                      <div className="products-mega-text">
+                        <h4 className="products-mega-item-title">NetCradus SIEM</h4>
+                        <p className="products-mega-item-desc">Real-time log management, dynamic correlation and threat matching.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/products/soar" className="products-mega-item" onClick={closeAllMenus}>
+                      <div className="products-mega-icon-container">
+                        <i className="fas fa-bolt"></i>
+                      </div>
+                      <div className="products-mega-text">
+                        <h4 className="products-mega-item-title">NetCradus SOAR</h4>
+                        <p className="products-mega-item-desc">Autonomous playbooks execution and active incident containment.</p>
                       </div>
                     </Link>
                   </div>
                 </div>
 
-                {/* Middle Column: Business Solutions */}
+                {/* Middle Column: Cyber Defense Modules */}
                 <div className="products-mega-col business-col">
-                  <h3 className="products-mega-heading">BUSINESS SOLUTIONS</h3>
+                  <h3 className="products-mega-heading">CYBER DEFENSE MODULES</h3>
                   <div className="products-mega-underline"></div>
 
                   <div className="products-mega-list">
-                    <Link to="/products" className="products-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/products/cti" className="products-mega-item" onClick={closeAllMenus}>
+                      <div className="products-mega-icon-container">
+                        <i className="fas fa-eye"></i>
+                      </div>
+                      <div className="products-mega-text">
+                        <h4 className="products-mega-item-title">NetCradus CTI</h4>
+                        <p className="products-mega-item-desc">Real-time threat intelligence lookup and dynamic IOC enrichment.</p>
+                      </div>
+                    </Link>
+
+                    <Link to="/products/pam" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
                         <i className="fas fa-users-cog"></i>
                       </div>
                       <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">NetCRM</h4>
-                        <p className="products-mega-item-desc">Enterprise relationship and operations platform.</p>
+                        <h4 className="products-mega-item-title">NetCradus PAM</h4>
+                        <p className="products-mega-item-desc">Privileged access management and Zero Trust identity verification.</p>
                       </div>
                     </Link>
 
-                    <Link to="/products" className="products-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/products/grc" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
-                        <i className="fas fa-exclamation-triangle"></i>
+                        <i className="fas fa-triangle-exclamation"></i>
                       </div>
                       <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">NetCrad</h4>
-                        <p className="products-mega-item-desc">
-                          AI-powered website security auditing and vulnerability assessment platform that scans websites for weaknesses, compliance, and performance risks.
-                        </p>
+                        <h4 className="products-mega-item-title">NetCradus GRC</h4>
+                        <p className="products-mega-item-desc">Continuous compliance audits (NIS2, GDPR) and risk scoring.</p>
                       </div>
                     </Link>
 
-                    <div className="products-mega-item products-mega-item-soon">
+                    <Link to="/products/ai-security" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
-                        <i className="fas fa-magic"></i>
+                        <i className="fas fa-microchip"></i>
                       </div>
                       <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">
-                          Future Products <span className="badge-soon">SOON</span>
-                        </h4>
-                        <p className="products-mega-item-desc">Sparking new security intelligence engines coming soon.</p>
+                        <h4 className="products-mega-item-title">NetCradus AI Security</h4>
+                        <p className="products-mega-item-desc">Inference query firewalls and model weights exfiltration protection.</p>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
@@ -206,7 +240,7 @@ export default function Header() {
                       <span className="promo-tag-pill">Secure by Design</span>
                     </div>
 
-                    <Link to="/products" className="promo-cta-btn" onClick={() => setMobileOpen(false)}>
+                    <Link to="/products" className="promo-cta-btn" onClick={closeAllMenus}>
                       Explore Products &rarr;
                     </Link>
                   </div>
@@ -214,7 +248,7 @@ export default function Header() {
               </div>
             </div>
           </li>
-          <li className={`nav-item dropdown mega-dropdown ${solutionsOpen ? 'mobile-submenu-open' : ''}`}>
+          <li className={`nav-item dropdown mega-dropdown ${isSolutionsOpen ? 'mobile-submenu-open' : ''}`}>
             <Link 
               to="/services" 
               className={`nav-link ${isSolutionsActive ? 'active' : ''}`}
@@ -222,7 +256,7 @@ export default function Header() {
             >
               Solutions <i className="fas fa-chevron-down nav-arrow"></i>
             </Link>
-            <div className="mega-menu-dropdown solutions-mega-menu">
+            <div className="mega-menu-dropdown solutions-mega-menu" onClick={(e) => e.stopPropagation()}>
               {/* Pointer Triangle */}
               <div className="mega-menu-pointer"></div>
 
@@ -233,7 +267,7 @@ export default function Header() {
                   <div className="solutions-mega-underline"></div>
                   
                   <div className="solutions-mega-list">
-                    <Link to="/services" className="solutions-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/services" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-shield-alt"></i>
                       </div>
@@ -243,7 +277,7 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/managed-soc" className="solutions-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/managed-soc" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-eye"></i>
                       </div>
@@ -253,7 +287,7 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/cloud-security" className="solutions-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/cloud-security" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-network-wired"></i>
                       </div>
@@ -271,7 +305,7 @@ export default function Header() {
                   <div className="solutions-mega-underline"></div>
 
                   <div className="solutions-mega-list">
-                    <Link to="/cloud-security" className="solutions-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/cloud-security" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-cloud"></i>
                       </div>
@@ -281,7 +315,7 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/services" className="solutions-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/services" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-brain"></i>
                       </div>
@@ -291,7 +325,7 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/services" className="solutions-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/services" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-building"></i>
                       </div>
@@ -301,7 +335,7 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/vapt" className="solutions-mega-item" onClick={() => setMobileOpen(false)}>
+                    <Link to="/vapt" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-bug"></i>
                       </div>
@@ -331,7 +365,7 @@ export default function Header() {
                       Discover AI-powered cybersecurity, healthcare, cloud, and digital transformation solutions designed to secure and accelerate modern businesses.
                     </p>
 
-                    <Link to="/services" className="promo-cta-btn" onClick={() => setMobileOpen(false)}>
+                    <Link to="/services" className="promo-cta-btn" onClick={closeAllMenus}>
                       Explore Solutions &rarr;
                     </Link>
                   </div>
@@ -340,10 +374,10 @@ export default function Header() {
             </div>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`} onClick={() => setMobileOpen(false)}>Contact</Link>
+            <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`} onClick={closeAllMenus}>Contact</Link>
           </li>
           <li className="nav-mobile-actions">
-            <Link to="/contact" className="btn-talk-expert" onClick={() => setMobileOpen(false)}>
+            <Link to="/contact" className="btn-talk-expert" onClick={closeAllMenus}>
               Talk to an Expert &rarr;
             </Link>
             <div className="nav-mobile-country">

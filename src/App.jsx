@@ -37,12 +37,20 @@ export default function App() {
           <Route path="acis" element={<Navigate to="/products/acis" replace />} />
           <Route path="platform" element={<Platform />} />
           <Route path="platform/endpoint-detection" element={<EndpointDetection />} />
+          <Route path="platform/xdr" element={<EndpointDetection />} />
           <Route path="platform/siem" element={<Siem />} />
           <Route path="platform/soar" element={<Soar />} />
           <Route path="platform/cti" element={<Cti />} />
           <Route path="platform/pam" element={<Pam />} />
           <Route path="platform/grc" element={<Grc />} />
           <Route path="platform/ai-security" element={<AiSecurity />} />
+          <Route path="products/xdr" element={<EndpointDetection />} />
+          <Route path="products/siem" element={<Siem />} />
+          <Route path="products/soar" element={<Soar />} />
+          <Route path="products/cti" element={<Cti />} />
+          <Route path="products/pam" element={<Pam />} />
+          <Route path="products/grc" element={<Grc />} />
+          <Route path="products/ai-security" element={<AiSecurity />} />
           <Route path="products" element={<Products />} />
           <Route path="services" element={<Services />} />
           <Route path="managed-soc" element={<ManagedSoc />} />

@@ -8,7 +8,7 @@ const platformModules = [
     tag: '→ Endpoint + Threat Hunting + Detection',
     desc: 'AI-powered unified endpoint, network and real-time threat hunting detection.',
     icon: 'fa-shield-halved',
-    link: '/platform/endpoint-detection'
+    link: '/platform/xdr'
   },
   {
     id: 'siem',
