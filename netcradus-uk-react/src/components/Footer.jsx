@@ -80,7 +80,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom" style={{ marginTop: '2.5rem' }}>
-          <div>&copy; 2026 Netcradus Limited. All rights reserved. Registered in England &amp; Wales.</div>
+          <div>&copy; 2026 Netcradus Limited. All rights reserved.</div>
         </div>
       </div>
     </footer>
