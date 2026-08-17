@@ -317,14 +317,14 @@ export default function AiSecurity() {
                       <span className="siem-browser-dot yellow" />
                       <span className="siem-browser-dot green" />
                     </div>
-                    <span className="siem-browser-address">app.netcradus.com/acis-ai-security</span>
-                    <span className="siem-browser-title">AI SECURITY & MONITORING</span>
+                    <span className="siem-browser-address">app.netcradus.com/llm-login</span>
+                    <span className="siem-browser-title">NETCRADUS LLM | LOGIN</span>
                   </div>
                   
-                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-dashboard.png", alt: "NetCradus AI Security & LLM Briefings Dashboard" })}>
-                    <img src="/images/netxdr-siem-dashboard.png" alt="NetCradus AI Security & LLM Briefings Dashboard" className="siem-browser-image" />
+                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netcradus-llm-login.png", alt: "NetCradus LLM Secure AI Platform Login" })}>
+                    <img src="/images/netcradus-llm-login.png" alt="NetCradus LLM Secure AI Platform Login" className="siem-browser-image" />
                     <div className="siem-image-overlay">
-                      <i className="fas fa-expand"></i> Click to Expand AI Security Dashboard
+                      <i className="fas fa-expand"></i> Click to Expand NetCradus LLM Login
                     </div>
                   </div>
                 </div>
@@ -704,13 +704,13 @@ export default function AiSecurity() {
                 <span className="siem-browser-dot yellow" />
                 <span className="siem-browser-dot green" />
               </div>
-              <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-ai-safety-dashboard</span>
-              <span className="siem-browser-title">AI SAFETY METRICS OVERVIEW</span>
+              <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/llm-interface</span>
+              <span className="siem-browser-title">NETCRADUS LLM | AI INTERFACE</span>
             </div>
-            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-dashboard.png", alt: "AI Safety Metrics Dashboard Overview" })}>
-              <img src="/images/netxdr-siem-dashboard.png" alt="AI Safety Metrics Dashboard Overview" className="siem-browser-image" />
+            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netcradus-llm-interface.png", alt: "NetCradus LLM AI Interface Dashboard" })}>
+              <img src="/images/netcradus-llm-interface.png" alt="NetCradus LLM AI Interface Dashboard" className="siem-browser-image" />
               <div className="siem-image-overlay">
-                <i className="fas fa-expand"></i> Click to Expand Dashboard Overview
+                <i className="fas fa-expand"></i> Click to Expand NetCradus LLM Interface
               </div>
             </div>
           </div>

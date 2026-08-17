@@ -321,8 +321,8 @@ export default function Grc() {
                     <span className="siem-browser-title">RISK & COMPLIANCE</span>
                   </div>
                   
-                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-correlation.png", alt: "NetCradus GRC Compliance & Searches Dashboard" })}>
-                    <img src="/images/netxdr-siem-correlation.png" alt="NetCradus GRC Compliance & Searches Dashboard" className="siem-browser-image" />
+                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/grc-compliance.png", alt: "NetCradus GRC Compliance & Searches Dashboard" })}>
+                    <img src="/images/grc-compliance.png" alt="NetCradus GRC Compliance & Searches Dashboard" className="siem-browser-image" />
                     <div className="siem-image-overlay">
                       <i className="fas fa-expand"></i> Click to Expand GRC Dashboard
                     </div>
@@ -508,8 +508,8 @@ export default function Grc() {
                   </h3>
                   <span className="siem-telemetry-badge-active">MONITORED</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-correlation.png", alt: "Active Compliance Rules Panel" })}>
-                  <img src="/images/netxdr-siem-correlation.png" alt="Active Compliance Rules Panel" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/grc-active-rules.png", alt: "Active Compliance Rules Panel" })}>
+                  <img src="/images/grc-active-rules.png" alt="Active Compliance Rules Panel" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -532,8 +532,8 @@ export default function Grc() {
                   </h3>
                   <span className="siem-telemetry-badge-live">DAILY TRACK</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-correlation.png", alt: "Policy Violations Console" })}>
-                  <img src="/images/netxdr-siem-correlation.png" alt="Policy Violations Console" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/grc-compliance.png", alt: "Policy Violations Console" })}>
+                  <img src="/images/grc-compliance.png" alt="Policy Violations Console" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -556,8 +556,8 @@ export default function Grc() {
                   </h3>
                   <span className="siem-telemetry-badge-subsecond">LIVE INDEX</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-correlation.png", alt: "GRC Risk Index Panel" })}>
-                  <img src="/images/netxdr-siem-correlation.png" alt="GRC Risk Index Panel" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/grc-compliance.png", alt: "GRC Risk Index Panel" })}>
+                  <img src="/images/grc-compliance.png" alt="GRC Risk Index Panel" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -612,8 +612,8 @@ export default function Grc() {
                   <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-compliance-searches</span>
                   <span className="siem-browser-title">GRC SEARCHES CONSOLE</span>
                 </div>
-                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-correlation.png", alt: "Compliance Rules Searches Workbench" })}>
-                  <img src="/images/netxdr-siem-correlation.png" alt="Compliance Rules Searches Workbench" className="siem-browser-image" />
+                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/grc-compliance.png", alt: "Compliance Rules Searches Workbench" })}>
+                  <img src="/images/grc-compliance.png" alt="Compliance Rules Searches Workbench" className="siem-browser-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand GRC Searches Console
                   </div>
@@ -646,11 +646,11 @@ export default function Grc() {
                     <span className="siem-browser-dot yellow" />
                     <span className="siem-browser-dot green" />
                   </div>
-                  <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-grc-containment</span>
-                  <span className="siem-browser-title">COMPLIANCE CONTAINMENT</span>
+                  <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-system-audit-trail</span>
+                  <span className="siem-browser-title">SYSTEM AUDIT TRAIL</span>
                 </div>
-                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-correlation.png", alt: "Compliance Active Containment Dashboard" })}>
-                  <img src="/images/netxdr-siem-correlation.png" alt="Compliance Active Containment Dashboard" className="siem-browser-image" />
+                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/grc-audit-trail.png", alt: "Compliance Active Containment and System Audit Trail" })}>
+                  <img src="/images/grc-audit-trail.png" alt="Compliance Active Containment and System Audit Trail" className="siem-browser-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Containment Console
                   </div>
@@ -707,8 +707,8 @@ export default function Grc() {
               <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-compliance-dashboard</span>
               <span className="siem-browser-title">GRC COMPLIANCE OVERVIEW</span>
             </div>
-            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-correlation.png", alt: "GRC Metrics Dashboard Overview" })}>
-              <img src="/images/netxdr-siem-correlation.png" alt="GRC Metrics Dashboard Overview" className="siem-browser-image" />
+            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/grc-compliance.png", alt: "GRC Metrics Dashboard Overview" })}>
+              <img src="/images/grc-compliance.png" alt="GRC Metrics Dashboard Overview" className="siem-browser-image" />
               <div className="siem-image-overlay">
                 <i className="fas fa-expand"></i> Click to Expand Dashboard Overview
               </div>

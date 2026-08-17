@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Acis() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
+      {/* PAGE 03 — ACIS PLATFORM VIDEO HERO SECTION */}
+      <section className="acis-video-hero">
+        <div className="acis-video-overlay"></div>
+        <video
+          className="acis-video-element"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-label="ACIS Platform Autonomous Cyber Immune System Demonstration Video"
+        >
+          <source src={`${import.meta.env.BASE_URL}videos/ACIS PPT video 1.mp4`} type="video/mp4" />
+          <source src="/videos/ACIS PPT video 1.mp4" type="video/mp4" />
+        </video>
+      </section>
+
       {/* PAGE 03 — ACIS PLATFORM HERO SECTION */}
       <section className="platform-hero">
         <div className="platform-hero-overlay"></div>

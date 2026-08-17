@@ -321,8 +321,8 @@ export default function Pam() {
                     <span className="endpoint-browser-title">ACCESS & INTEGRATIONS</span>
                   </div>
                   
-                  <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-agent-deployment.png", alt: "NetCradus PAM Credentials & Agent Deployment Console" })}>
-                    <img src="/images/netxdr-siem-agent-deployment.png" alt="NetCradus PAM Credentials & Agent Deployment Console" className="endpoint-browser-image" />
+                  <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/pam-dashboard.png", alt: "NetCradus PAM Credentials & Agent Deployment Console" })}>
+                    <img src="/images/pam-dashboard.png" alt="NetCradus PAM Credentials & Agent Deployment Console" className="endpoint-browser-image" />
                     <div className="endpoint-image-overlay">
                       <i className="fas fa-expand"></i> Click to Expand PAM Console
                     </div>
@@ -388,8 +388,8 @@ export default function Pam() {
                   </h3>
                   <span className="endpoint-telemetry-badge-active">ACTIVE SYNC</span>
                 </div>
-                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-agent-deployment.png", alt: "Gateways Enrollment Console" })}>
-                  <img src="/images/netxdr-siem-agent-deployment.png" alt="Gateways Enrollment Console" className="endpoint-telemetry-image" />
+                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/pam-agent-deployment.png", alt: "Gateways Enrollment Console" })}>
+                  <img src="/images/pam-agent-deployment.png" alt="Gateways Enrollment Console" className="endpoint-telemetry-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -412,8 +412,8 @@ export default function Pam() {
                   </h3>
                   <span className="endpoint-telemetry-badge-live">AUTOMATED RUN</span>
                 </div>
-                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-agent-deployment.png", alt: "Silent Installation Commands Panel" })}>
-                  <img src="/images/netxdr-siem-agent-deployment.png" alt="Silent Installation Commands Panel" className="endpoint-telemetry-image" />
+                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/pam-silent-install.jpg", alt: "Silent Installation Commands Panel" })}>
+                  <img src="/images/pam-silent-install.jpg" alt="Silent Installation Commands Panel" className="endpoint-telemetry-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -436,8 +436,8 @@ export default function Pam() {
                   </h3>
                   <span className="endpoint-telemetry-badge-subsecond">SECURE TOKENS</span>
                 </div>
-                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-agent-deployment.png", alt: "Token Secret Management Panel" })}>
-                  <img src="/images/netxdr-siem-agent-deployment.png" alt="Token Secret Management Panel" className="endpoint-telemetry-image" />
+                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/pam-keys-rotation.png", alt: "Token Secret Management Panel" })}>
+                  <img src="/images/pam-keys-rotation.png" alt="Token Secret Management Panel" className="endpoint-telemetry-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -492,8 +492,8 @@ export default function Pam() {
                   <span className="endpoint-browser-address" style={{ color: '#FF6B00' }}>app.netcradus.com/acis-pam-credentials</span>
                   <span className="endpoint-browser-title">GATEWAY DEPLOYMENT</span>
                 </div>
-                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-agent-deployment.png", alt: "Secure Gateway Deployment Panel" })}>
-                  <img src="/images/netxdr-siem-agent-deployment.png" alt="Secure Gateway Deployment Panel" className="endpoint-browser-image" />
+                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/pam-workbenches.jpg", alt: "Secure Gateway Deployment Panel" })}>
+                  <img src="/images/pam-workbenches.jpg" alt="Secure Gateway Deployment Panel" className="endpoint-browser-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Gateway Console
                   </div>
@@ -529,8 +529,8 @@ export default function Pam() {
                   <span className="endpoint-browser-address" style={{ color: '#FF6B00' }}>app.netcradus.com/acis-pam-actions</span>
                   <span className="endpoint-browser-title">ACCESS RESTRICTIONS</span>
                 </div>
-                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-agent-deployment.png", alt: "Active Session Restrictions Panel" })}>
-                  <img src="/images/netxdr-siem-agent-deployment.png" alt="Active Session Restrictions Panel" className="endpoint-browser-image" />
+                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/pam-dashboard.png", alt: "Active Session Restrictions Panel" })}>
+                  <img src="/images/pam-dashboard.png" alt="Active Session Restrictions Panel" className="endpoint-browser-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Restrictions Console
                   </div>
@@ -587,8 +587,8 @@ export default function Pam() {
               <span className="endpoint-browser-address" style={{ color: '#FF6B00' }}>app.netcradus.com/acis-pam-dashboard</span>
               <span className="endpoint-browser-title">ACCESS CREDENTIALS SUMMARY</span>
             </div>
-            <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-agent-deployment.png", alt: "PAM Gateways Dashboard Overview" })}>
-              <img src="/images/netxdr-siem-agent-deployment.png" alt="PAM Gateways Dashboard Overview" className="endpoint-browser-image" />
+            <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/pam-dashboard.png", alt: "PAM Gateways Dashboard Overview" })}>
+              <img src="/images/pam-dashboard.png" alt="PAM Gateways Dashboard Overview" className="endpoint-browser-image" />
               <div className="endpoint-image-overlay">
                 <i className="fas fa-expand"></i> Click to Expand Dashboard Overview
               </div>

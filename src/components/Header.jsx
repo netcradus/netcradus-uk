@@ -26,10 +26,13 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile drawer on route change
+  // Close all menus and mobile drawer on route change
   useEffect(() => {
+    setIsPlatformOpen(false);
+    setIsProductsOpen(false);
+    setIsSolutionsOpen(false);
     setMobileOpen(false);
-  }, [location]);
+  }, [location.pathname]);
 
   // Close all menus when clicking outside the header
   useEffect(() => {
@@ -91,12 +94,12 @@ export default function Header() {
   return (
     <header className={`site-header ${isScrolled ? 'scrolled' : ''} ${mobileOpen ? 'mobile-menu-active' : ''}`} id="siteHeader" ref={headerRef}>
       <div className="nav-container">
-        <Link to="/" className="brand-logo" aria-label="Netcradus UK Homepage">
+        <Link to="/" className="brand-logo" aria-label="Netcradus UK Homepage" onClick={closeAllMenus}>
           <img src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`} alt="Netcradus UK Logo" className="brand-logo-img" />
         </Link>
 
         <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>
-          <li className={`nav-item dropdown mega-dropdown ${isPlatformOpen ? 'mobile-submenu-open' : ''}`}>
+          <li className={`nav-item dropdown mega-dropdown ${isPlatformOpen ? 'mobile-submenu-open is-open' : 'is-closed'}`}>
             <Link 
               to="/platform" 
               className={`nav-link ${isPlatformActive ? 'active' : ''}`}
@@ -108,15 +111,20 @@ export default function Header() {
               <ConvergedPlatformBar onItemClick={closeAllMenus} />
             </div>
           </li>
-          <li className={`nav-item dropdown mega-dropdown ${isProductsOpen ? 'mobile-submenu-open' : ''}`}>
+          <li 
+            className={`nav-item dropdown mega-dropdown ${isProductsOpen ? 'mobile-submenu-open is-open' : 'is-closed'}`}
+            onMouseEnter={() => { if (window.innerWidth > 768) setIsProductsOpen(true); }}
+            onMouseLeave={() => { if (window.innerWidth > 768) setIsProductsOpen(false); }}
+          >
             <Link 
               to="/products" 
-              className={`nav-link ${isProductsActive ? 'active' : ''}`}
+              className={`nav-link ${isProductsActive || isProductsOpen ? 'active' : ''}`}
               onClick={(e) => handleDropdownToggle(e, 'products')}
             >
               Products <i className="fas fa-chevron-down nav-arrow"></i>
             </Link>
             <div className="mega-menu-dropdown products-mega-menu" onClick={(e) => e.stopPropagation()}>
+              <div className="products-mega-pointer"></div>
               <div className="products-mega-menu-inner">
                 {/* Left Column: Cybersecurity Platform */}
                 <div className="products-mega-col cybersecurity-col">
@@ -134,102 +142,74 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/products/xdr" className="products-mega-item" onClick={closeAllMenus}>
+                    <Link to="/cyrix-xdr" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
                         <i className="fas fa-crosshairs"></i>
                       </div>
                       <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">NetCradus XDR</h4>
+                        <h4 className="products-mega-item-title">Cyrix XDR</h4>
                         <p className="products-mega-item-desc">AI-powered unified endpoint, cloud and network protection.</p>
                       </div>
                     </Link>
-
-                    <Link to="/products/siem" className="products-mega-item" onClick={closeAllMenus}>
-                      <div className="products-mega-icon-container">
-                        <i className="fas fa-bullseye"></i>
-                      </div>
-                      <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">NetCradus SIEM</h4>
-                        <p className="products-mega-item-desc">Real-time log management, dynamic correlation and threat matching.</p>
-                      </div>
-                    </Link>
-
-                    <Link to="/products/soar" className="products-mega-item" onClick={closeAllMenus}>
-                      <div className="products-mega-icon-container">
-                        <i className="fas fa-bolt"></i>
-                      </div>
-                      <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">NetCradus SOAR</h4>
-                        <p className="products-mega-item-desc">Autonomous playbooks execution and active incident containment.</p>
-                      </div>
-                    </Link>
                   </div>
                 </div>
 
-                {/* Middle Column: Cyber Defense Modules */}
+                {/* Middle Column: Business Solutions */}
                 <div className="products-mega-col business-col">
-                  <h3 className="products-mega-heading">CYBER DEFENSE MODULES</h3>
+                  <h3 className="products-mega-heading">BUSINESS SOLUTIONS</h3>
                   <div className="products-mega-underline"></div>
 
                   <div className="products-mega-list">
-                    <Link to="/products/cti" className="products-mega-item" onClick={closeAllMenus}>
+                    <Link to="/products" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
-                        <i className="fas fa-eye"></i>
+                        <i className="fas fa-users"></i>
                       </div>
                       <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">NetCradus CTI</h4>
-                        <p className="products-mega-item-desc">Real-time threat intelligence lookup and dynamic IOC enrichment.</p>
+                        <h4 className="products-mega-item-title">NetCRM</h4>
+                        <p className="products-mega-item-desc">Enterprise relationship and operations platform.</p>
                       </div>
                     </Link>
 
-                    <Link to="/products/pam" className="products-mega-item" onClick={closeAllMenus}>
+                    <Link to="/products" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
-                        <i className="fas fa-users-cog"></i>
+                        <i className="fas fa-shield-alt"></i>
                       </div>
                       <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">NetCradus PAM</h4>
-                        <p className="products-mega-item-desc">Privileged access management and Zero Trust identity verification.</p>
+                        <h4 className="products-mega-item-title">NetCrad</h4>
+                        <p className="products-mega-item-desc">AI-powered website security auditing and vulnerability assessment.</p>
                       </div>
                     </Link>
 
-                    <Link to="/products/grc" className="products-mega-item" onClick={closeAllMenus}>
+                    <div className="products-mega-item products-mega-item-soon">
                       <div className="products-mega-icon-container">
-                        <i className="fas fa-triangle-exclamation"></i>
+                        <i className="fas fa-magic"></i>
                       </div>
                       <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">NetCradus GRC</h4>
-                        <p className="products-mega-item-desc">Continuous compliance audits (NIS2, GDPR) and risk scoring.</p>
+                        <h4 className="products-mega-item-title">
+                          Future Products <span className="badge-soon">SOON</span>
+                        </h4>
+                        <p className="products-mega-item-desc">Sparking new security intelligence engines coming soon.</p>
                       </div>
-                    </Link>
-
-                    <Link to="/products/ai-security" className="products-mega-item" onClick={closeAllMenus}>
-                      <div className="products-mega-icon-container">
-                        <i className="fas fa-microchip"></i>
-                      </div>
-                      <div className="products-mega-text">
-                        <h4 className="products-mega-item-title">NetCradus AI Security</h4>
-                        <p className="products-mega-item-desc">Inference query firewalls and model weights exfiltration protection.</p>
-                      </div>
-                    </Link>
+                    </div>
                   </div>
                 </div>
 
-                {/* Right Column: Large Orange Promo Card */}
+                {/* Right Column: Featured Products Card */}
                 <div className="products-mega-col promo-col">
                   <div className="products-promo-card">
-                    {/* Background Technical Pattern */}
+                    {/* Background Security Pattern */}
                     <div className="promo-tech-bg">
                       <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="150" cy="150" r="120" stroke="rgba(255,255,255,0.06)" strokeWidth="1" strokeDasharray="5 5" />
-                        <polygon points="150,50 250,110 250,220 150,280 50,220 50,110" stroke="rgba(255,255,255,0.04)" strokeWidth="1.5" />
-                        <circle cx="150" cy="150" r="40" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
+                        <circle cx="150" cy="150" r="130" stroke="rgba(255,255,255,0.18)" strokeWidth="1.5" strokeDasharray="6 6" />
+                        <path d="M150 40 L240 85 V165 C240 220 150 260 150 260 C150 260 60 220 60 165 V85 L150 40 Z" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" fill="none" />
+                        <circle cx="150" cy="150" r="48" stroke="rgba(255,255,255,0.22)" strokeWidth="2" fill="none" />
                       </svg>
                     </div>
 
                     <span className="promo-badge">ENTERPRISE SECURITY PLATFORM</span>
                     <h3 className="promo-title">Netcradus Products</h3>
                     <p className="promo-desc">
-                      Discover AI-powered cybersecurity and business platforms designed to protect, automate, and accelerate your organization through a unified ecosystem.
+                      Discover AI-powered cybersecurity and business platforms.
                     </p>
 
                     <div className="promo-tags">
