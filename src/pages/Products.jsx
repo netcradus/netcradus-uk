@@ -40,9 +40,6 @@ function ScrollingCard({ children, title, desc, link, linkText }) {
         <>
           <h3 className="service-title">{title}</h3>
           <p className="service-desc">{desc}</p>
-          <Link to={link} className="platform-card-arrow" style={{ marginTop: 'auto', paddingTop: '1.5rem', textDecoration: 'none' }}>
-            {linkText} &rarr;
-          </Link>
         </>
       )}
     </div>
@@ -182,9 +179,6 @@ export default function Products() {
           <div className="product-scroll-header">
             <h3 className="service-title">NetCRM Portal</h3>
             <p className="service-desc">Enterprise relationship management, secure stakeholder operations, and digital compliance platforms built for secure business communications.</p>
-            <Link to="/contact" className="platform-card-arrow" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
-              Explore NetCRM &rarr;
-            </Link>
           </div>
           
           <ScrollingCard>
@@ -198,12 +192,18 @@ export default function Products() {
 
         {/* SECTION 2 - DARK MODE (ACIS) */}
         <section className="product-scroll-section dark-section section-acis">
-          <ScrollingCard 
-            title="ACIS™ Autonomous Engine"
-            desc="Continuous real-time threat anomaly detection, sub-second auto-containment, and agentic response playbooks."
-            link="/products/acis"
-            linkText="Explore ACIS"
-          />
+          <div className="product-scroll-header">
+            <h3 className="service-title">ACIS™ Autonomous Engine</h3>
+            <p className="service-desc">Continuous real-time threat anomaly detection, sub-second auto-containment, and agentic response playbooks.</p>
+          </div>
+          
+          <ScrollingCard>
+            <img 
+              src={`${import.meta.env.BASE_URL}images/acis_login_preview.png`} 
+              alt="ACIS Autonomous Engine Command Center" 
+              className="card-preview-image"
+            />
+          </ScrollingCard>
         </section>
 
         {/* SECTION 3 - LIGHT MODE (NIF) */}
@@ -218,12 +218,18 @@ export default function Products() {
 
         {/* SECTION 4 - DARK MODE (CYRIX XDR) */}
         <section className="product-scroll-section dark-section section-cyrix">
-          <ScrollingCard 
-            title="CYRIX XDR Unified Detection"
-            desc="Extended cross-layer threat detection and response across endpoint, network, identity, and cloud assets."
-            link="/platform/endpoint-detection"
-            linkText="Explore CYRIX"
-          />
+          <div className="product-scroll-header">
+            <h3 className="service-title">CYRIX XDR Unified Detection</h3>
+            <p className="service-desc">Extended cross-layer threat detection and response across endpoint, network, identity, and cloud assets.</p>
+          </div>
+          
+          <ScrollingCard>
+            <img 
+              src={`${import.meta.env.BASE_URL}images/cyrix-dashboard.png`} 
+              alt="CYRIX XDR Unified Detection Dashboard" 
+              className="card-preview-image"
+            />
+          </ScrollingCard>
         </section>
 
         {/* SECTION 5 - LIGHT MODE (Managed SOC & SIEM) */}

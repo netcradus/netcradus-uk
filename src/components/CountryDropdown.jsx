@@ -1,16 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import gbFlag from '../assets/flags/gb.svg';
 import inFlag from '../assets/flags/in.svg';
-import usFlag from '../assets/flags/us.svg';
 import auFlag from '../assets/flags/au.svg';
-import aeFlag from '../assets/flags/ae.svg';
 
 const COUNTRIES = [
-  { id: 'gb', name: 'United Kingdom', flag: gbFlag },
-  { id: 'in', name: 'India', flag: inFlag, url: 'https://www.netcradus.in/' },
-  { id: 'us', name: 'United States', flag: usFlag },
-  { id: 'au', name: 'Australia', flag: auFlag },
-  { id: 'ae', name: 'Dubai (UAE)', flag: aeFlag },
+  { id: 'gb', code: 'GB', name: 'United Kingdom', flag: gbFlag },
+  { id: 'in', code: 'IN', name: 'India', flag: inFlag, url: 'https://www.netcradus.in/' },
+  { id: 'au', code: 'AU', name: 'Australia', flag: auFlag, url: 'https://aus.netcradus.com/' },
 ];
 
 export default function CountryDropdown() {
@@ -31,6 +27,12 @@ export default function CountryDropdown() {
     setSelectedCountry(country);
     setIsOpen(false);
     setSearchQuery('');
+    
+    if (country.code === 'AU') {
+      window.location.href = 'https://aus.netcradus.com/';
+      return;
+    }
+    
     if (country.url) {
       window.location.href = country.url;
     }

@@ -1582,15 +1582,79 @@ body {
   color: var(--text-dim);
 }
 
-/* Platform Hero Section Background - Clean Dark Cybersecurity Theme */
+/* Footer Social Icon Buttons */
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF !important;
+  font-size: 19px;
+  text-decoration: none;
+  opacity: 1 !important;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.social-icon-btn i {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  font-size: 19px;
+}
+
+.social-icon-btn:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.social-icon-btn.instagram:hover {
+  border-color: #E4405F;
+  box-shadow: 0 0 10px rgba(228, 64, 95, 0.3);
+  background: rgba(228, 64, 95, 0.15);
+}
+
+.social-icon-btn.facebook:hover {
+  border-color: #1877F2;
+  box-shadow: 0 0 10px rgba(24, 119, 242, 0.3);
+  background: rgba(24, 119, 242, 0.15);
+}
+
+.social-icon-btn.linkedin:hover {
+  border-color: #0A66C2;
+  box-shadow: 0 0 10px rgba(10, 102, 194, 0.3);
+  background: rgba(10, 102, 194, 0.15);
+}
+
+.social-icon-btn.youtube:hover {
+  border-color: #FF0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  background: rgba(255, 0, 0, 0.15);
+}
+
+.social-icon-btn.twitter:hover {
+  border-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .platform-hero {
   position: relative;
   width: 100%;
-  background: linear-gradient(180deg, #050208 0%, #0b0518 100%);
+  min-height: 80vh;
+  background: 
+    linear-gradient(180deg, rgba(5, 2, 8, 0.1) 0%, rgba(5, 2, 8, 0.35) 50%, rgba(5, 2, 8, 0.8) 100%),
+    url('/assets/platformbg.png') no-repeat center bottom;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0 4rem;
+  padding: 8rem 0;
   overflow: hidden;
 }
 
@@ -5565,19 +5629,26 @@ img {
   font-size: 1.05rem;
 }
 
+.product-scroll-section.dark-section .product-scroll-header .service-title {
+  color: #ffffff !important;
+}
+
+.product-scroll-section.dark-section .product-scroll-header .service-desc {
+  color: #a7b5d1 !important;
+}
+
 /* Card image preview styles */
 .service-scrolling-card.card-has-preview {
   padding: 18px !important;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
+  height: auto;
   min-height: auto;
   align-items: stretch;
 }
 
 .card-preview-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
@@ -5947,6 +6018,43 @@ img {
   font-size: 1rem;
   font-weight: 700;
   color: #ffffff;
+}
+
+.git-clickable-link {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.git-clickable-link:hover {
+  color: #FF6A00 !important;
+}
+
+.git-icon-link {
+  text-decoration: none !important;
+  cursor: pointer;
+  display: inline-flex;
+  outline: none;
+}
+
+.git-icon-link:focus-visible .git-icon-wrapper,
+.git-clickable-link:focus-visible {
+  outline: 2px solid #FF6A00;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.git-icon-link .git-icon-wrapper {
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.git-icon-link:hover .git-icon-wrapper {
+  color: #FF6A00;
+  border-color: rgba(255, 106, 0, 0.5);
+  background: rgba(255, 106, 0, 0.18);
+  transform: scale(1.05);
 }
 
 .git-subtext {

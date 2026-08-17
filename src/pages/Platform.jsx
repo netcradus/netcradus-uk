@@ -753,6 +753,52 @@ export default function Platform() {
         </div>
       </section>
 
+      {/* PLATFORM-LEVEL CAPABILITIES */}
+      <section className="platform-capabilities-section">
+        {/* Abstract low opacity background circuit grid */}
+        <svg className="light-cyber-bg-svg" viewBox="0 0 1000 800" preserveAspectRatio="none">
+          <path d="M50,100 L150,100 L200,150 L400,150 L450,100 L750,100 L800,150 L950,150" fill="none" stroke="#8b5cf6" strokeWidth="1" strokeDasharray="4 4" />
+          <path d="M100,300 L250,300 L300,350 L700,350 L750,300 L900,300" fill="none" stroke="#3b82f6" strokeWidth="1" />
+          <path d="M50,700 L350,700 L400,650 L600,650 L650,700 L950,700" fill="none" stroke="#8b5cf6" strokeWidth="1" strokeDasharray="3 3" />
+          <circle cx="200" cy="150" r="3" fill="#8b5cf6" />
+          <circle cx="400" cy="150" r="3" fill="#8b5cf6" />
+          <circle cx="800" cy="150" r="3" fill="#8b5cf6" />
+          <circle cx="300" cy="350" r="3" fill="#3b82f6" />
+          <circle cx="700" cy="350" r="3" fill="#3b82f6" />
+        </svg>
+
+        {/* Background Ambient Glows */}
+        <div className="platform-cap-glow cap-glow-top-left"></div>
+        <div className="platform-cap-glow cap-glow-top-center"></div>
+        <div className="platform-cap-glow cap-glow-right"></div>
+        <div className="platform-cap-glow cap-glow-bottom"></div>
+
+        <div className="capabilities-container">
+          <div className="section-header" style={{ marginBottom: '5rem', textAlign: 'center' }}>
+            <span className="section-tag">
+              <i className="fas fa-shield-alt"></i> CORE CAPABILITIES
+            </span>
+            <h2 className="section-title">Platform-Level Security Operations</h2>
+            <p className="section-desc">
+              Comprehensive enterprise-grade controls providing continuous resilience.
+            </p>
+          </div>
+
+          <div className="capabilities-vertical-list">
+            {platformCapabilities.map((cap, idx) => (
+              <CapabilityRow 
+                key={idx}
+                number={cap.number}
+                title={cap.title}
+                desc={cap.desc}
+                Visual={cap.visual}
+                index={idx}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PLATFORM ARCHITECTURE */}
       <section 
         ref={sectionRef} 
@@ -813,52 +859,6 @@ export default function Platform() {
                   <p className="converged-item-desc">{module.desc}</p>
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PLATFORM-LEVEL CAPABILITIES */}
-      <section className="platform-capabilities-section">
-        {/* Abstract low opacity background circuit grid */}
-        <svg className="light-cyber-bg-svg" viewBox="0 0 1000 800" preserveAspectRatio="none">
-          <path d="M50,100 L150,100 L200,150 L400,150 L450,100 L750,100 L800,150 L950,150" fill="none" stroke="#8b5cf6" strokeWidth="1" strokeDasharray="4 4" />
-          <path d="M100,300 L250,300 L300,350 L700,350 L750,300 L900,300" fill="none" stroke="#3b82f6" strokeWidth="1" />
-          <path d="M50,700 L350,700 L400,650 L600,650 L650,700 L950,700" fill="none" stroke="#8b5cf6" strokeWidth="1" strokeDasharray="3 3" />
-          <circle cx="200" cy="150" r="3" fill="#8b5cf6" />
-          <circle cx="400" cy="150" r="3" fill="#8b5cf6" />
-          <circle cx="800" cy="150" r="3" fill="#8b5cf6" />
-          <circle cx="300" cy="350" r="3" fill="#3b82f6" />
-          <circle cx="700" cy="350" r="3" fill="#3b82f6" />
-        </svg>
-
-        {/* Background Ambient Glows */}
-        <div className="platform-cap-glow cap-glow-top-left"></div>
-        <div className="platform-cap-glow cap-glow-top-center"></div>
-        <div className="platform-cap-glow cap-glow-right"></div>
-        <div className="platform-cap-glow cap-glow-bottom"></div>
-
-        <div className="capabilities-container">
-          <div className="section-header" style={{ marginBottom: '5rem', textAlign: 'center' }}>
-            <span className="section-tag">
-              <i className="fas fa-shield-alt"></i> CORE CAPABILITIES
-            </span>
-            <h2 className="section-title">Platform-Level Security Operations</h2>
-            <p className="section-desc">
-              Comprehensive enterprise-grade controls providing continuous resilience.
-            </p>
-          </div>
-
-          <div className="capabilities-vertical-list">
-            {platformCapabilities.map((cap, idx) => (
-              <CapabilityRow 
-                key={idx}
-                number={cap.number}
-                title={cap.title}
-                desc={cap.desc}
-                Visual={cap.visual}
-                index={idx}
-              />
             ))}
           </div>
         </div>

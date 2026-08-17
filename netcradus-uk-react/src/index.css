@@ -1154,6 +1154,67 @@ body {
   color: var(--text-dim);
 }
 
+/* Footer Social Icon Buttons */
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF !important;
+  font-size: 19px;
+  text-decoration: none;
+  opacity: 1 !important;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.social-icon-btn i {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  font-size: 19px;
+}
+
+.social-icon-btn:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.social-icon-btn.instagram:hover {
+  border-color: #E4405F;
+  box-shadow: 0 0 10px rgba(228, 64, 95, 0.3);
+  background: rgba(228, 64, 95, 0.15);
+}
+
+.social-icon-btn.facebook:hover {
+  border-color: #1877F2;
+  box-shadow: 0 0 10px rgba(24, 119, 242, 0.3);
+  background: rgba(24, 119, 242, 0.15);
+}
+
+.social-icon-btn.linkedin:hover {
+  border-color: #0A66C2;
+  box-shadow: 0 0 10px rgba(10, 102, 194, 0.3);
+  background: rgba(10, 102, 194, 0.15);
+}
+
+.social-icon-btn.youtube:hover {
+  border-color: #FF0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  background: rgba(255, 0, 0, 0.15);
+}
+
+.social-icon-btn.twitter:hover {
+  border-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+}
+
 /* Platform Hero Section Background using assets/platformbg.png */
 .platform-hero {
   position: relative;

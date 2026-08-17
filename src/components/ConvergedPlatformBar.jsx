@@ -79,9 +79,7 @@ export default function ConvergedPlatformBar({ onItemClick }) {
           </div>
         </div>
 
-        <Link to="/products/acis" className="converged-platform-cta-btn" onClick={onItemClick}>
-          Explore Full Architecture &rarr;
-        </Link>
+
       </div>
 
       {/* 7 Modules Grid */}
@@ -108,9 +106,7 @@ export default function ConvergedPlatformBar({ onItemClick }) {
           <span className="dot"></span>
           Single Agent &bull; Single Console &bull; Autonomous Cyber Defense
         </div>
-        <Link to="/products/acis" className="converged-footer-link" onClick={onItemClick}>
-          View Interactive Platform Wheel &rarr;
-        </Link>
+
       </div>
     </div>
   );

@@ -197,16 +197,17 @@ export default function Contact() {
                 
                 {/* Block 1: Call Us */}
                 <div className="git-block">
-                  <div className="git-icon-wrapper">
-                    <i className="fas fa-phone-alt"></i>
-                  </div>
+                  <a href="tel:+917290909571" className="git-icon-link" aria-label="Call Netcradus at +91 72909 09571">
+                    <div className="git-icon-wrapper">
+                      <i className="fas fa-phone-alt"></i>
+                    </div>
+                  </a>
                   <div className="git-content">
                     <span className="git-label">CALL US</span>
                     <div className="git-value-row">
-                      <span className="git-value">+91 72909 09571</span>
-                      <button className="git-copy-btn" onClick={() => copyToClipboard('+91 72909 09571', 'Phone number')}>
-                        <i className="far fa-copy"></i>
-                      </button>
+                      <a href="tel:+917290909571" className="git-clickable-link" aria-label="Call Netcradus at +91 72909 09571">
+                        <span className="git-value">+91 72909 09571</span>
+                      </a>
                     </div>
                     <span className="git-subtext">24x7 Emergency Incident Response</span>
                   </div>
@@ -214,39 +215,38 @@ export default function Contact() {
 
                 {/* Block 2: Email Us */}
                 <div className="git-block">
-                  <div className="git-icon-wrapper">
-                    <i className="fas fa-envelope"></i>
-                  </div>
+                  <a href="mailto:info@netcradus.com" className="git-icon-link" aria-label="Email Netcradus at info@netcradus.com">
+                    <div className="git-icon-wrapper">
+                      <i className="fas fa-envelope"></i>
+                    </div>
+                  </a>
                   <div className="git-content">
                     <span className="git-label">EMAIL US</span>
                     
                     <div className="git-email-subrow">
                       <span className="git-sublabel">GENERAL ENQUIRIES</span>
                       <div className="git-value-row">
-                        <span className="git-value-small">info@netcradus.com</span>
-                        <button className="git-copy-btn" onClick={() => copyToClipboard('info@netcradus.com', 'General Email')}>
-                          <i className="far fa-copy"></i>
-                        </button>
+                        <a href="mailto:info@netcradus.com" className="git-clickable-link" aria-label="Email Netcradus at info@netcradus.com">
+                          <span className="git-value-small">info@netcradus.com</span>
+                        </a>
                       </div>
                     </div>
 
                     <div className="git-email-subrow">
                       <span className="git-sublabel">EMERGENCY SUPPORT (24x7)</span>
                       <div className="git-value-row">
-                        <span className="git-value-small">support@netcradus.com</span>
-                        <button className="git-copy-btn" onClick={() => copyToClipboard('support@netcradus.com', 'Support Email')}>
-                          <i className="far fa-copy"></i>
-                        </button>
+                        <a href="mailto:support@netcradus.com" className="git-clickable-link" aria-label="Email Netcradus at support@netcradus.com">
+                          <span className="git-value-small">support@netcradus.com</span>
+                        </a>
                       </div>
                     </div>
 
                     <div className="git-email-subrow">
                       <span className="git-sublabel">SALES & BUSINESS ENQUIRIES</span>
                       <div className="git-value-row">
-                        <span className="git-value-small">sales@netcradus.com</span>
-                        <button className="git-copy-btn" onClick={() => copyToClipboard('sales@netcradus.com', 'Sales Email')}>
-                          <i className="far fa-copy"></i>
-                        </button>
+                        <a href="mailto:sales@netcradus.com" className="git-clickable-link" aria-label="Email Netcradus at sales@netcradus.com">
+                          <span className="git-value-small">sales@netcradus.com</span>
+                        </a>
                       </div>
                     </div>
 
