@@ -130,16 +130,16 @@ export default function Home() {
           <div className="hero-content">
             <div className="hero-status-pill">
               <span className="pulse-dot"></span>
-              <span>ACIS™ Autonomous Engine Active &bull; UK Posture: Nominal</span>
+              <span>ACIS™ Autonomous Engine Active &bull; Security Posture: Nominal</span>
             </div>
 
             <h1 className="hero-title">
-              Cyber Resilience, <br />
-              <span className="gradient-text">Engineered for the UK.</span>
+              Cybersecurity for <br />
+              <span className="gradient-text">the Digital Era</span>
             </h1>
 
             <p className="hero-subtitle">
-              Protect your organisation with autonomous threat detection, 24/7 security operations and intelligent cyber defence built for an evolving threat landscape.
+              Stay Ahead of Threats — Real-Time, Every Time, with Netcradus.
             </p>
 
             <div className="hero-actions">
@@ -153,9 +153,6 @@ export default function Home() {
 
             {/* Protected Cyber Domains Badges */}
             <div style={{ width: '100%', borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '1.5rem', marginTop: '1rem' }}>
-              <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '0.8rem' }}>
-                PROTECTED CYBER DOMAINS (ACIS IMMUNE CORE)
-              </div>
               <div className="domain-badge-grid">
                 <div className="domain-badge-card">
                   <i className="fas fa-user-shield domain-badge-icon"></i>

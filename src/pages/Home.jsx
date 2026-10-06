@@ -193,16 +193,16 @@ export default function Home() {
           <div className="hero-content">
             <div className="hero-status-pill">
               <span className="pulse-dot"></span>
-              <span>ACIS™ Autonomous Engine Active &bull; UK Posture: Nominal</span>
+              <span>ACIS™ Autonomous Engine Active &bull; Security Posture: Nominal</span>
             </div>
 
             <h1 className="hero-title">
-              Cyber Resilience, <br />
-              <span className="gradient-text">Engineered for the UK.</span>
+              Cybersecurity for <br />
+              <span className="gradient-text">the Digital Era</span>
             </h1>
 
             <p className="hero-subtitle">
-              Protect your organisation with autonomous threat detection, 24/7 security operations and intelligent cyber defence built for an evolving threat landscape.
+              Stay Ahead of Threats — Real-Time, Every Time, with Netcradus.
             </p>
 
             <div className="hero-actions">
@@ -216,15 +216,6 @@ export default function Home() {
 
             {/* Protected Cyber Domains Badges */}
             <div className="hero-domain-section">
-              <div className="hero-domain-header">
-                <div className="hero-domain-title">
-                  <span className="hero-domain-dot"></span>
-                  PROTECTED CYBER DOMAINS (ACIS IMMUNE CORE)
-                </div>
-                <div className="hero-domain-subtitle">
-                  <i className="fas fa-shield-halved"></i> 3D REAL-TIME ISOLATION ENGINE
-                </div>
-              </div>
               <div className="domain-badge-grid">
                 {domainItems.map((item, idx) => (
                   <Domain3DCard key={idx} {...item} />
