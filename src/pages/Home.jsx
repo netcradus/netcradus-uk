@@ -243,174 +243,312 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="platform-grid-7">
-            <div className="platform-card">
-              <div className="platform-icon-box">
-                <Icon3D name="ai-brain" size={32} />
-              </div>
-              <h3 className="platform-card-title">AI Threat Detection</h3>
-              <p className="platform-card-desc">
-                Identify threats and anomalies in real time using advanced AI models.
-              </p>
-              <Link to="/products/acis" className="platform-card-arrow">→</Link>
+          <div className="platform-grid-wrapper">
+            <div className="platform-grid-row platform-grid-row-4">
+              <Link to="/products/acis" className="platform-card">
+                <div className="platform-icon-box">
+                  <Icon3D name="ai-brain" size={32} />
+                </div>
+                <h3 className="platform-card-title">AI Threat Detection</h3>
+                <p className="platform-card-desc">
+                  Identify threats and anomalies in real time using advanced AI models.
+                </p>
+              </Link>
+
+              <Link to="/products/acis" className="platform-card">
+                <div className="platform-icon-box">
+                  <Icon3D name="soc-headset" size={32} />
+                </div>
+                <h3 className="platform-card-title">Security Operations</h3>
+                <p className="platform-card-desc">
+                  Centralise monitoring, investigation and response in one modern SOC behavioural analysis.
+                </p>
+              </Link>
+
+              <Link to="/products/acis" className="platform-card platform-card-featured">
+                <div className="platform-icon-box">
+                  <Icon3D name="endpoint-laptop" size={32} />
+                </div>
+                <h3 className="platform-card-title">Endpoint Protection</h3>
+                <p className="platform-card-desc">
+                  Enrich investigations with global threat intelligence and context.
+                </p>
+              </Link>
+
+              <Link to="/products/acis" className="platform-card">
+                <div className="platform-icon-box">
+                  <Icon3D name="automated-lightning" size={32} />
+                </div>
+                <h3 className="platform-card-title">Automated Response</h3>
+                <p className="platform-card-desc">
+                  Respond faster with intelligent automation and configurable workflows.
+                </p>
+              </Link>
             </div>
 
-            <div className="platform-card">
-              <div className="platform-icon-box">
-                <Icon3D name="soc-headset" size={32} />
-              </div>
-              <h3 className="platform-card-title">Security Operations</h3>
-              <p className="platform-card-desc">
-                Centralise monitoring, investigation and response in one modern SOC behavioural analysis.
-              </p>
-              <Link to="/products/acis" className="platform-card-arrow">→</Link>
-            </div>
+            <div className="platform-grid-row platform-grid-row-3">
+              <Link to="/products/acis" className="platform-card">
+                <div className="platform-icon-box">
+                  <Icon3D name="incident-search" size={32} />
+                </div>
+                <h3 className="platform-card-title">Incident Investigation</h3>
+                <p className="platform-card-desc">
+                  Investigate incidents deeply with AI-powered analysis and attack correlation.
+                </p>
+              </Link>
 
-            <div className="platform-card">
-              <div className="platform-icon-box">
-                <Icon3D name="endpoint-laptop" size={32} />
-              </div>
-              <h3 className="platform-card-title">Endpoint Protection</h3>
-              <p className="platform-card-desc">
-                Enrich investigations with global threat intelligence and context.
-              </p>
-              <Link to="/products/acis" className="platform-card-arrow">→</Link>
-            </div>
+              <Link to="/products/acis" className="platform-card">
+                <div className="platform-icon-box">
+                  <Icon3D name="analytics-pie" size={32} />
+                </div>
+                <h3 className="platform-card-title">Security Analytics</h3>
+                <p className="platform-card-desc">
+                  Turn security data into actionable insights and measurable outcomes.
+                </p>
+              </Link>
 
-            <div className="platform-card">
-              <div className="platform-icon-box">
-                <Icon3D name="automated-lightning" size={32} />
-              </div>
-              <h3 className="platform-card-title">Automated Response</h3>
-              <p className="platform-card-desc">
-                Respond faster with intelligent automation and configurable workflows.
-              </p>
-              <Link to="/products/acis" className="platform-card-arrow">→</Link>
-            </div>
-
-            <div className="platform-card">
-              <div className="platform-icon-box">
-                <Icon3D name="incident-search" size={32} />
-              </div>
-              <h3 className="platform-card-title">Incident Investigation</h3>
-              <p className="platform-card-desc">
-                Investigate incidents deeply with AI-powered analysis and attack correlation.
-              </p>
-              <Link to="/products/acis" className="platform-card-arrow">→</Link>
-            </div>
-
-            <div className="platform-card">
-              <div className="platform-icon-box">
-                <Icon3D name="analytics-pie" size={32} />
-              </div>
-              <h3 className="platform-card-title">Security Analytics</h3>
-              <p className="platform-card-desc">
-                Turn security data into actionable insights and measurable outcomes.
-              </p>
-              <Link to="/products/acis" className="platform-card-arrow">→</Link>
-            </div>
-
-            <div className="platform-card">
-              <div className="platform-icon-box">
-                <Icon3D name="cyber-shield" size={32} />
-              </div>
-              <h3 className="platform-card-title">Cyber Resilience</h3>
-              <p className="platform-card-desc">
-                Strengthen resilience and recover quickly from cyber incidents.
-              </p>
-              <Link to="/products/acis" className="platform-card-arrow">→</Link>
+              <Link to="/products/acis" className="platform-card">
+                <div className="platform-icon-box">
+                  <Icon3D name="cyber-shield" size={32} />
+                </div>
+                <h3 className="platform-card-title">Cyber Resilience</h3>
+                <p className="platform-card-desc">
+                  Strengthen resilience and recover quickly from cyber incidents.
+                </p>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. BUILT FOR EVERY INDUSTRY */}
+      {/* 3. WHY CHOOSE NETCRADUS (Dark Infographic Theme) */}
+      <section className="why-choose-section-dark">
+        {/* Subtle Ambient Corner Glows */}
+        <div className="why-ambient-glow glow-top-left"></div>
+        <div className="why-ambient-glow glow-top-right"></div>
+        <div className="why-ambient-glow glow-bottom-left"></div>
+        <div className="why-ambient-glow glow-bottom-right"></div>
+
+        <div className="section-container" style={{ position: 'relative', zIndex: 2 }}>
+          {/* Header Area */}
+          <div className="why-dark-header">
+            <h2 className="why-dark-title">
+              Why Choose <span className="why-dark-title-orange">Netcradus?</span>
+            </h2>
+          </div>
+
+          <div className="why-choose-diagram-wrapper">
+            {/* POINT 1: TOP LEFT */}
+            <div className="why-point-block why-point-tl">
+              <div className="why-point-icon blue">
+                <i className="fas fa-shield-halved"></i>
+              </div>
+              <div className="why-point-content">
+                <h3 className="why-point-title">Proven Security Expertise</h3>
+                <p className="why-point-desc">
+                  Real-world cybersecurity expertise combined with practical security strategies designed to protect modern organisations.
+                </p>
+              </div>
+              <div className="why-connector connector-tl">
+                <span className="connector-dot"></span>
+              </div>
+            </div>
+
+            {/* POINT 2: TOP RIGHT */}
+            <div className="why-point-block why-point-tr">
+              <div className="why-point-icon blue">
+                <i className="fas fa-clock"></i>
+              </div>
+              <div className="why-point-content">
+                <h3 className="why-point-title">24/7 Threat Monitoring</h3>
+                <p className="why-point-desc">
+                  Continuous monitoring and threat analysis to identify suspicious activity and respond before threats escalate.
+                </p>
+              </div>
+              <div className="why-connector connector-tr">
+                <span className="connector-dot"></span>
+              </div>
+            </div>
+
+            {/* CENTRAL VISUAL: PROVIDED 3D STATUE + QUESTION MARK WITH TRUE PNG TRANSPARENCY */}
+            <div className="why-central-visual">
+              <img
+                src={`${import.meta.env.BASE_URL}images/why_choose_statue_transparent.png`}
+                alt="Why Choose Netcradus - 3D Orange Statue & Dark Question Mark"
+                className="why-3d-img-transparent"
+              />
+            </div>
+
+            {/* POINT 3: BOTTOM LEFT */}
+            <div className="why-point-block why-point-bl">
+              <div className="why-point-icon orange">
+                <i className="fas fa-brain"></i>
+              </div>
+              <div className="why-point-content">
+                <h3 className="why-point-title">AI + Human Intelligence</h3>
+                <p className="why-point-desc">
+                  Combining advanced security technology with expert human analysis for smarter and faster threat detection.
+                </p>
+              </div>
+              <div className="why-connector connector-bl">
+                <span className="connector-dot"></span>
+              </div>
+            </div>
+
+            {/* POINT 4: BOTTOM RIGHT */}
+            <div className="why-point-block why-point-br">
+              <div className="why-point-icon blue">
+                <i className="fas fa-bolt"></i>
+              </div>
+              <div className="why-point-content">
+                <h3 className="why-point-title">Faster Response & Recovery</h3>
+                <p className="why-point-desc">
+                  Rapid incident response and coordinated security processes designed to minimise risk and downtime.
+                </p>
+              </div>
+              <div className="why-connector connector-br">
+                <span className="connector-dot"></span>
+              </div>
+            </div>
+
+            {/* POINT 5: BOTTOM CENTER */}
+            <div className="why-point-block why-point-bc">
+              <div className="why-point-icon blue">
+                <i className="fas fa-users-gear"></i>
+              </div>
+              <div className="why-point-content">
+                <h3 className="why-point-title">Customer-Focused Security</h3>
+                <p className="why-point-desc">
+                  We work as a long-term security partner, providing solutions aligned with your organisation’s needs and goals.
+                </p>
+              </div>
+              <div className="why-connector connector-bc">
+                <span className="connector-dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. INDUSTRIES & EXPERTISE */}
       <section className="industries-home-section">
         <div className="section-container">
           <div className="platform-section-header">
-            <div className="platform-section-tag">
-              BUILT FOR EVERY INDUSTRY
+            <div className="platform-section-tag-wrapper">
+              <span className="platform-section-tag-line"></span>
+              <span className="platform-section-tag">INDUSTRIES & EXPERTISE</span>
+              <span className="platform-section-tag-line"></span>
             </div>
             <h2 className="platform-section-title">
-              Securing What Matters Across the UK
+              Protection That Fits Your Business
             </h2>
             <p className="industries-subtitle">
-              Purpose-built protection for the organisations and industries that keep the UK moving.
+              From critical infrastructure to modern enterprises, we secure the systems, data and operations that matter most.
             </p>
           </div>
 
           <div className="industry-cards-grid">
-            <div className="industry-card-item">
+            <Link to="/industries" className="industry-card-item">
               <img
                 src={`${import.meta.env.BASE_URL}images/industry_public_sector.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80'; }}
-                alt="Public Sector Security"
+                alt="Public Sector"
                 className="industry-card-img"
               />
               <div className="industry-card-overlay">
-                <div className="industry-badge-pill">
-                  <i className="fas fa-landmark"></i> Public Sector
+                <div className="industry-card-header">
+                  <div className="industry-icon-box">
+                    <i className="fas fa-landmark"></i>
+                  </div>
+                  <h3 className="industry-card-title">Public Sector</h3>
                 </div>
+                <p className="industry-card-desc">
+                  Protecting essential services, citizen data and critical infrastructure.
+                </p>
               </div>
-            </div>
+            </Link>
 
-            <div className="industry-card-item">
+            <Link to="/industries" className="industry-card-item">
               <img
                 src={`${import.meta.env.BASE_URL}images/industry_financial_services.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'; }}
-                alt="Financial Services Security"
+                alt="Financial Services"
                 className="industry-card-img"
               />
               <div className="industry-card-overlay">
-                <div className="industry-badge-pill">
-                  <i className="fas fa-building-columns"></i> Financial Services
+                <div className="industry-card-header">
+                  <div className="industry-icon-box">
+                    <i className="fas fa-coins"></i>
+                  </div>
+                  <h3 className="industry-card-title">Financial Services</h3>
                 </div>
+                <p className="industry-card-desc">
+                  Securing transactions, customer data and financial operations.
+                </p>
               </div>
-            </div>
+            </Link>
 
-            <div className="industry-card-item">
+            <Link to="/industries" className="industry-card-item">
               <img
                 src={`${import.meta.env.BASE_URL}images/industry_healthcare.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80'; }}
-                alt="Healthcare & Life Sciences"
+                alt="Healthcare"
                 className="industry-card-img"
               />
               <div className="industry-card-overlay">
-                <div className="industry-badge-pill">
-                  <i className="fas fa-hospital"></i> Healthcare
+                <div className="industry-card-header">
+                  <div className="industry-icon-box">
+                    <i className="fas fa-user-doctor"></i>
+                  </div>
+                  <h3 className="industry-card-title">Healthcare</h3>
                 </div>
+                <p className="industry-card-desc">
+                  Protecting sensitive data, clinical systems and critical services.
+                </p>
               </div>
-            </div>
+            </Link>
 
-            <div className="industry-card-item">
+            <Link to="/industries" className="industry-card-item">
               <img
                 src={`${import.meta.env.BASE_URL}images/industry_technology.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80'; }}
-                alt="Technology & SaaS"
+                alt="Technology"
                 className="industry-card-img"
               />
               <div className="industry-card-overlay">
-                <div className="industry-badge-pill">
-                  <i className="fas fa-server"></i> Technology
+                <div className="industry-card-header">
+                  <div className="industry-icon-box">
+                    <i className="fas fa-cloud"></i>
+                  </div>
+                  <h3 className="industry-card-title">Technology</h3>
                 </div>
+                <p className="industry-card-desc">
+                  Securing digital infrastructure, applications and intellectual property.
+                </p>
               </div>
-            </div>
+            </Link>
 
-            <div className="industry-card-item">
+            <Link to="/industries" className="industry-card-item">
               <img
                 src={`${import.meta.env.BASE_URL}images/industry_manufacturing.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80'; }}
-                alt="Smart Manufacturing"
+                alt="Manufacturing"
                 className="industry-card-img"
               />
               <div className="industry-card-overlay">
-                <div className="industry-badge-pill">
-                  <i className="fas fa-industry"></i> Manufacturing
+                <div className="industry-card-header">
+                  <div className="industry-icon-box">
+                    <i className="fas fa-industry"></i>
+                  </div>
+                  <h3 className="industry-card-title">Manufacturing</h3>
                 </div>
+                <p className="industry-card-desc">
+                  Protecting operational technology, production systems and supply chains.
+                </p>
               </div>
-            </div>
+            </Link>
 
-            <div className="industry-card-item">
+            <Link to="/industries" className="industry-card-item">
               <img
                 src={`${import.meta.env.BASE_URL}images/industry_professional_services.png`}
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80'; }}
@@ -418,150 +556,115 @@ export default function Home() {
                 className="industry-card-img"
               />
               <div className="industry-card-overlay">
-                <div className="industry-badge-pill">
-                  <i className="fas fa-briefcase"></i> Professional Services
+                <div className="industry-card-header">
+                  <div className="industry-icon-box">
+                    <i className="fas fa-briefcase"></i>
+                  </div>
+                  <h3 className="industry-card-title">Professional Services</h3>
                 </div>
+                <p className="industry-card-desc">
+                  Securing client data, business operations and digital trust.
+                </p>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* 4. CYBER RESILIENCE METRICS BANNER (ANIMATED COUNT-UP) */}
+      {/* 5. CYBER RESILIENCE METRICS BANNER (ANIMATED COUNT-UP) */}
       <AnimatedMetrics />
 
-      {/* 5. LATEST INSIGHTS */}
-      <section className="insights-section">
-        <div className="section-container">
-          <div className="platform-section-header">
-            <div className="platform-section-tag">
-              LATEST INSIGHTS
-            </div>
-          </div>
 
-          <div className="insights-grid">
-            <div className="insight-card">
-              <div className="insight-img-wrapper">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/insight_uk_threat_landscape.png`}
-                  onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'; }}
-                  alt="Autonomous Cyber Defence"
-                  className="insight-img"
-                />
-                <span className="insight-category-pill">DEEP DIVE</span>
-              </div>
-              <div className="insight-content">
-                <h3 className="insight-title">The Rise of Autonomous Cyber Defence</h3>
-                <p className="insight-desc">Why autonomous systems are the future of cyber resilience.</p>
-                <Link to="/resources" className="insight-link">Read more &rarr;</Link>
-              </div>
-            </div>
-
-            <div className="insight-card">
-              <div className="insight-img-wrapper">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/insight_automated_containment.png`}
-                  onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80'; }}
-                  alt="UK Cybersecurity Compliance"
-                  className="insight-img"
-                />
-                <span className="insight-category-pill">GUIDE</span>
-              </div>
-              <div className="insight-content">
-                <h3 className="insight-title">UK Cybersecurity Compliance 2024</h3>
-                <p className="insight-desc">Navigate NIS2, DORA and other key regulatory requirements.</p>
-                <Link to="/resources" className="insight-link">Read more &rarr;</Link>
-              </div>
-            </div>
-
-            <div className="insight-card">
-              <div className="insight-img-wrapper">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/insight_uk_gdpr_nis2.png`}
-                  onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80'; }}
-                  alt="Protecting Critical Public Services"
-                  className="insight-img"
-                />
-                <span className="insight-category-pill">CASE STUDY</span>
-              </div>
-              <div className="insight-content">
-                <h3 className="insight-title">Protecting Critical Public Services</h3>
-                <p className="insight-desc">How we helped a UK public sector organisation.</p>
-                <Link to="/resources" className="insight-link">Read more &rarr;</Link>
-              </div>
-            </div>
-
-            <div className="insight-card">
-              <div className="insight-img-wrapper">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/insight_zero_trust_identity.png`}
-                  onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'; }}
-                  alt="2024 UK Threat Landscape Report"
-                  className="insight-img"
-                />
-                <span className="insight-category-pill">REPORT</span>
-              </div>
-              <div className="insight-content">
-                <h3 className="insight-title">2024 UK Threat Landscape Report</h3>
-                <p className="insight-desc">Key findings and predictions from our threat intelligence team.</p>
-                <Link to="/resources" className="insight-link">Download report &rarr;</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 6. FINAL CTA */}
       <section className="final-cta-section">
-        <div className="cta-uk-map-bg"></div>
         <div className="section-container">
           <div className="cta-layout-grid">
-            <div>
+            {/* LEFT SIDE CONTENT */}
+            <div className="cta-left-content">
               <h2 className="cta-title">
                 Ready to Strengthen Your <br />
-                <span style={{ color: '#ff8a1f' }}>Cyber Defence?</span>
+                <span className="cta-title-highlight">Cyber Defence?</span>
               </h2>
               <p className="cta-desc">
                 See how Netcradus can help your organisation detect threats faster, respond smarter and build lasting cyber resilience.
               </p>
-              <div className="hero-actions" style={{ justifyContent: 'flex-start', marginTop: '2rem' }}>
-                <Link to="/contact" className="btn-hero-primary" style={{ background: 'linear-gradient(90deg, #ff8a1f 0%, #ff2d78 100%)', border: 'none' }}>
+              <div className="cta-actions">
+                <Link to="/contact" className="btn-hero-primary cta-btn-primary">
                   Talk to an Expert &rarr;
                 </Link>
-                <Link to="/contact" className="btn-hero-secondary">
+                <Link to="/contact" className="btn-hero-secondary cta-btn-secondary">
                   Book a Security Assessment &rarr;
                 </Link>
               </div>
             </div>
 
-            <div className="cta-trust-stack">
+            {/* RIGHT SIDE 2x2 TRUST GRID WITH BADGES */}
+            <div className="cta-trust-grid">
               <div className="cta-trust-item">
-                <div className="cta-trust-icon">
-                  <i className="fas fa-user-shield"></i>
+                <div className="cta-trust-badge-col">
+                  <img
+                    src={`${import.meta.env.BASE_URL}assets/ico-badge.svg`}
+                    alt="ICO Registered - UK Information Commissioner's Office"
+                    className="cta-ico-logo-img"
+                  />
                 </div>
-                <div>
-                  <div className="cta-trust-title">UK-Based SOC</div>
-                  <div className="cta-trust-desc">24/7 monitoring from our UK Security Operations Centre.</div>
+                <div className="cta-trust-text-wrap">
+                  <h3 className="cta-trust-title">ICO Registered</h3>
+                  <p className="cta-trust-desc">ICO Registration: ZC045097</p>
+                  <a
+                    href="https://ico.org.uk/ESDWebPages/Entry/ZC045097"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cta-ico-verify-link"
+                  >
+                    Verify registration &rarr;
+                  </a>
                 </div>
               </div>
 
               <div className="cta-trust-item">
-                <div className="cta-trust-icon">
-                  <i className="fas fa-certificate"></i>
+                <div className="cta-trust-badge-col">
+                  <div className="cta-badge-iso">
+                    <i className="fas fa-globe-americas iso-icon"></i>
+                    <div className="iso-text-col">
+                      <span className="iso-main">ISO</span>
+                      <span className="iso-num">27001</span>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <div className="cta-trust-title">ISO 27001 Certified</div>
-                  <div className="cta-trust-desc">Information security management you can trust.</div>
+                <div className="cta-trust-text-wrap">
+                  <h3 className="cta-trust-title">ISO 27001</h3>
+                  <p className="cta-trust-desc">Information security management aligned with ISO 27001 standards.</p>
                 </div>
               </div>
 
               <div className="cta-trust-item">
-                <div className="cta-trust-icon">
-                  <i className="fas fa-award"></i>
+                <div className="cta-trust-badge-col">
+                  <div className="cta-badge-gdpr">
+                    <div className="gdpr-star-ring">
+                      <i className="fas fa-user-shield"></i>
+                    </div>
+                    <span className="gdpr-label">GDPR</span>
+                  </div>
                 </div>
-                <div>
-                  <div className="cta-trust-title">Cyber Essentials Plus</div>
-                  <div className="cta-trust-desc">Certified protection for your organisation.</div>
+                <div className="cta-trust-text-wrap">
+                  <h3 className="cta-trust-title">GDPR Compliant</h3>
+                  <p className="cta-trust-desc">Security and data protection practices designed to support GDPR requirements.</p>
+                </div>
+              </div>
+
+              <div className="cta-trust-item">
+                <div className="cta-trust-badge-col">
+                  <div className="cta-badge-soc">
+                    <span className="soc-top">AICPA</span>
+                    <span className="soc-mid">SOC 2</span>
+                    <span className="soc-bot">TYPE II</span>
+                  </div>
+                </div>
+                <div className="cta-trust-text-wrap">
+                  <h3 className="cta-trust-title">SOC 2 Type II</h3>
+                  <p className="cta-trust-desc">Security controls aligned with SOC 2 Type II compliance requirements.</p>
                 </div>
               </div>
             </div>

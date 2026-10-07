@@ -4,21 +4,6 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <footer className="site-footer">
-      {/* Moved Top Banner inside Footer (Single instance on site) */}
-      <div className="top-banner" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', padding: '0.75rem 1rem', marginBottom: '3.5rem' }}>
-        <div className="top-banner-inner">
-          <div>
-            <span className="top-banner-badge">🇬🇧 UK CYBERSECURITY</span>
-            <strong>UK Cybersecurity | Enterprise Defence | 24/7 Security Operations</strong> &bull; Netcradus Limited (ICO Ref: <code>ZC045097</code>)
-          </div>
-          <div>
-            <Link to="/compliance" className="top-banner-link">
-              <i className="fas fa-shield-alt"></i> Verify ICO Certificate &rarr;
-            </Link>
-          </div>
-        </div>
-      </div>
-
       <div className="section-container">
         <div className="footer-grid">
           <div className="footer-col">
