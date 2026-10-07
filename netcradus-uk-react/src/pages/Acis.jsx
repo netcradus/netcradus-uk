@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Acis() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [activePillar, setActivePillar] = useState('01');
 
   const modulesList = [
     { name: 'Log Explorer', icon: 'fa-folder-tree' },
@@ -25,12 +27,79 @@ export default function Acis() {
   ];
 
   const pillarsList = [
-    { num: '01', title: 'SIEM', subtitle: 'Security Monitoring', desc: 'Real-time log aggregation, parsing, and telemetry correlation across your infrastructure.', link: '/platform/siem' },
-    { num: '02', title: 'SOAR', subtitle: 'Response & Automation', desc: 'Orchestrated containment playbooks with human-in-the-loop approval safeguards.', link: '/platform/soar' },
-    { num: '03', title: 'Threat Intelligence', subtitle: 'Threat Intelligence', desc: 'Global IOC feeds correlated directly with UK-specific threat activity and telemetry.', link: '/platform/cti' },
-    { num: '04', title: 'Red Teaming', subtitle: 'Proactive Security', desc: 'Continuous exposure assessment and automated adversary simulation testing.', link: '/platform/red-teaming' },
-    { num: '05', title: 'Swarm Intelligence', subtitle: 'Adaptive Defence', desc: 'Agentic multi-node signal analysis detecting zero-day anomalies across vectors.', link: '/platform/swarm-intelligence' }
+    {
+      num: '01',
+      title: 'SIEM',
+      subtitle: 'Security & Monitoring',
+      icon: 'fa-shield-halved',
+      desc: 'Real-time security monitoring, log aggregation, correlation and analysis across the infrastructure.',
+      capabilities: [
+        'Real-time log aggregation',
+        'Cross-stack telemetry correlation',
+        'Continuous security visibility',
+        'Automated threat detection'
+      ],
+      link: '/platform/siem'
+    },
+    {
+      num: '02',
+      title: 'SOAR',
+      subtitle: 'Response & Automation',
+      icon: 'fa-atom',
+      desc: 'Orchestrated containment playbooks with human-in-the-loop approval safeguards.',
+      capabilities: [
+        'Automated incident response',
+        'Playbook orchestration',
+        'Human-in-the-loop approval',
+        'Faster threat containment'
+      ],
+      link: '/platform/soar'
+    },
+    {
+      num: '03',
+      title: 'Threat Intelligence',
+      subtitle: 'Threat & Intelligence',
+      icon: 'fa-brain',
+      desc: 'Known-bad IPs, domains, hashes and other indicators used to identify malicious activity.',
+      capabilities: [
+        'Global IOC enrichment',
+        'Real-time threat feed integration',
+        'Attacker TTP correlation',
+        'Context-rich threat scoring'
+      ],
+      link: '/platform/cti'
+    },
+    {
+      num: '04',
+      title: 'Red Teaming',
+      subtitle: 'Proactive & Security',
+      icon: 'fa-crosshairs',
+      desc: 'Authorized offensive security testing and continuous exposure assessment.',
+      capabilities: [
+        'Automated adversary simulation',
+        'Continuous attack surface testing',
+        'Vulnerability path analysis',
+        'Proactive security validation'
+      ],
+      link: '/platform/red-teaming'
+    },
+    {
+      num: '05',
+      title: 'Swarm Intelligence',
+      subtitle: 'Adaptive & Intelligence',
+      icon: 'fa-circle-nodes',
+      desc: 'Distributed multi-node signal analysis and adaptive intelligence for identifying complex and emerging threats.',
+      capabilities: [
+        'Multi-node signal analysis',
+        'Distributed threat sensing',
+        'Zero-day anomaly detection',
+        'Emerging risk correlation'
+      ],
+      link: '/platform/swarm-intelligence'
+    }
   ];
+
+  const selectedPillarData = pillarsList.find((p) => p.num === activePillar) || pillarsList[0];
 
   const rolesList = [
     { role: 'SOC Analyst', desc: 'Rapid triage, correlated alerts, and instant incident context.' },
@@ -41,19 +110,19 @@ export default function Acis() {
 
   return (
     <div className="acis-new-page">
-      
+
       {/* 1. NEW ACIS HERO */}
       <section className="acis-hero-section">
         <div className="section-container">
           <div className="acis-hero-grid">
-            
+
             {/* HERO LEFT SIDE */}
             <div className="acis-hero-left">
               <span className="acis-hero-eyebrow">AUTONOMOUS CYBER IMMUNE SYSTEM</span>
               <h1 className="acis-hero-title">ACIS</h1>
               <h2 className="acis-hero-subtitle">
                 Security that detects. <br />
-                Understands. Responds.
+                Understands. <span style={{ color: '#ff7a00' }}>Responds.</span>
               </h2>
               <p className="acis-hero-desc">
                 Continuous cyber defence with human control at every critical decision.
@@ -84,8 +153,8 @@ export default function Acis() {
       </section>
 
       {/* 2. WHAT IS ACIS? */}
-      <section 
-        id="what-is-acis" 
+      <section
+        id="what-is-acis"
         className="acis-overview-section"
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(5, 2, 12, 0.82) 0%, rgba(9, 4, 21, 0.88) 100%), url(${import.meta.env.BASE_URL}images/acis_what_is_bg.png)`,
@@ -160,14 +229,13 @@ export default function Acis() {
       <section className="acis-loop-section">
         <div className="section-container">
           <div className="acis-section-header">
+            <span className="acis-tag-badge">CONTINUOUS ARCHITECTURE</span>
             <h2 className="acis-section-title">The ACIS Security Loop</h2>
             <p className="acis-section-desc">
               Unified threat response lifecycle operating around the central ACIS intelligence core.
             </p>
           </div>
-        </div>
 
-        <div className="acis-architecture-container">
           <div className="acis-architecture-visual-wrapper">
             <img
               src={`${import.meta.env.BASE_URL}images/acis_continuous_architecture.jpg`}
@@ -186,19 +254,91 @@ export default function Acis() {
             <h2 className="acis-section-title">One Platform. Five Security Capabilities.</h2>
           </div>
 
-          <div className="acis-pillars-grid">
-            {pillarsList.map((pillar) => (
-              <Link to={pillar.link} key={pillar.num} className="acis-pillar-card">
-                <div className="pillar-num">{pillar.num}</div>
-                <h3 className="pillar-title">{pillar.title}</h3>
-                <div className="pillar-subtitle">{pillar.subtitle}</div>
-                <p className="pillar-desc">{pillar.desc}</p>
-                <div className="pillar-link">
-                  <span>Explore Capability</span>
-                  <i className="fas fa-arrow-right"></i>
+          <div className="acis-pillars-interactive-grid">
+            {/* LEFT SIDE: ACIS PILLARS IMAGE */}
+            <div className="acis-pillars-left">
+              <img
+                src={`${import.meta.env.BASE_URL}images/acis_pillars.jpg`}
+                alt="ACIS Five Security Capabilities Pillars"
+                className="acis-pillars-img"
+              />
+            </div>
+
+            {/* RIGHT SIDE: INTERACTIVE NAVIGATION + DETAILED INFORMATION PANEL */}
+            <div className="acis-pillars-right">
+              {/* PILLAR NAVIGATION LIST */}
+              <div className="acis-pillar-tabs">
+                {pillarsList.map((pillar) => {
+                  const isActive = activePillar === pillar.num;
+                  return (
+                    <button
+                      key={pillar.num}
+                      type="button"
+                      className={`acis-pillar-tab-btn ${isActive ? 'active' : ''}`}
+                      onClick={() => setActivePillar(pillar.num)}
+                    >
+                      <div className="tab-left-group">
+                        <i className={`fas ${pillar.icon} tab-icon`}></i>
+                        <span className="tab-num">{pillar.num} &mdash;</span>
+                        <span className="tab-title">{pillar.title}</span>
+                      </div>
+                      <i className={`fas ${isActive ? 'fa-chevron-up' : 'fa-chevron-right'} tab-chevron`}></i>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* DETAILED INFORMATION PANEL */}
+              <div className="acis-pillar-detail-card" key={selectedPillarData.num}>
+                <div className="detail-card-inner">
+                  <div className="detail-left-content">
+                    {/* TOP BADGE */}
+                    <div className="detail-header-badge">
+                      <div className="detail-icon-circle">
+                        <i className={`fas ${selectedPillarData.icon}`}></i>
+                      </div>
+                      <span className="detail-badge-text">{selectedPillarData.num} &mdash; {selectedPillarData.title}</span>
+                    </div>
+
+                    {/* MAIN TITLE WITH SECOND WORD IN ORANGE */}
+                    <h3 className="detail-main-title">
+                      {selectedPillarData.subtitle.split('&')[0]} &amp; <span className="highlight-orange">{selectedPillarData.subtitle.split('&')[1] || selectedPillarData.subtitle.split(' ')[1]}</span>
+                    </h3>
+
+                    {/* SHORT DESCRIPTION */}
+                    <p className="detail-desc">{selectedPillarData.desc}</p>
+
+                    {/* KEY CAPABILITIES */}
+                    <div className="detail-capabilities-block">
+                      <h4 className="capabilities-label">KEY CAPABILITIES</h4>
+                      <ul className="capabilities-list">
+                        {selectedPillarData.capabilities.map((cap, i) => (
+                          <li key={i} className="capability-item">
+                            <i className="fas fa-circle-check check-icon"></i>
+                            <span>{cap}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* RIGHT ABSTRACT DECORATIVE TECH GEAR EMBLEM & LEARN MORE BUTTON */}
+                  <div className="detail-right-graphic">
+                    <div className="graphic-ring-outer">
+                      <div className="graphic-ring-inner">
+                        <i className={`fas ${selectedPillarData.icon} graphic-center-icon`}></i>
+                      </div>
+                    </div>
+
+                    {/* LEARN MORE BUTTON */}
+                    <Link to={selectedPillarData.link} className="acis-pillar-learn-btn">
+                      <span>Learn More</span>
+                      <i className="fas fa-arrow-right"></i>
+                    </Link>
+                  </div>
                 </div>
-              </Link>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
