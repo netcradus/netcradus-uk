@@ -321,8 +321,8 @@ export default function EndpointDetection() {
                     <span className="endpoint-browser-title">NETCRADUS CONSOLE</span>
                   </div>
                   
-                  <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-endpoints-management.png", alt: "NetCradus Endpoint Security Dashboard" })}>
-                    <img src="/images/netxdr-endpoints-management.png" alt="NetCradus Endpoint Security Dashboard" className="endpoint-browser-image" />
+                  <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-endpoints-management.png`, alt: "NetCradus Endpoint Security Dashboard" })}>
+                    <img src={`${import.meta.env.BASE_URL}images/netxdr-endpoints-management.png`} alt="NetCradus Endpoint Security Dashboard" className="endpoint-browser-image" />
                     <div className="endpoint-image-overlay">
                       <i className="fas fa-expand"></i> Click to Expand NetCradus Dashboard
                     </div>
@@ -388,8 +388,8 @@ export default function EndpointDetection() {
                   </h3>
                   <span className="endpoint-telemetry-badge-active">ACTIVE</span>
                 </div>
-                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-endpoints-management.png", alt: "Endpoint Telemetry Agent" })}>
-                  <img src="/images/netxdr-endpoints-management.png" alt="Endpoint Telemetry Agent" className="endpoint-telemetry-image" />
+                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-endpoints-management.png`, alt: "Endpoint Telemetry Agent" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-endpoints-management.png`} alt="Endpoint Telemetry Agent" className="endpoint-telemetry-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -412,8 +412,8 @@ export default function EndpointDetection() {
                   </h3>
                   <span className="endpoint-telemetry-badge-live">LIVE STREAM</span>
                 </div>
-                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-threat-hunting-ioc.png", alt: "Threat Hunting & IOC Matching" })}>
-                  <img src="/images/netxdr-threat-hunting-ioc.png" alt="Threat Hunting & IOC Matching" className="endpoint-telemetry-image" />
+                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-threat-hunting-ioc.png`, alt: "Threat Hunting & IOC Matching" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-threat-hunting-ioc.png`} alt="Threat Hunting & IOC Matching" className="endpoint-telemetry-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -436,8 +436,8 @@ export default function EndpointDetection() {
                   </h3>
                   <span className="endpoint-telemetry-badge-subsecond">SUB-SECOND</span>
                 </div>
-                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-realtime-detections.png", alt: "Real-Time Containment Engine" })}>
-                  <img src="/images/netxdr-realtime-detections.png" alt="Real-Time Containment Engine" className="endpoint-telemetry-image" />
+                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-realtime-detections.png`, alt: "Real-Time Containment Engine" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-realtime-detections.png`} alt="Real-Time Containment Engine" className="endpoint-telemetry-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -492,8 +492,8 @@ export default function EndpointDetection() {
                   <span className="endpoint-browser-address" style={{ color: '#FF6B00' }}>THREAT HUNTING ENGINE</span>
                   <span className="endpoint-browser-title">MITRE ATT&CK RETROSPECTION</span>
                 </div>
-                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-threat-hunting-ioc.png", alt: "Proactive Threat Hunting Workbench" })}>
-                  <img src="/images/netxdr-threat-hunting-ioc.png" alt="Proactive Threat Hunting Workbench" className="endpoint-browser-image" />
+                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-threat-hunting-ioc.png`, alt: "Proactive Threat Hunting Workbench" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-threat-hunting-ioc.png`} alt="Proactive Threat Hunting Workbench" className="endpoint-browser-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Threat Hunting Console
                   </div>
@@ -529,8 +529,8 @@ export default function EndpointDetection() {
                   <span className="endpoint-browser-address" style={{ color: '#EC4899' }}>AUTOMATED ISOLATION PLAYBOOK</span>
                   <span className="endpoint-browser-title" style={{ color: '#34d399' }}>EXECUTED</span>
                 </div>
-                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-realtime-detections.png", alt: "Automated Device Isolation Console" })}>
-                  <img src="/images/netxdr-realtime-detections.png" alt="Automated Device Isolation Console" className="endpoint-browser-image" />
+                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-realtime-detections.png`, alt: "Automated Device Isolation Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-realtime-detections.png`} alt="Automated Device Isolation Console" className="endpoint-browser-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Isolation Console
                   </div>
@@ -589,8 +589,8 @@ export default function EndpointDetection() {
               <span className="endpoint-browser-address" style={{ color: '#FF6B00' }}>CYRIX CYBER DEFENSE PLATFORM DASHBOARD</span>
               <span className="endpoint-browser-title">REAL-TIME TELEMETRY AUDIT</span>
             </div>
-            <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/cyrix-dashboard.png", alt: "CYRIX Cyber Defense Platform Dashboard" })}>
-              <img src="/images/cyrix-dashboard.png" alt="CYRIX Cyber Defense Platform Dashboard" className="endpoint-browser-image" />
+            <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/cyrix-dashboard.png`, alt: "CYRIX Cyber Defense Platform Dashboard" })}>
+              <img src={`${import.meta.env.BASE_URL}images/cyrix-dashboard.png`} alt="CYRIX Cyber Defense Platform Dashboard" className="endpoint-browser-image" />
               <div className="endpoint-image-overlay">
                 <i className="fas fa-expand"></i> Click to Expand CYRIX Platform Dashboard
               </div>

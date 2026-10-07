@@ -8704,4 +8704,617 @@ img {
   }
 }
 
+/* ==========================================================================
+   NEW REDESIGNED ACIS PAGE STYLES (PREMIUM ENTERPRISE CYBERSECURITY)
+   ========================================================================== */
+
+.acis-new-page {
+  background-color: #05020c;
+  color: #ffffff;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  padding-top: 5rem;
+}
+
+/* Common Section Spacing & Headers */
+.acis-hero-section,
+.acis-overview-section,
+.acis-human-loop-section,
+.acis-loop-section,
+.acis-pillars-section,
+.acis-modules-section,
+.acis-roles-section,
+.acis-final-cta-section {
+  position: relative;
+  padding: 5.5rem 0;
+}
+
+.acis-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.acis-tag-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #ff7a00;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  background: rgba(255, 122, 0, 0.1);
+  border: 1px solid rgba(255, 122, 0, 0.25);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+}
+
+.acis-section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.acis-section-desc {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  margin: 0 auto;
+}
+
+/* 1. HERO SECTION */
+.acis-hero-section {
+  padding: 4rem 0 5rem 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(255, 122, 0, 0.07) 0%, rgba(139, 92, 246, 0.05) 45%, transparent 75%), #05020c;
+}
+
+.acis-hero-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.2fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.acis-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.acis-hero-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ff7a00;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.1rem;
+}
+
+.acis-hero-title {
+  font-family: var(--font-heading);
+  font-size: 4.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.acis-hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
+}
+
+.acis-hero-desc {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 2.2rem;
+  max-width: 480px;
+}
+
+.acis-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.acis-btn-primary {
+  background: linear-gradient(90deg, #ff7a00 0%, #ff2d78 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 22px rgba(255, 122, 0, 0.35);
+  text-decoration: none;
+}
+
+.acis-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(255, 122, 0, 0.5);
+  color: #ffffff !important;
+}
+
+.acis-btn-secondary {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+}
+
+.acis-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 122, 0, 0.5) !important;
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+
+/* HERO RIGHT SIDE SIGNATURE VISUAL */
+.acis-hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.acis-visual-frame {
+  position: relative;
+  width: 100%;
+  max-width: 740px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 50px rgba(255, 122, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #090514;
+}
+
+.acis-envelope-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.acis-visual-frame:hover .acis-envelope-img {
+  transform: scale(1.02);
+}
+
+/* 2. WHAT IS ACIS? */
+.acis-overview-section {
+  background: #090415;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.acis-three-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.acis-minimal-card {
+  background: rgba(15, 10, 32, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem 1.8rem;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.acis-minimal-card:hover {
+  background: rgba(22, 14, 45, 0.85);
+  border-color: rgba(255, 122, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.acis-card-num {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ff7a00;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.85rem;
+}
+
+.acis-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+.acis-card-desc {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* 3. HUMAN-IN-THE-LOOP CONTROL */
+.acis-human-loop-section {
+  background: #05020c;
+}
+
+.acis-human-grid {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.acis-human-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.acis-human-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.acis-badge-chip {
+  background: rgba(15, 10, 32, 0.8);
+  border: 1px solid rgba(255, 122, 0, 0.35);
+  padding: 0.75rem 1.4rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.acis-badge-chip i {
+  color: #ff7a00;
+  font-size: 1rem;
+}
+
+/* 4. ACIS SECURITY LOOP / CONTINUOUS ARCHITECTURE (CINEMATIC FULL-WIDTH) */
+.acis-loop-section {
+  position: relative;
+  background-color: #06050b;
+  background: radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.05) 0%, rgba(255, 122, 0, 0.03) 45%, #06050b 90%);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 5rem 0 3.5rem 0;
+  overflow: hidden;
+}
+
+.acis-architecture-container {
+  width: 92%;
+  max-width: 1440px;
+  margin: 1.5rem auto 0 auto;
+}
+
+.acis-architecture-visual-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.acis-architecture-img {
+  width: 100%;
+  height: auto;
+  max-width: 1380px;
+  display: block;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.7));
+  transition: transform 0.5s ease;
+}
+
+.acis-architecture-img:hover {
+  transform: scale(1.01);
+}
+
+/* 5. FIVE ACIS PILLARS */
+.acis-pillars-section {
+  background: #05020c;
+}
+
+.acis-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.acis-pillar-card {
+  background: rgba(13, 8, 28, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.acis-pillar-card:hover {
+  background: rgba(20, 12, 42, 0.85);
+  border-color: rgba(255, 122, 0, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.pillar-num {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ff7a00;
+  margin-bottom: 0.75rem;
+}
+
+.pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.pillar-subtitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #06b6d4;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.pillar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ff7a00;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 6. ACIS PLATFORM MODULES */
+.acis-modules-section {
+  background: #080316;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.acis-modules-chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.acis-module-chip {
+  background: rgba(14, 9, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 0.65rem 1.25rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.acis-module-chip:hover {
+  background: rgba(255, 122, 0, 0.12);
+  border-color: rgba(255, 122, 0, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.acis-module-chip i {
+  color: #ff7a00;
+  font-size: 0.85rem;
+}
+
+/* 7. WHO USES ACIS */
+.acis-roles-section {
+  background: #05020c;
+}
+
+.acis-roles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.acis-role-card {
+  background: rgba(12, 8, 26, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.acis-role-card:hover {
+  background: rgba(18, 11, 38, 0.85);
+  border-color: rgba(255, 122, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+.role-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 122, 0, 0.12);
+  color: #ff7a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin: 0 auto 1rem auto;
+}
+
+.role-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.role-desc {
+  font-size: 0.83rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* 8. FINAL CTA */
+.acis-final-cta-section {
+  background: linear-gradient(135deg, #090317 0%, #170933 50%, #080214 100%);
+  border-top: 1px solid rgba(255, 45, 120, 0.15);
+  padding: 5.5rem 0;
+}
+
+.acis-final-cta-box {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.acis-cta-title {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.acis-cta-desc {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.acis-cta-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .acis-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .acis-hero-left {
+    align-items: center;
+  }
+  .acis-hero-title {
+    font-size: 3.8rem;
+  }
+  .acis-three-cards-grid,
+  .acis-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .acis-roles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .acis-hero-title {
+    font-size: 3rem;
+  }
+  .acis-hero-subtitle {
+    font-size: 1.4rem;
+  }
+  .acis-section-title {
+    font-size: 1.85rem;
+  }
+  .acis-three-cards-grid,
+  .acis-pillars-grid,
+  .acis-roles-grid {
+    grid-template-columns: 1fr;
+  }
+  .acis-loop-ring {
+    width: 320px;
+    height: 320px;
+  }
+  .acis-loop-node {
+    width: 75px;
+    height: 75px;
+  }
+  .node-label {
+    font-size: 0.68rem;
+  }
+  .node-1 { top: -15px; }
+  .node-2 { top: 50px; right: -15px; }
+  .node-3 { bottom: 50px; right: -15px; }
+  .node-4 { bottom: -15px; }
+  .node-5 { bottom: 50px; left: -15px; }
+  .node-6 { top: 50px; left: -15px; }
+  .acis-loop-center {
+    width: 110px;
+    height: 110px;
+  }
+  .center-acis-logo {
+    font-size: 1.4rem;
+  }
+}
+
 

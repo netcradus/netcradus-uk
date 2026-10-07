@@ -321,8 +321,8 @@ export default function Siem() {
                     <span className="siem-browser-title">NETCRADUS CONSOLE</span>
                   </div>
                   
-                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-dashboard.png", alt: "NetCradus AI SIEM Intelligence Center Console" })}>
-                    <img src="/images/netxdr-siem-dashboard.png" alt="NetCradus AI SIEM Intelligence Center Console" className="siem-browser-image" />
+                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`, alt: "NetCradus AI SIEM Intelligence Center Console" })}>
+                    <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`} alt="NetCradus AI SIEM Intelligence Center Console" className="siem-browser-image" />
                     <div className="siem-image-overlay">
                       <i className="fas fa-expand"></i> Click to Expand Console Dashboard
                     </div>
@@ -508,8 +508,8 @@ export default function Siem() {
                   </h3>
                   <span className="siem-telemetry-badge-active">ACTIVE</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-collectors.png", alt: "Access & Integrations Console" })}>
-                  <img src="/images/netxdr-siem-collectors.png" alt="Access & Integrations Console" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-collectors.png`, alt: "Access & Integrations Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-collectors.png`} alt="Access & Integrations Console" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Integrations Console
                   </div>
@@ -532,8 +532,8 @@ export default function Siem() {
                   </h3>
                   <span className="siem-telemetry-badge-live">LIVE BRIEF</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-agent-deployment.png", alt: "Access & Integrations Console" })}>
-                  <img src="/images/netxdr-siem-agent-deployment.png" alt="Access & Integrations Console" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-agent-deployment.png`, alt: "Access & Integrations Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-agent-deployment.png`} alt="Access & Integrations Console" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Agent Ingestion Console
                   </div>
@@ -556,8 +556,8 @@ export default function Siem() {
                   </h3>
                   <span className="siem-telemetry-badge-subsecond">1.2 MS/EVT</span>
                 </div>
-                 <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-datasources.png", alt: "Access & Integrations - Data Sources Console" })}>
-                  <img src="/images/netxdr-siem-datasources.png" alt="Access & Integrations - Data Sources Console" className="siem-telemetry-image" />
+                 <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-datasources.png`, alt: "Access & Integrations - Data Sources Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-datasources.png`} alt="Access & Integrations - Data Sources Console" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Data Sources Console
                   </div>
@@ -612,8 +612,8 @@ export default function Siem() {
                   <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-threat-intelligence</span>
                   <span className="siem-browser-title">REAL-TIME IOC ENRICHMENT</span>
                 </div>
-                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-threat-intel.png", alt: "Threat Intelligence Dashboard" })}>
-                  <img src="/images/netxdr-siem-threat-intel.png" alt="Threat Intelligence Dashboard" className="siem-browser-image" />
+                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`, alt: "Threat Intelligence Dashboard" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`} alt="Threat Intelligence Dashboard" className="siem-browser-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Threat Intelligence Console
                   </div>
@@ -649,8 +649,8 @@ export default function Siem() {
                   <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-assets-identities</span>
                   <span className="siem-browser-title">ASSETS & IDENTITIES CONSOLE</span>
                 </div>
-                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-assets.png", alt: "ACIS Assets & Identities Console Dashboard" })}>
-                  <img src="/images/netxdr-siem-assets.png" alt="ACIS Assets & Identities Console Dashboard" className="siem-browser-image" />
+                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-assets.png`, alt: "ACIS Assets & Identities Console Dashboard" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-assets.png`} alt="ACIS Assets & Identities Console Dashboard" className="siem-browser-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Assets & Identities Console
                   </div>
@@ -709,8 +709,8 @@ export default function Siem() {
               <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-event-correlation</span>
               <span className="siem-browser-title">EVENT CORRELATION CONSOLE</span>
             </div>
-            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-correlation.png", alt: "ACIS Event Correlation Console Dashboard" })}>
-              <img src="/images/netxdr-siem-correlation.png" alt="ACIS Event Correlation Console Dashboard" className="siem-browser-image" />
+            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-correlation.png`, alt: "ACIS Event Correlation Console Dashboard" })}>
+              <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-correlation.png`} alt="ACIS Event Correlation Console Dashboard" className="siem-browser-image" />
               <div className="siem-image-overlay">
                 <i className="fas fa-expand"></i> Click to Expand Correlation Console
               </div>

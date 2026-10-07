@@ -321,8 +321,8 @@ export default function Soar() {
                     <span className="endpoint-browser-title">PLAYBOOK ORCHESTRATION</span>
                   </div>
                   
-                  <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-soar-playbooks.png", alt: "NetCradus SOAR Playbooks Console" })}>
-                    <img src="/images/netxdr-siem-soar-playbooks.png" alt="NetCradus SOAR Playbooks Console" className="endpoint-browser-image" />
+                  <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks.png`, alt: "NetCradus SOAR Playbooks Console" })}>
+                    <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks.png`} alt="NetCradus SOAR Playbooks Console" className="endpoint-browser-image" />
                     <div className="endpoint-image-overlay">
                       <i className="fas fa-expand"></i> Click to Expand SOAR Playbook
                     </div>
@@ -388,8 +388,8 @@ export default function Soar() {
                   </h3>
                   <span className="endpoint-telemetry-badge-active">CONNECTED</span>
                 </div>
-                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-soar-playbooks.png", alt: "Active Playbooks Console" })}>
-                  <img src="/images/netxdr-siem-soar-playbooks.png" alt="Active Playbooks Console" className="endpoint-telemetry-image" />
+                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks.png`, alt: "Active Playbooks Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks.png`} alt="Active Playbooks Console" className="endpoint-telemetry-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -412,8 +412,8 @@ export default function Soar() {
                   </h3>
                   <span className="endpoint-telemetry-badge-live">SUB-SECOND</span>
                 </div>
-                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-soar-playbooks-dark.png", alt: "Timeline Correlation Console" })}>
-                  <img src="/images/netxdr-siem-soar-playbooks-dark.png" alt="Timeline Correlation Console" className="endpoint-telemetry-image" />
+                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks-dark.png`, alt: "Timeline Correlation Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks-dark.png`} alt="Timeline Correlation Console" className="endpoint-telemetry-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -436,8 +436,8 @@ export default function Soar() {
                   </h3>
                   <span className="endpoint-telemetry-badge-subsecond">SECURE LOGS</span>
                 </div>
-                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-soar-chain.png", alt: "Audit Chain of Custody Console" })}>
-                  <img src="/images/netxdr-siem-soar-chain.png" alt="Audit Chain of Custody Console" className="endpoint-telemetry-image" />
+                <div className="endpoint-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-soar-chain.png`, alt: "Audit Chain of Custody Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-soar-chain.png`} alt="Audit Chain of Custody Console" className="endpoint-telemetry-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Chain of Custody
                   </div>
@@ -492,8 +492,8 @@ export default function Soar() {
                   <span className="endpoint-browser-address" style={{ color: '#FF6B00' }}>app.netcradus.com/acis-soar-designer</span>
                   <span className="endpoint-browser-title">PLAYBOOKS DESIGNER</span>
                 </div>
-                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-soar-designer.png", alt: "Create SOAR Playbook Modal" })}>
-                  <img src="/images/netxdr-siem-soar-designer.png" alt="Create SOAR Playbook Modal" className="endpoint-browser-image" />
+                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-soar-designer.png`, alt: "Create SOAR Playbook Modal" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-soar-designer.png`} alt="Create SOAR Playbook Modal" className="endpoint-browser-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Playbooks Creator
                   </div>
@@ -529,8 +529,8 @@ export default function Soar() {
                   <span className="endpoint-browser-address" style={{ color: '#FF6B00' }}>app.netcradus.com/acis-soar-remediation</span>
                   <span className="endpoint-browser-title">ACTIVE REMEDIATION</span>
                 </div>
-                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-soar-playbooks.png", alt: "Automated Playbook Remediation Console" })}>
-                  <img src="/images/netxdr-siem-soar-playbooks.png" alt="Automated Playbook Remediation Console" className="endpoint-browser-image" />
+                <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks.png`, alt: "Automated Playbook Remediation Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks.png`} alt="Automated Playbook Remediation Console" className="endpoint-browser-image" />
                   <div className="endpoint-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Remediation Console
                   </div>
@@ -587,8 +587,8 @@ export default function Soar() {
               <span className="endpoint-browser-address" style={{ color: '#FF6B00' }}>app.netcradus.com/acis-soar-dashboard</span>
               <span className="endpoint-browser-title">PLAYBOOKS RUNS METRICS</span>
             </div>
-            <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-soar-playbooks.png", alt: "SOAR Metrics Dashboard" })}>
-              <img src="/images/netxdr-siem-soar-playbooks.png" alt="SOAR Metrics Dashboard" className="endpoint-browser-image" />
+            <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks.png`, alt: "SOAR Metrics Dashboard" })}>
+              <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-soar-playbooks.png`} alt="SOAR Metrics Dashboard" className="endpoint-browser-image" />
               <div className="endpoint-image-overlay">
                 <i className="fas fa-expand"></i> Click to Expand Metrics Console
               </div>

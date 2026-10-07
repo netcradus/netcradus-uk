@@ -321,8 +321,8 @@ export default function Cti() {
                     <span className="siem-browser-title">THREAT INTELLIGENCE</span>
                   </div>
                   
-                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-threat-intel.png", alt: "NetCradus CTI Indicators Console" })}>
-                    <img src="/images/netxdr-siem-threat-intel.png" alt="NetCradus CTI Indicators Console" className="siem-browser-image" />
+                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`, alt: "NetCradus CTI Indicators Console" })}>
+                    <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`} alt="NetCradus CTI Indicators Console" className="siem-browser-image" />
                     <div className="siem-image-overlay">
                       <i className="fas fa-expand"></i> Click to Expand Indicators Console
                     </div>
@@ -508,8 +508,8 @@ export default function Cti() {
                   </h3>
                   <span className="siem-telemetry-badge-active">ACTIVE SYNC</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-threat-intel.png", alt: "Threat Intel Indicators Panel" })}>
-                  <img src="/images/netxdr-siem-threat-intel.png" alt="Threat Intel Indicators Panel" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`, alt: "Threat Intel Indicators Panel" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`} alt="Threat Intel Indicators Panel" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -532,8 +532,8 @@ export default function Cti() {
                   </h3>
                   <span className="siem-telemetry-badge-live">DYNAMIC SCORING</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-threat-intel.png", alt: "Severity Breakdown Console" })}>
-                  <img src="/images/netxdr-siem-threat-intel.png" alt="Severity Breakdown Console" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`, alt: "Severity Breakdown Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`} alt="Severity Breakdown Console" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -556,8 +556,8 @@ export default function Cti() {
                   </h3>
                   <span className="siem-telemetry-badge-subsecond">REAL-TIME</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-threat-intel.png", alt: "Threat Sources Integration Dashboard" })}>
-                  <img src="/images/netxdr-siem-threat-intel.png" alt="Threat Sources Integration Dashboard" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`, alt: "Threat Sources Integration Dashboard" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`} alt="Threat Sources Integration Dashboard" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -612,8 +612,8 @@ export default function Cti() {
                   <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-threat-enrichment</span>
                   <span className="siem-browser-title">IOC LOOKUP CONSOLE</span>
                 </div>
-                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-threat-intel.png", alt: "IOC Enrichment Search Interface" })}>
-                  <img src="/images/netxdr-siem-threat-intel.png" alt="IOC Enrichment Search Interface" className="siem-browser-image" />
+                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`, alt: "IOC Enrichment Search Interface" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`} alt="IOC Enrichment Search Interface" className="siem-browser-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Lookup Console
                   </div>
@@ -649,8 +649,8 @@ export default function Cti() {
                   <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-cti-remediation</span>
                   <span className="siem-browser-title">ACTIVE REACTION</span>
                 </div>
-                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-threat-intel.png", alt: "CTI Active Containment Playbook" })}>
-                  <img src="/images/netxdr-siem-threat-intel.png" alt="CTI Active Containment Playbook" className="siem-browser-image" />
+                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`, alt: "CTI Active Containment Playbook" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`} alt="CTI Active Containment Playbook" className="siem-browser-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Containment Console
                   </div>
@@ -707,8 +707,8 @@ export default function Cti() {
               <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-threat-intel-dashboard</span>
               <span className="siem-browser-title">THREAT INTELLIGENCE SUMMARY</span>
             </div>
-            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-threat-intel.png", alt: "Threat Intelligence Dashboard Overview" })}>
-              <img src="/images/netxdr-siem-threat-intel.png" alt="Threat Intelligence Dashboard Overview" className="siem-browser-image" />
+            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`, alt: "Threat Intelligence Dashboard Overview" })}>
+              <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-threat-intel.png`} alt="Threat Intelligence Dashboard Overview" className="siem-browser-image" />
               <div className="siem-image-overlay">
                 <i className="fas fa-expand"></i> Click to Expand Dashboard Overview
               </div>

@@ -321,8 +321,8 @@ export default function AiSecurity() {
                     <span className="siem-browser-title">NETCRADUS LLM | LOGIN</span>
                   </div>
                   
-                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netcradus-llm-login.png", alt: "NetCradus LLM Secure AI Platform Login" })}>
-                    <img src="/images/netcradus-llm-login.png" alt="NetCradus LLM Secure AI Platform Login" className="siem-browser-image" />
+                  <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netcradus-llm-login.png`, alt: "NetCradus LLM Secure AI Platform Login" })}>
+                    <img src={`${import.meta.env.BASE_URL}images/netcradus-llm-login.png`} alt="NetCradus LLM Secure AI Platform Login" className="siem-browser-image" />
                     <div className="siem-image-overlay">
                       <i className="fas fa-expand"></i> Click to Expand NetCradus LLM Login
                     </div>
@@ -508,8 +508,8 @@ export default function AiSecurity() {
                   </h3>
                   <span className="siem-telemetry-badge-active">ACTIVE SCAN</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-dashboard.png", alt: "Active Prompt Firewalls Panel" })}>
-                  <img src="/images/netxdr-siem-dashboard.png" alt="Active Prompt Firewalls Panel" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`, alt: "Active Prompt Firewalls Panel" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`} alt="Active Prompt Firewalls Panel" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -532,8 +532,8 @@ export default function AiSecurity() {
                   </h3>
                   <span className="siem-telemetry-badge-live">SUB-SECOND</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-dashboard.png", alt: "Prompt Injections Block Logs" })}>
-                  <img src="/images/netxdr-siem-dashboard.png" alt="Prompt Injections Block Logs" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`, alt: "Prompt Injections Block Logs" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`} alt="Prompt Injections Block Logs" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -556,8 +556,8 @@ export default function AiSecurity() {
                   </h3>
                   <span className="siem-telemetry-badge-subsecond">SECURE PIPELINE</span>
                 </div>
-                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-dashboard.png", alt: "PII Masking Pipeline Panel" })}>
-                  <img src="/images/netxdr-siem-dashboard.png" alt="PII Masking Pipeline Panel" className="siem-telemetry-image" />
+                <div className="siem-telemetry-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`, alt: "PII Masking Pipeline Panel" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`} alt="PII Masking Pipeline Panel" className="siem-telemetry-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Screenshot
                   </div>
@@ -612,8 +612,8 @@ export default function AiSecurity() {
                   <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-ai-controls</span>
                   <span className="siem-browser-title">AI CONTROLS PANEL</span>
                 </div>
-                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-dashboard.png", alt: "Active LLM Models Controls Console" })}>
-                  <img src="/images/netxdr-siem-dashboard.png" alt="Active LLM Models Controls Console" className="siem-browser-image" />
+                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`, alt: "Active LLM Models Controls Console" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`} alt="Active LLM Models Controls Console" className="siem-browser-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand AI Controls Console
                   </div>
@@ -649,8 +649,8 @@ export default function AiSecurity() {
                   <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/acis-ai-containment</span>
                   <span className="siem-browser-title">AI CONTAINMENT PLAYBOOKS</span>
                 </div>
-                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netxdr-siem-dashboard.png", alt: "AI Containment Playbook Designer" })}>
-                  <img src="/images/netxdr-siem-dashboard.png" alt="AI Containment Playbook Designer" className="siem-browser-image" />
+                <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`, alt: "AI Containment Playbook Designer" })}>
+                  <img src={`${import.meta.env.BASE_URL}images/netxdr-siem-dashboard.png`} alt="AI Containment Playbook Designer" className="siem-browser-image" />
                   <div className="siem-image-overlay">
                     <i className="fas fa-expand"></i> Click to Expand Containment Console
                   </div>
@@ -707,8 +707,8 @@ export default function AiSecurity() {
               <span className="siem-browser-address" style={{ color: '#06b6d4' }}>app.netcradus.com/llm-interface</span>
               <span className="siem-browser-title">NETCRADUS LLM | AI INTERFACE</span>
             </div>
-            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: "/images/netcradus-llm-interface.png", alt: "NetCradus LLM AI Interface Dashboard" })}>
-              <img src="/images/netcradus-llm-interface.png" alt="NetCradus LLM AI Interface Dashboard" className="siem-browser-image" />
+            <div className="siem-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/netcradus-llm-interface.png`, alt: "NetCradus LLM AI Interface Dashboard" })}>
+              <img src={`${import.meta.env.BASE_URL}images/netcradus-llm-interface.png`} alt="NetCradus LLM AI Interface Dashboard" className="siem-browser-image" />
               <div className="siem-image-overlay">
                 <i className="fas fa-expand"></i> Click to Expand NetCradus LLM Interface
               </div>

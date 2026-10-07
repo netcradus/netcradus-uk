@@ -135,7 +135,7 @@ export default function Products() {
               muted
               playsInline
               preload="auto"
-              poster={`${import.meta.env.BASE_URL}videos/netcradus_products_carousel_v4_poster.png`}
+              poster={`${import.meta.env.BASE_URL}assets/netcradus_one_solution_cycle_poster.png`}
               className="showcase-video"
             />
             

@@ -41,9 +41,12 @@ export default function App() {
           <Route path="platform/siem" element={<Siem />} />
           <Route path="platform/soar" element={<Soar />} />
           <Route path="platform/cti" element={<Cti />} />
+          <Route path="platform/threat-intelligence" element={<Cti />} />
           <Route path="platform/pam" element={<Pam />} />
           <Route path="platform/grc" element={<Grc />} />
           <Route path="platform/ai-security" element={<AiSecurity />} />
+          <Route path="platform/swarm-intelligence" element={<AiSecurity />} />
+          <Route path="platform/red-teaming" element={<Vapt />} />
           <Route path="products/xdr" element={<EndpointDetection />} />
           <Route path="products/siem" element={<Siem />} />
           <Route path="products/soar" element={<Soar />} />
