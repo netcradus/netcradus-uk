@@ -9,91 +9,166 @@ export default function Acis() {
   const [activePillar, setActivePillar] = useState('01');
 
   const modulesList = [
-    { name: 'Log Explorer', icon: 'fa-folder-tree' },
-    { name: 'Correlation', icon: 'fa-diagram-project' },
-    { name: 'Alerts & Incidents', icon: 'fa-triangle-exclamation' },
-    { name: 'Assets & Identities', icon: 'fa-users-gear' },
-    { name: 'Threat Intel', icon: 'fa-globe' },
-    { name: 'SOAR Playbooks', icon: 'fa-bolt' },
-    { name: 'Red Team', icon: 'fa-user-ninja' },
-    { name: 'File Scanning', icon: 'fa-file-shield' },
-    { name: 'Supply Chain', icon: 'fa-network-wired' },
-    { name: 'Approvals', icon: 'fa-user-check' },
-    { name: 'Endpoints & Network', icon: 'fa-desktop' },
-    { name: 'Compliance & Audit', icon: 'fa-file-contract' },
-    { name: 'Reports', icon: 'fa-chart-pie' },
-    { name: 'AI Analyst', icon: 'fa-brain' },
-    { name: 'Settings', icon: 'fa-sliders' }
+    {
+      name: 'Log Explorer',
+      desc: 'Search and browse raw ingested log events.',
+      icon: 'fa-folder-tree',
+      route: '/platform/siem'
+    },
+    {
+      name: 'Correlation',
+      desc: 'Rules engine that turns raw logs into alerts.',
+      icon: 'fa-diagram-project',
+      route: '/platform/siem'
+    },
+    {
+      name: 'Alerts & Incidents',
+      desc: 'Every alert ACIS has raised, and triage status.',
+      icon: 'fa-triangle-exclamation',
+      route: '/platform/siem'
+    },
+    {
+      name: 'Assets & Identities',
+      desc: 'Inventory of machines, cloud resources, identities.',
+      icon: 'fa-users-gear',
+      route: '/platform/siem'
+    },
+    {
+      name: 'Threat Intel',
+      desc: 'Known-bad indicators (IPs, hashes, domains) ACIS checks activity against.',
+      icon: 'fa-globe',
+      route: '/platform/cti'
+    },
+    {
+      name: 'SOAR Playbooks',
+      desc: 'Automated and semi-automated response workflows.',
+      icon: 'fa-bolt',
+      route: '/platform/soar'
+    },
+    {
+      name: 'Red Team',
+      desc: 'Authorized offensive-security testing engagements.',
+      icon: 'fa-user-ninja',
+      route: '/platform/red-teaming'
+    },
+    {
+      name: 'File Scanning',
+      desc: 'Malware and mobile-app static-analysis scanning for uploaded files.',
+      icon: 'fa-file-shield',
+      route: ''
+    },
+    {
+      name: 'Supply Chain',
+      desc: 'Dependency vulnerability scanning.',
+      icon: 'fa-network-wired',
+      route: ''
+    },
+    {
+      name: 'Approvals',
+      desc: 'Queue of pending approval-gated actions awaiting human decision.',
+      icon: 'fa-user-check',
+      route: '/platform/soar'
+    },
+    {
+      name: 'Endpoints & Network',
+      desc: 'Enrolled endpoint agents and their status.',
+      icon: 'fa-desktop',
+      route: '/platform/siem'
+    },
+    {
+      name: 'Compliance & Audit',
+      desc: 'Tamper-evident audit trail and compliance reporting.',
+      icon: 'fa-file-contract',
+      route: '/solutions/grc'
+    },
+    {
+      name: 'Reports',
+      desc: 'Generated and scheduled reports.',
+      icon: 'fa-chart-pie',
+      route: '/solutions/grc'
+    },
+    {
+      name: 'AI Analyst',
+      desc: 'AI-assisted query and explanation over security data.',
+      icon: 'fa-brain',
+      route: '/platform/swarm-intelligence'
+    },
+    {
+      name: 'Settings',
+      desc: 'Profile, notifications, roles, users, integrations.',
+      icon: 'fa-sliders',
+      route: ''
+    }
   ];
 
   const pillarsList = [
     {
       num: '01',
       title: 'SIEM',
-      subtitle: 'Security & Monitoring',
+      category: 'Security Monitoring',
       icon: 'fa-shield-halved',
-      desc: 'Real-time security monitoring, log aggregation, correlation and analysis across the infrastructure.',
+      desc: 'Real-time security visibility across logs, events and telemetry.',
       capabilities: [
-        'Real-time log aggregation',
-        'Cross-stack telemetry correlation',
-        'Continuous security visibility',
-        'Automated threat detection'
+        'Log aggregation and visibility',
+        'Security event monitoring',
+        'Detection and correlation',
+        'Investigation support'
       ],
       link: '/platform/siem'
     },
     {
       num: '02',
       title: 'SOAR',
-      subtitle: 'Response & Automation',
+      category: 'Response & Automation',
       icon: 'fa-atom',
-      desc: 'Orchestrated containment playbooks with human-in-the-loop approval safeguards.',
+      desc: 'Orchestrated response workflows that help security teams investigate and contain incidents.',
       capabilities: [
-        'Automated incident response',
+        'Automated response workflows',
         'Playbook orchestration',
-        'Human-in-the-loop approval',
-        'Faster threat containment'
+        'Semi-automated containment',
+        'Human approval for critical actions'
       ],
       link: '/platform/soar'
     },
     {
       num: '03',
       title: 'Threat Intelligence',
-      subtitle: 'Threat & Intelligence',
+      category: 'Threat Intelligence',
       icon: 'fa-brain',
-      desc: 'Known-bad IPs, domains, hashes and other indicators used to identify malicious activity.',
+      desc: 'Known-bad indicators and threat context used to strengthen detection and investigation.',
       capabilities: [
-        'Global IOC enrichment',
-        'Real-time threat feed integration',
-        'Attacker TTP correlation',
-        'Context-rich threat scoring'
+        'IP intelligence',
+        'Domain intelligence',
+        'Hash intelligence',
+        'Threat context and correlation'
       ],
       link: '/platform/cti'
     },
     {
       num: '04',
       title: 'Red Teaming',
-      subtitle: 'Proactive & Security',
+      category: 'Offensive Security',
       icon: 'fa-crosshairs',
-      desc: 'Authorized offensive security testing and continuous exposure assessment.',
+      desc: 'Authorized offensive-security testing used to identify weaknesses and validate defensive controls.',
       capabilities: [
-        'Automated adversary simulation',
-        'Continuous attack surface testing',
-        'Vulnerability path analysis',
-        'Proactive security validation'
+        'Authorized security testing',
+        'Exposure assessment',
+        'Adversary simulation',
+        'Security validation'
       ],
       link: '/platform/red-teaming'
     },
     {
       num: '05',
       title: 'Swarm Intelligence',
-      subtitle: 'Adaptive & Intelligence',
+      category: 'Distributed Intelligence',
       icon: 'fa-circle-nodes',
-      desc: 'Distributed multi-node signal analysis and adaptive intelligence for identifying complex and emerging threats.',
+      desc: 'Distributed analysis of security signals to improve collective threat understanding.',
       capabilities: [
-        'Multi-node signal analysis',
-        'Distributed threat sensing',
-        'Zero-day anomaly detection',
-        'Emerging risk correlation'
+        'Distributed signal analysis',
+        'Cross-signal intelligence',
+        'Pattern identification',
+        'Emerging-threat awareness'
       ],
       link: '/platform/swarm-intelligence'
     }
@@ -297,12 +372,12 @@ export default function Acis() {
                       <div className="detail-icon-circle">
                         <i className={`fas ${selectedPillarData.icon}`}></i>
                       </div>
-                      <span className="detail-badge-text">{selectedPillarData.num} &mdash; {selectedPillarData.title}</span>
+                      <span className="detail-badge-text">{selectedPillarData.num} &mdash; {selectedPillarData.category}</span>
                     </div>
 
-                    {/* MAIN TITLE WITH SECOND WORD IN ORANGE */}
+                    {/* MAIN TITLE */}
                     <h3 className="detail-main-title">
-                      {selectedPillarData.subtitle.split('&')[0]} &amp; <span className="highlight-orange">{selectedPillarData.subtitle.split('&')[1] || selectedPillarData.subtitle.split(' ')[1]}</span>
+                      {selectedPillarData.title}
                     </h3>
 
                     {/* SHORT DESCRIPTION */}
@@ -349,15 +424,36 @@ export default function Acis() {
           <div className="acis-section-header">
             <span className="acis-tag-badge">SYSTEM MODULES</span>
             <h2 className="acis-section-title">ACIS Platform Modules</h2>
+            <p className="acis-section-desc">
+              Everything ACIS uses across detection, investigation, response and security operations.
+            </p>
           </div>
 
-          <div className="acis-modules-chips-grid">
-            {modulesList.map((mod, idx) => (
-              <div key={idx} className="acis-module-chip">
-                <i className={`fas ${mod.icon}`}></i>
-                <span>{mod.name}</span>
-              </div>
-            ))}
+          <div className="acis-modules-cards-grid">
+            {modulesList.map((mod, idx) => {
+              const cardInner = (
+                <>
+                  <div className="module-card-header">
+                    <div className="module-icon-box">
+                      <i className={`fas ${mod.icon}`}></i>
+                    </div>
+                    <i className="fas fa-arrow-up-right-from-square module-arrow"></i>
+                  </div>
+                  <h3 className="module-name">{mod.name}</h3>
+                  <p className="module-desc">{mod.desc}</p>
+                </>
+              );
+
+              return mod.route ? (
+                <Link key={idx} to={mod.route} className="acis-module-card clickable">
+                  {cardInner}
+                </Link>
+              ) : (
+                <div key={idx} className="acis-module-card">
+                  {cardInner}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

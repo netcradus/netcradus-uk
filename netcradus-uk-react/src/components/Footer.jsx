@@ -4,69 +4,264 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <footer className="site-footer">
-      <div className="section-container">
+      {/* Subtle Cybersecurity Network Grid Background Pattern */}
+      <div className="footer-grid-bg" aria-hidden="true">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="footer-cyber-grid-react" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 122, 0, 0.04)" strokeWidth="0.8" />
+              <circle cx="40" cy="40" r="1" fill="rgba(255, 122, 0, 0.12)" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#footer-cyber-grid-react)" />
+        </svg>
+      </div>
+
+      <div className="section-container footer-container">
         <div className="footer-grid">
-          <div className="footer-col">
-            <Link to="/" className="brand-logo" style={{ marginBottom: '0.8rem' }}>
-              <img src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`} alt="Netcradus UK Logo" className="brand-logo-img" />
+          
+          {/* COLUMN 1 — NETCRADUS */}
+          <div className="footer-col col-brand">
+            <Link to="/" className="brand-logo" aria-label="Netcradus UK Homepage">
+              <img 
+                src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`} 
+                alt="Netcradus UK Logo" 
+                className="brand-logo-img" 
+              />
             </Link>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>
-              Netcradus Limited (UK) is a registered cybersecurity software engineering firm. Protecting organisations with ACIS™ &amp; 24/7 SOC.
+            
+            <div className="brand-tagline">
+              Security <span>|</span> Intelligence <span>|</span> Resilience
+            </div>
+
+            <p className="brand-copy">
+              Netcradus engineers the future of cyber defense. Through our ACIS platform, we combine AI-driven threat detection, automated response, and enterprise-grade resilience to protect what matters most &mdash; before threats even strike.
             </p>
-            <div className="footer-social-links" style={{ display: 'flex', gap: '0.75rem', marginTop: '1.2rem' }}>
-              <a href="https://instagram.com/netcradus" target="_blank" rel="noopener noreferrer" className="social-icon-btn instagram" aria-label="Instagram" title="Instagram">
+
+            <div className="footer-social-links">
+              <a 
+                href="https://instagram.com/netcradus" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="social-icon-btn instagram" 
+                aria-label="Instagram" 
+                title="Instagram"
+              >
                 <i className="fa-brands fa-instagram"></i>
               </a>
-              <a href="https://www.facebook.com/netcradus" target="_blank" rel="noopener noreferrer" className="social-icon-btn facebook" aria-label="Facebook" title="Facebook">
+              <a 
+                href="https://www.facebook.com/netcradus" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="social-icon-btn facebook" 
+                aria-label="Facebook" 
+                title="Facebook"
+              >
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="https://www.linkedin.com/company/netcradus-pvt-ltd/" target="_blank" rel="noopener noreferrer" className="social-icon-btn linkedin" aria-label="LinkedIn" title="LinkedIn">
+              <a 
+                href="https://www.linkedin.com/company/netcradus-pvt-ltd/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="social-icon-btn linkedin" 
+                aria-label="LinkedIn" 
+                title="LinkedIn"
+              >
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
-              <a href="https://www.youtube.com/@Netcradus-acis" target="_blank" rel="noopener noreferrer" className="social-icon-btn youtube" aria-label="YouTube" title="YouTube">
+              <a 
+                href="https://www.youtube.com/@Netcradus-acis" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="social-icon-btn youtube" 
+                aria-label="YouTube" 
+                title="YouTube"
+              >
                 <i className="fa-brands fa-youtube"></i>
               </a>
-              <a href="https://x.com/Netcraduspvtltd" target="_blank" rel="noopener noreferrer" className="social-icon-btn twitter" aria-label="X" title="X">
+              <a 
+                href="https://x.com/Netcraduspvtltd" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="social-icon-btn twitter" 
+                aria-label="X (Twitter)" 
+                title="X"
+              >
                 <i className="fa-brands fa-x-twitter"></i>
               </a>
             </div>
           </div>
 
-          <div className="footer-col">
-            <h4 className="footer-title">Products</h4>
-            <ul className="footer-links">
-              <li><Link to="/acis">ACIS™ Platform</Link></li>
-              <li><Link to="/cyrix-xdr">CYRIX XDR</Link></li>
-              <li><Link to="/managed-soc">24/7 Managed SOC</Link></li>
+          {/* COLUMN 2 — PRODUCTS (Prominent & Product-Led) */}
+          <div className="footer-col col-products footer-col-featured">
+            <div className="featured-category-badge">
+              <span className="badge-dot"></span> PRODUCT ECOSYSTEM
+            </div>
+            <h4 className="footer-title title-products">Products</h4>
+            <ul className="footer-links links-products">
+              <li>
+                <Link to="/products/acis">
+                  <span className="link-text">ACIS Platform</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/cyrix-xdr">
+                  <span className="link-text">CYRIX XDR</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/managed-soc">
+                  <span className="link-text">24/7 Managed SOC</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/vapt">
+                  <span className="link-text">VAPT Services</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/compliance">
+                  <span className="link-text">ABDM Security</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
             </ul>
           </div>
 
-          <div className="footer-col">
-            <h4 className="footer-title">Services &amp; Solutions</h4>
+          {/* COLUMN 3 — SECURITY SOLUTIONS */}
+          <div className="footer-col col-solutions">
+            <h4 className="footer-title">Security Solutions</h4>
             <ul className="footer-links">
-              <li><Link to="/services">Cybersecurity Services</Link></li>
-              <li><Link to="/vapt">VAPT Penetration Testing</Link></li>
-              <li><Link to="/zero-trust">Zero Trust &amp; Identity</Link></li>
-              <li><Link to="/cloud-security">Cloud &amp; Network Security</Link></li>
-              <li><Link to="/incident-response">Incident Response</Link></li>
+              <li>
+                <Link to="/services">
+                  <span className="link-text">Cyber Security</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/managed-soc">
+                  <span className="link-text">Managed SOC</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/cloud-security">
+                  <span className="link-text">Cloud Security</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/platform/ai-security">
+                  <span className="link-text">AI Security</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/cloud-security">
+                  <span className="link-text">Network Security</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/services">
+                  <span className="link-text">Enterprise Security</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
             </ul>
           </div>
 
-          <div className="footer-col">
-            <h4 className="footer-title">Company &amp; Compliance</h4>
+          {/* COLUMN 4 — COMPANY */}
+          <div className="footer-col col-company">
+            <h4 className="footer-title">Company</h4>
             <ul className="footer-links">
-              <li><Link to="/industries">Industries</Link></li>
-              <li><Link to="/why-netcradus">Why Netcradus</Link></li>
-              <li><Link to="/compliance">UK Compliance &amp; NIS2</Link></li>
-              <li><Link to="/case-studies">Case Studies</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
+              <li>
+                <Link to="/why-netcradus">
+                  <span className="link-text">About / Why Netcradus</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/industries">
+                  <span className="link-text">Industries</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies">
+                  <span className="link-text">Case Studies</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact">
+                  <span className="link-text">Careers</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact">
+                  <span className="link-text">Contact Us</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
             </ul>
+          </div>
+
+          {/* COLUMN 5 — CONTACT / OPERATIONS */}
+          <div className="footer-col col-operations">
+            <h4 className="footer-title">Operations &amp; Support</h4>
+            <div className="footer-ops-info">
+              
+              <div className="ops-item">
+                <span className="ops-label">PRESENCE</span>
+                <p className="ops-val">
+                  <i className="fas fa-location-dot ops-icon"></i> UK &amp; India Offices
+                </p>
+                <p className="ops-sub">Leicester, UK &bull; Delhi NCR, India</p>
+              </div>
+
+              <div className="ops-item">
+                <span className="ops-label">CONTACT EMAIL</span>
+                <p className="ops-val">
+                  <i className="fas fa-envelope ops-icon"></i> 
+                  <a href="mailto:info@netcradus.com" className="ops-link">info@netcradus.com</a>
+                </p>
+              </div>
+
+              <div className="ops-item">
+                <span className="ops-label">SUPPORT HOURS</span>
+                <p className="ops-val highlight-247">
+                  <i className="fas fa-shield-halved ops-icon"></i> 24/7/365 SOC Monitoring
+                </p>
+                <p className="ops-sub">Partner &amp; Support Desk Active</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        {/* BOTTOM BAR */}
+        <div className="footer-bottom">
+          <div className="footer-copyright">
+            &copy; 2026 Netcradus Limited. All rights reserved.
+          </div>
+          <div className="footer-legal-links">
+            <Link to="/compliance" className="legal-link">Privacy Policy</Link>
+            <span className="legal-sep">|</span>
+            <Link to="/compliance" className="legal-link">Terms &amp; Conditions</Link>
+            <span className="legal-sep">|</span>
+            <Link to="/compliance" className="legal-link">Cookies</Link>
+            <span className="legal-sep">|</span>
+            <Link to="/products" className="legal-link">Sitemap</Link>
           </div>
         </div>
 
-        <div className="footer-bottom" style={{ marginTop: '2.5rem' }}>
-          <div>&copy; 2026 Netcradus Limited. All rights reserved.</div>
-        </div>
       </div>
     </footer>
   );
