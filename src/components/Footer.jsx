@@ -19,17 +19,17 @@ function Footer() {
 
       <div className="section-container footer-container">
         <div className="footer-grid">
-          
+
           {/* COLUMN 1 — NETCRADUS */}
           <div className="footer-col col-brand">
             <Link to="/" className="brand-logo" aria-label="Netcradus UK Homepage">
-              <img 
-                src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`} 
-                alt="Netcradus UK Logo" 
-                className="brand-logo-img" 
+              <img
+                src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`}
+                alt="Netcradus UK Logo"
+                className="brand-logo-img"
               />
             </Link>
-            
+
             <div className="brand-tagline">
               Security <span>|</span> Intelligence <span>|</span> Resilience
             </div>
@@ -39,52 +39,52 @@ function Footer() {
             </p>
 
             <div className="footer-social-links">
-              <a 
-                href="https://instagram.com/netcradus" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon-btn instagram" 
-                aria-label="Instagram" 
+              <a
+                href="https://instagram.com/netcradus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon-btn instagram"
+                aria-label="Instagram"
                 title="Instagram"
               >
                 <i className="fa-brands fa-instagram"></i>
               </a>
-              <a 
-                href="https://www.facebook.com/netcradus" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon-btn facebook" 
-                aria-label="Facebook" 
+              <a
+                href="https://www.facebook.com/netcradus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon-btn facebook"
+                aria-label="Facebook"
                 title="Facebook"
               >
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a 
-                href="https://www.linkedin.com/company/netcradus-pvt-ltd/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon-btn linkedin" 
-                aria-label="LinkedIn" 
+              <a
+                href="https://www.linkedin.com/company/netcradus-pvt-ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon-btn linkedin"
+                aria-label="LinkedIn"
                 title="LinkedIn"
               >
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
-              <a 
-                href="https://www.youtube.com/@Netcradus-acis" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon-btn youtube" 
-                aria-label="YouTube" 
+              <a
+                href="https://www.youtube.com/@Netcradus-acis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon-btn youtube"
+                aria-label="YouTube"
                 title="YouTube"
               >
                 <i className="fa-brands fa-youtube"></i>
               </a>
-              <a 
-                href="https://x.com/Netcraduspvtltd" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon-btn twitter" 
-                aria-label="X (Twitter)" 
+              <a
+                href="https://x.com/Netcraduspvtltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon-btn twitter"
+                aria-label="X (Twitter)"
                 title="X"
               >
                 <i className="fa-brands fa-x-twitter"></i>
@@ -112,20 +112,20 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/netcrad">
+                  <span className="link-text">NetCRAD Website Audit</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
+                <Link to="/crm">
+                  <span className="link-text">NetCRM</span>
+                  <i className="fas fa-arrow-right link-arrow"></i>
+                </Link>
+              </li>
+              <li>
                 <Link to="/managed-soc">
                   <span className="link-text">24/7 Managed SOC</span>
-                  <i className="fas fa-arrow-right link-arrow"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to="/vapt">
-                  <span className="link-text">VAPT Services</span>
-                  <i className="fas fa-arrow-right link-arrow"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to="/compliance">
-                  <span className="link-text">ABDM Security</span>
                   <i className="fas fa-arrow-right link-arrow"></i>
                 </Link>
               </li>
@@ -137,7 +137,7 @@ function Footer() {
             <h4 className="footer-title">Security Solutions</h4>
             <ul className="footer-links">
               <li>
-                <Link to="/services">
+                <Link to="/cyber-security">
                   <span className="link-text">Cyber Security</span>
                   <i className="fas fa-arrow-right link-arrow"></i>
                 </Link>
@@ -155,19 +155,19 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/platform/ai-security">
+                <Link to="/ai-security">
                   <span className="link-text">AI Security</span>
                   <i className="fas fa-arrow-right link-arrow"></i>
                 </Link>
               </li>
               <li>
-                <Link to="/cloud-security">
+                <Link to="/network-security">
                   <span className="link-text">Network Security</span>
                   <i className="fas fa-arrow-right link-arrow"></i>
                 </Link>
               </li>
               <li>
-                <Link to="/services">
+                <Link to="/enterprise-security">
                   <span className="link-text">Enterprise Security</span>
                   <i className="fas fa-arrow-right link-arrow"></i>
                 </Link>
@@ -216,7 +216,7 @@ function Footer() {
           <div className="footer-col col-operations">
             <h4 className="footer-title">Operations &amp; Support</h4>
             <div className="footer-ops-info">
-              
+
               <div className="ops-item">
                 <span className="ops-label">PRESENCE</span>
                 <p className="ops-val">
@@ -228,7 +228,7 @@ function Footer() {
               <div className="ops-item">
                 <span className="ops-label">CONTACT EMAIL</span>
                 <p className="ops-val">
-                  <i className="fas fa-envelope ops-icon"></i> 
+                  <i className="fas fa-envelope ops-icon"></i>
                   <a href="mailto:info@netcradus.com" className="ops-link">info@netcradus.com</a>
                 </p>
               </div>

@@ -26,6 +26,11 @@ import Cti from './pages/Cti';
 import Pam from './pages/Pam';
 import Grc from './pages/Grc';
 import AiSecurity from './pages/AiSecurity';
+import CyberSecurity from './pages/CyberSecurity';
+import EnterpriseSecurity from './pages/EnterpriseSecurity';
+import NetworkSecurity from './pages/NetworkSecurity';
+import Crm from './pages/Crm';
+import Netcrad from './pages/Netcrad';
 
 export default function App() {
   return (
@@ -54,18 +59,33 @@ export default function App() {
           <Route path="products/pam" element={<Pam />} />
           <Route path="products/grc" element={<Grc />} />
           <Route path="products/ai-security" element={<AiSecurity />} />
+          <Route path="products/crm" element={<Navigate to="/crm" replace />} />
+          <Route path="crm" element={<Crm />} />
+          <Route path="netcrad" element={<Netcrad />} />
+          <Route path="products/netcrad" element={<Navigate to="/netcrad" replace />} />
+          <Route path="platform/netcrad" element={<Navigate to="/netcrad" replace />} />
           <Route path="products" element={<Products />} />
           <Route path="services" element={<Services />} />
+          <Route path="cyber-security" element={<CyberSecurity />} />
+          <Route path="services/cyber-security" element={<Navigate to="/cyber-security" replace />} />
+          <Route path="ai-security" element={<AiSecurity />} />
+          <Route path="services/ai-security" element={<Navigate to="/ai-security" replace />} />
+          <Route path="enterprise-security" element={<EnterpriseSecurity />} />
+          <Route path="services/enterprise-security" element={<Navigate to="/enterprise-security" replace />} />
+          <Route path="network-security" element={<NetworkSecurity />} />
+          <Route path="services/network-security" element={<Navigate to="/network-security" replace />} />
           <Route path="managed-soc" element={<ManagedSoc />} />
           <Route path="cloud-security" element={<CloudSecurity />} />
           <Route path="zero-trust" element={<ZeroTrust />} />
           <Route path="vapt" element={<Vapt />} />
+          <Route path="services/vapt" element={<Navigate to="/vapt" replace />} />
           <Route path="incident-response" element={<IncidentResponse />} />
           <Route path="compliance" element={<Compliance />} />
           <Route path="industries" element={<Industries />} />
           <Route path="case-studies" element={<CaseStudies />} />
           <Route path="why-netcradus" element={<WhyNetcradus />} />
           <Route path="cyrix-xdr" element={<CyrixXdr />} />
+          <Route path="netxdr" element={<Navigate to="/cyrix-xdr" replace />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>

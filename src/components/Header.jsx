@@ -9,7 +9,7 @@ export default function Header() {
   const [isPlatformOpen, setIsPlatformOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  
+
   const location = useLocation();
   const headerRef = useRef(null);
 
@@ -87,21 +87,21 @@ export default function Header() {
   };
 
   const isPlatformActive = location.pathname.startsWith('/platform');
-  const isProductsActive = location.pathname.startsWith('/products') || ['/cyrix-xdr'].includes(location.pathname);
-  const isSolutionsActive = ['/services', '/vapt', '/zero-trust', '/cloud-security', '/incident-response', '/managed-soc'].includes(location.pathname);
+  const isProductsActive = location.pathname.startsWith('/products') || ['/cyrix-xdr', '/crm', '/netcrad'].includes(location.pathname);
+  const isSolutionsActive = ['/services', '/cyber-security', '/vapt', '/zero-trust', '/cloud-security', '/incident-response', '/managed-soc', '/ai-security', '/enterprise-security', '/network-security'].includes(location.pathname);
   const isActive = (path) => location.pathname === path;
 
   return (
     <header className={`site-header ${isScrolled ? 'scrolled' : ''} ${mobileOpen ? 'mobile-menu-active' : ''}`} id="siteHeader" ref={headerRef}>
       <div className="nav-container">
         <Link to="/" className="brand-logo" aria-label="Netcradus UK Homepage" onClick={closeAllMenus}>
-          <img src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`} alt="Netcradus UK Logo" className="brand-logo-img" />
+          <img src={`${import.meta.env.BASE_URL}assets/netcradus-header-logo.png`} alt="Netcradus UK Logo" className="brand-logo-img" />
         </Link>
 
         <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>
           <li className={`nav-item dropdown mega-dropdown ${isPlatformOpen ? 'mobile-submenu-open is-open' : 'is-closed'}`}>
-            <Link 
-              to="/platform" 
+            <Link
+              to="/platform"
               className={`nav-link ${isPlatformActive ? 'active' : ''}`}
               onClick={(e) => handleDropdownToggle(e, 'platform')}
             >
@@ -111,13 +111,13 @@ export default function Header() {
               <ConvergedPlatformBar onItemClick={closeAllMenus} />
             </div>
           </li>
-          <li 
+          <li
             className={`nav-item dropdown mega-dropdown ${isProductsOpen ? 'mobile-submenu-open is-open' : 'is-closed'}`}
             onMouseEnter={() => { if (window.innerWidth > 768) setIsProductsOpen(true); }}
             onMouseLeave={() => { if (window.innerWidth > 768) setIsProductsOpen(false); }}
           >
-            <Link 
-              to="/products" 
+            <Link
+              to="/products"
               className={`nav-link ${isProductsActive || isProductsOpen ? 'active' : ''}`}
               onClick={(e) => handleDropdownToggle(e, 'products')}
             >
@@ -130,7 +130,7 @@ export default function Header() {
                 <div className="products-mega-col cybersecurity-col">
                   <h3 className="products-mega-heading">CYBERSECURITY PLATFORM</h3>
                   <div className="products-mega-underline"></div>
-                  
+
                   <div className="products-mega-list">
                     <Link to="/products/acis" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
@@ -160,7 +160,7 @@ export default function Header() {
                   <div className="products-mega-underline"></div>
 
                   <div className="products-mega-list">
-                    <Link to="/products" className="products-mega-item" onClick={closeAllMenus}>
+                    <Link to="/crm" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
                         <i className="fas fa-users"></i>
                       </div>
@@ -170,9 +170,9 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/products" className="products-mega-item" onClick={closeAllMenus}>
+                    <Link to="/netcrad" className="products-mega-item" onClick={closeAllMenus}>
                       <div className="products-mega-icon-container">
-                        <i className="fas fa-shield-alt"></i>
+                        <i className="fas fa-globe-lock"></i>
                       </div>
                       <div className="products-mega-text">
                         <h4 className="products-mega-item-title">NetCrad</h4>
@@ -229,8 +229,8 @@ export default function Header() {
             </div>
           </li>
           <li className={`nav-item dropdown mega-dropdown ${isSolutionsOpen ? 'mobile-submenu-open' : ''}`}>
-            <Link 
-              to="/services" 
+            <Link
+              to="/services"
               className={`nav-link ${isSolutionsActive ? 'active' : ''}`}
               onClick={(e) => handleDropdownToggle(e, 'solutions')}
             >
@@ -245,9 +245,9 @@ export default function Header() {
                 <div className="solutions-mega-col core-services-col">
                   <h3 className="solutions-mega-heading">CORE SECURITY SERVICES</h3>
                   <div className="solutions-mega-underline"></div>
-                  
+
                   <div className="solutions-mega-list">
-                    <Link to="/services" className="solutions-mega-item" onClick={closeAllMenus}>
+                    <Link to="/cyber-security" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-shield-alt"></i>
                       </div>
@@ -267,7 +267,7 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/cloud-security" className="solutions-mega-item" onClick={closeAllMenus}>
+                    <Link to="/network-security" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-network-wired"></i>
                       </div>
@@ -295,7 +295,7 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/services" className="solutions-mega-item" onClick={closeAllMenus}>
+                    <Link to="/ai-security" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-brain"></i>
                       </div>
@@ -305,7 +305,7 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link to="/services" className="solutions-mega-item" onClick={closeAllMenus}>
+                    <Link to="/enterprise-security" className="solutions-mega-item" onClick={closeAllMenus}>
                       <div className="solutions-mega-icon-container">
                         <i className="fas fa-building"></i>
                       </div>
@@ -374,9 +374,9 @@ export default function Header() {
           <CountryDropdown />
         </div>
 
-        <button 
-          className="mobile-toggle" 
-          id="mobileNavToggle" 
+        <button
+          className="mobile-toggle"
+          id="mobileNavToggle"
           aria-label="Toggle Navigation"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
