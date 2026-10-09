@@ -2122,14 +2122,19 @@ body {
   .nav-links.mobile-open {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 52px;
     left: 0;
-    width: 100%;
-    background: #0b0518;
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--glass-border);
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 2, 8, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 1.5rem 1.25rem 3rem 1.25rem;
     gap: 1.2rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 9999;
   }
 
   .domain-badge-grid {
@@ -2160,9 +2165,11 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .brand-logo-img {
-    height: 40px;
-    max-width: 280px;
+  .site-header .brand-logo-img {
+    width: 125px !important;
+    max-width: 125px !important;
+    height: auto !important;
+    max-height: 32px !important;
   }
 
   /* Decreased from 48px */
@@ -11132,4 +11139,161 @@ img {
 .cs-cta-btn {
   padding: 1rem 2.5rem;
   font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   NETCRADUS UK - COMPREHENSIVE RESPONSIVE DESIGN ENHANCEMENTS
+   (Optimized for 320px, 360px, 375px, 390px, 430px, 600px, 768px, 820px, 1024px, 1280px, 1440px, 1600px+)
+   ========================================================================== */
+
+/* 1. Global Viewport & Media Boundaries */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+}
+
+img, video, iframe, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2. Fluid Section Containers */
+.siem-container,
+.section-container,
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+  box-sizing: border-box;
+}
+
+/* 3. Fluid Responsive Typography */
+.cs-hero-title,
+.siem-hero-title,
+.acis-hero-title {
+  font-size: clamp(1.75rem, 4.2vw, 3.5rem) !important;
+  line-height: 1.18 !important;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.cs-section-title,
+.siem-section-title,
+.acis-section-title {
+  font-size: clamp(1.4rem, 3.2vw, 2.5rem) !important;
+  line-height: 1.25 !important;
+  word-wrap: break-word;
+}
+
+.cs-hero-desc,
+.siem-hero-desc,
+.cs-overview-lead {
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem) !important;
+  line-height: 1.65 !important;
+}
+
+/* 4. Responsive Grid Collapsing (< 992px) */
+@media (max-width: 991px) {
+  .cs-hero-grid,
+  .siem-hero-grid,
+  .acis-hero-grid,
+  .cs-overview-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.2rem !important;
+  }
+
+  .siem-hero-left,
+  .cs-hero-left,
+  .acis-hero-left {
+    text-align: left;
+  }
+
+  .cs-hero-highlights {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .siem-buttons-container,
+  .acis-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  .siem-buttons-container a,
+  .siem-buttons-container button,
+  .acis-hero-actions a,
+  .acis-hero-actions button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cs-hero-graphic-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* 5. Small Mobile Screen Grid Tweaks (< 640px & < 380px) */
+@media (max-width: 640px) {
+  .cs-capabilities-grid,
+  .cs-workflow-grid,
+  .cs-threats-grid,
+  .cs-importance-grid,
+  .cs-approach-grid,
+  .cs-audiences-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .cs-capability-card,
+  .cs-workflow-card,
+  .cs-threat-card,
+  .cs-importance-card,
+  .cs-approach-card,
+  .cs-audience-card {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .cs-mini-card {
+    padding: 1.1rem 1rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+
+  .cs-metrics-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  .cs-metric-card {
+    padding: 0.75rem 0.5rem !important;
+  }
+}
+
+/* 6. Touch-Friendly Tables & Code Blocks */
+.table-responsive-wrapper,
+.cs-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 7. CTA Box Mobile Spacing */
+@media (max-width: 640px) {
+  .cs-cta-box {
+    padding: 2.2rem 1.25rem !important;
+    border-radius: 20px !important;
+  }
+
+  .cs-cta-btn {
+    width: 100% !important;
+    padding: 0.9rem 1.5rem !important;
+  }
 }

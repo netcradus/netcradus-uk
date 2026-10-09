@@ -95,7 +95,7 @@ export default function Header() {
     <header className={`site-header ${isScrolled ? 'scrolled' : ''} ${mobileOpen ? 'mobile-menu-active' : ''}`} id="siteHeader" ref={headerRef}>
       <div className="nav-container">
         <Link to="/" className="brand-logo" aria-label="Netcradus UK Homepage" onClick={closeAllMenus}>
-          <img src={`${import.meta.env.BASE_URL}assets/netcradus-header-logo.png`} alt="Netcradus UK Logo" className="brand-logo-img" />
+          <img src={`${import.meta.env.BASE_URL}assets/netcradus-navbar-logo.png`} alt="Netcradus UK Logo" className="brand-logo-img" />
         </Link>
 
         <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>

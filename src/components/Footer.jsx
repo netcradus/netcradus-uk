@@ -24,7 +24,7 @@ function Footer() {
           <div className="footer-col col-brand">
             <Link to="/" className="brand-logo" aria-label="Netcradus UK Homepage">
               <img
-                src={`${import.meta.env.BASE_URL}assets/netcradus logo.png`}
+                src={`${import.meta.env.BASE_URL}assets/netcradus-footer-logo.png`}
                 alt="Netcradus UK Logo"
                 className="brand-logo-img"
               />

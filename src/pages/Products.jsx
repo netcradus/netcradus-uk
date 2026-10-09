@@ -225,7 +225,7 @@ export default function Products() {
           
           <ScrollingCard>
             <img 
-              src={`${import.meta.env.BASE_URL}images/cyrix-dashboard.png`} 
+              src={`${import.meta.env.BASE_URL}assets/cyrix-dashboard.png`}
               alt="CYRIX XDR Unified Detection Dashboard" 
               className="card-preview-image"
             />

@@ -589,8 +589,8 @@ export default function EndpointDetection() {
               <span className="endpoint-browser-address" style={{ color: '#FF6B00' }}>CYRIX CYBER DEFENSE PLATFORM DASHBOARD</span>
               <span className="endpoint-browser-title">REAL-TIME TELEMETRY AUDIT</span>
             </div>
-            <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}images/cyrix-dashboard.png`, alt: "CYRIX Cyber Defense Platform Dashboard" })}>
-              <img src={`${import.meta.env.BASE_URL}images/cyrix-dashboard.png`} alt="CYRIX Cyber Defense Platform Dashboard" className="endpoint-browser-image" />
+            <div className="endpoint-browser-image-container" onClick={() => setModalImage({ src: `${import.meta.env.BASE_URL}assets/cyrix-dashboard.png`, alt: "CYRIX Cyber Defense Platform Dashboard" })}>
+              <img src={`${import.meta.env.BASE_URL}assets/cyrix-dashboard.png`} alt="CYRIX Cyber Defense Platform Dashboard" className="endpoint-browser-image" />
               <div className="endpoint-image-overlay">
                 <i className="fas fa-expand"></i> Click to Expand CYRIX Platform Dashboard
               </div>
